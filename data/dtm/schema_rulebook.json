@@ -1,0 +1,131 @@
+{
+  "version": "0.1.0-phase0",
+  "locked_at": "2026-05-17 19:33:26",
+  "rule_book": {
+    "colombia": {
+      "primary_source": "Unidad para las V\u00edctimas (RUV)",
+      "admin_level": "Municipio",
+      "join_column_candidates": [
+        "municipio",
+        "Municipio",
+        "MPIO_CCNCT",
+        "DIVIPOLA"
+      ],
+      "outcome_column_candidates": [
+        "desplazados",
+        "DESPLAZADOS",
+        "idps",
+        "victimas_desplazadas"
+      ],
+      "year_column_candidates": [
+        "year",
+        "anio",
+        "vigencia"
+      ],
+      "expected_schema_drift": [
+        "RUV switched format around 2018 \u2014 pre-2018 files have different column names",
+        "Multiple aggregation levels in same file (departmental + municipal); filter to admin-2 only"
+      ],
+      "notes": "Primary source is NOT IOM DTM (minimal Colombia presence). RUV is the canonical IDP registration."
+    },
+    "sudan": {
+      "primary_source": "IOM DTM Sudan Round-by-Round",
+      "admin_level": "Locality (mahaliya)",
+      "join_column_candidates": [
+        "locality",
+        "Locality",
+        "Admin 2",
+        "admin2",
+        "Admin2_Name",
+        "Admin 2 Name",
+        "mahaliya"
+      ],
+      "outcome_column_candidates": [
+        "IDP Individuals",
+        "idp_individuals",
+        "Number of IDPs",
+        "n_idps",
+        "Total IDPs"
+      ],
+      "year_column_candidates": [
+        "year",
+        "Year",
+        "Round Date",
+        "Assessment Date"
+      ],
+      "expected_schema_drift": [
+        "Round-by-Round column renames between rounds (typically Q1 vs Q3 format changes)",
+        "Pre-2023 vs post-2023 (post-RSF-war) major schema change expected",
+        "Some rounds report Households not Individuals; need conversion factor (HH \u00d7 5)",
+        "South Sudan rounds may be in same file pre-2011 \u2014 filter Sudan-only"
+      ],
+      "notes": "Post-April-2023 RSF-SAF war: DTM coverage may be partial in RSF-controlled areas. Flag in panel."
+    },
+    "drc": {
+      "primary_source": "IOM DTM DRC monthly provincial reports",
+      "admin_level": "Territoire",
+      "join_column_candidates": [
+        "territoire",
+        "Territoire",
+        "Admin 2",
+        "admin2",
+        "Territory",
+        "Zone"
+      ],
+      "outcome_column_candidates": [
+        "pdi_total",
+        "PDI Total",
+        "idps",
+        "Number of IDPs",
+        "personnes_deplacees_internes"
+      ],
+      "year_column_candidates": [
+        "year",
+        "Year",
+        "annee",
+        "date"
+      ],
+      "expected_schema_drift": [
+        "Pre-2018 reports are PDF-only; CSV exports only available 2018-forward",
+        "Province-level rolls up territoire-level; need to disaggregate",
+        "Eastern DRC (Nord-Kivu, Sud-Kivu, Ituri) reported more frequently than west",
+        "M23 cycles (2022-present) create reporting bursts; flag round-frequency irregularity"
+      ],
+      "notes": "Use 2024 INS population estimates for denominators; 1984 census is 40yr stale. Flag uncertainty."
+    },
+    "yemen": {
+      "primary_source": "IOM DTM Yemen Master List + Area Assessments",
+      "admin_level": "Mud\u012briyah (district)",
+      "join_column_candidates": [
+        "district",
+        "District",
+        "Admin 2",
+        "admin2",
+        "mudiriyah",
+        "Mudiriyah"
+      ],
+      "outcome_column_candidates": [
+        "IDP Individuals",
+        "idp_individuals",
+        "Number of IDPs",
+        "n_idps",
+        "Total IDPs",
+        "HH Number"
+      ],
+      "year_column_candidates": [
+        "year",
+        "Year",
+        "Round",
+        "Assessment Year"
+      ],
+      "expected_schema_drift": [
+        "Governorate-level vs district-level resolution varies by round",
+        "Post-2022 Houthi-controlled governorate coverage degraded (pre-cond 4)",
+        "Master List vs Area Assessments are different products; Master List is district-granular",
+        "Some rounds report HH only; convert HH \u00d7 6 (Yemen HH-size avg) or HH \u00d7 locked factor"
+      ],
+      "notes": "Pre-cond 4 determines whether post-2022 Yemen data enters Stage B panel. Document, don't fight it."
+    }
+  },
+  "lock_note": "This rule book is locked at Phase 0 initial commit. Any change during Phase 2 execution must be logged in the country's _harmonization_log.json under a `rule_change` entry pointing to the introducing commit hash. Substantive changes (e.g., a new outcome column candidate that materially changes a country's IDP estimate) trigger a pre_reg_redline.md v1->v2 entry."
+}

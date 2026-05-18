@@ -1,0 +1,29 @@
+{
+  "overall": "PHASE0_STUB",
+  "results": [
+    {
+      "country": "colombia",
+      "verdict": "PHASE0_STUB",
+      "reason": "No digitized polygon in historical_polygons\\colombia_cdo_1922 (only provenance.md present)",
+      "n_admin2_in_polygon": null
+    },
+    {
+      "country": "sudan",
+      "verdict": "PHASE0_STUB",
+      "reason": "No digitized polygon in historical_polygons\\sudan_fur_dar_pre1994 (only provenance.md present)",
+      "n_admin2_in_polygon": null
+    },
+    {
+      "country": "drc",
+      "verdict": "PHASE0_STUB",
+      "reason": "No digitized polygon in historical_polygons\\drc_kivu_pre1996 (only provenance.md present)",
+      "n_admin2_in_polygon": null
+    },
+    {
+      "country": "yemen",
+      "verdict": "PHASE0_STUB",
+      "reason": "No digitized polygon in historical_polygons\\yemen_houthi_zaydi (only provenance.md present)",
+      "n_admin2_in_polygon": null
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+# Raw data (regeneratable from public sources; SHA-256 hashes in manifest.json)
+data/ucdp/*.csv
+data/ucdp/*.zip
+data/ucdp/*.xlsx
+data/acled/*.csv
+data/acled/*.zip
+data/dtm/**/*.csv
+data/dtm/**/*.xlsx
+data/dtm/**/*.xls
+data/dtm/**/*.json
+!data/dtm/schema_rulebook.json
+!data/dtm/FETCH_INSTRUCTIONS.md
+!data/dtm/**/_harmonization_log.json
+data/gadm/*.gpkg
+data/gadm/*.shp
+data/gadm/*.zip
+data/eosv/*.csv
+data/eosv/*.xlsx
+data/eosv/*.zip
+data/polygons/*.geojson
+data/polygons/*.shp
+data/polygons/*.gpkg
+
+# Historical polygon digitization outputs (committed when ready;
+# provenance.md tracked separately)
+historical_polygons/**/*.geojson
+historical_polygons/**/*.shp
+historical_polygons/**/*.gpkg
+historical_polygons/**/*.png
+!historical_polygons/**/provenance.md
+
+# Secrets
+.env
+.env.*
+*.key
+ACLED_EMAIL
+ACLED_API_KEY
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Stan
+*.exe.stan
+analysis/*.exe
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp

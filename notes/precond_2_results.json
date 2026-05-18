@@ -1,0 +1,29 @@
+{
+  "overall": "PHASE0_STUB",
+  "results": [
+    {
+      "country": "colombia",
+      "verdict": "PHASE0_STUB",
+      "reason": "Missing data: ['ACLED']",
+      "spearman_correlation": null
+    },
+    {
+      "country": "sudan",
+      "verdict": "PHASE0_STUB",
+      "reason": "Missing data: ['ACLED']",
+      "spearman_correlation": null
+    },
+    {
+      "country": "drc",
+      "verdict": "PHASE0_STUB",
+      "reason": "Missing data: ['ACLED']",
+      "spearman_correlation": null
+    },
+    {
+      "country": "yemen",
+      "verdict": "PHASE0_STUB",
+      "reason": "Missing data: ['ACLED']",
+      "spearman_correlation": null
+    }
+  ]
+}
