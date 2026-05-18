@@ -25,10 +25,13 @@ NOTES = ROOT / "notes"
 REPORT = NOTES / "precond_3_report.md"
 
 POLYGON_PATHS = {
-    "colombia": (HIST_DIR / "colombia_cdo_1922", GADM_DIR / "gadm41_colombia.gpkg"),
-    "sudan":    (HIST_DIR / "sudan_fur_dar_pre1994", GADM_DIR / "gadm41_sudan.gpkg"),
-    "drc":      (HIST_DIR / "drc_kivu_pre1996", GADM_DIR / "gadm41_drc.gpkg"),
-    "yemen":    (HIST_DIR / "yemen_houthi_zaydi", GADM_DIR / "gadm41_yemen.gpkg"),
+    # Locked at redline Entry 002 (2026-05-17). Per PI confirmation, polygons
+    # mark founding protracted-displacement geographies, not new-onset
+    # displacement events.
+    "colombia": (HIST_DIR / "colombia_la_violencia_1948_1958", GADM_DIR / "gadm41_colombia.gpkg"),
+    "sudan":    (HIST_DIR / "sudan_fur_dar_pre1994",          GADM_DIR / "gadm41_sudan.gpkg"),
+    "drc":      (HIST_DIR / "drc_kasai_1959_1965",            GADM_DIR / "gadm41_drc.gpkg"),
+    "yemen":    (HIST_DIR / "yemen_six_wars_2004_2010",       GADM_DIR / "gadm41_yemen.gpkg"),
 }
 LOCKED_MIN_ADMIN2_PER_POLYGON = 5
 

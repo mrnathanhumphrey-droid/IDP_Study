@@ -4,7 +4,7 @@
 
 **Author:** Nathan Humphrey
 
-**Status:** Pre-registration v1. Not yet executed. All hypotheses, cell definitions, harmonization rules, pre-conditions, and walk-back protocol specified BEFORE any rate-level outcome inspection.
+**Status:** Pre-registration v2 (effective 2026-05-17). Entry 001 (ACLED → GDELT cross-source substitution) + Entry 002 (Stage-A polygon interpretation locks + substrate framing clarification + DRC source-list amendment) both committed to `notes/pre_reg_redline.md`. Original v1 committed at `dd3f0ec`. No Stan fits yet. No rate-level outcome inspection.
 
 **Pipeline position:** Substrate 9 of the Paper 6 methodology corpus. Mirrors gun-violence (substrate 6) and food-deserts (substrate 8) discipline: commit-hash + content-hash pre-reg lock, locked falsifier + walk-back protocol, public commit chain, honest negative reporting.
 
@@ -60,33 +60,50 @@ Each context has:
 3. A **DTM displacement-rate time series** at admin-unit level — defines the
    outcome.
 
-**Substantive question:** does historical atrocity geography predict
-differential intensification of displacement response to contemporary conflict
-shocks, after controlling for current conflict intensity, population, terrain,
-and contemporaneous ethnic composition?
+**Substantive question (v2 framing, per redline Entry 002-E):**
 
-The framing is correlational. Per Phase 0 locked language: **"associated
-with differential displacement intensification under conflict shock"** — NOT
+The substrate-9 hypothesis tests **long-term protracted displacement
+geography**, not new-onset displacement geography. Per PI clarification
+(2026-05-17): modern IDP is multi-generational protracted displacement
+(Sudan, DRC, Colombia, Palestine all exemplify this) — the chronic IDP
+burden geography was established by founding atrocity events decades
+ago, and is periodically compounded by contemporary conflict shocks. The
+Stage-A polygons mark where the chronic burden lives; the contemporary
+shock is the marginal event compounding on that geography. This framing
+aligns substrate-9 with the UNHCR/IDMC "protracted-displacement-situation"
+definition (≥ 25,000 IDPs displaced for ≥ 5 consecutive years).
+
+Under this framing, the substantive question is: do conflict shocks
+produce differentially-intensified displacement response in admin-2
+units within a country's founding-atrocity polygon — geographies that
+have hosted protracted IDP populations since the historical event —
+beyond what the shock predicts in non-polygon units? The framing is
+correlational. Per Phase 0 locked language: **"associated with
+differential displacement intensification under conflict shock"** — NOT
 "causes." The shock-amplification specification is isolated in
 `notes/shock_amplification_specification.md`.
 
-### §1.1 Stage A historical polygons (4)
+### §1.1 Stage A historical polygons (4, LOCKED at redline Entry 002)
 
 | Country | Polygon | Historical period | Source materials |
 |---|---|---|---|
-| Colombia | "CDO 1922" zone | 1922 colonial demarcation (placeholder; **user must confirm**) | Historical Colombian govt gazettes; IGAC archive; CINEP archive of La Violencia 1948–1958 mortality |
-| Sudan | Fur dar (pre-1994) | Pre-1994 historical Fur Sultanate / Dar Fur dar boundary | Colonial Sudan AAOA archives; Daly 2007 *Darfur's Sorrow* polygon reproduction; UCLA Sudan Open Archive |
-| DRC | Kivu pre-1996 ethnic-targeting zones | 1965–1996 Banyamulenge / Hutu / Tutsi violence pattern | de Villers Tribu et État au Zaïre archive; CRRA UCL Université Catholique de Louvain conflict geography |
-| Yemen | Pre-2014 Houthi conflict zones (Sa'dah / Hajjah / Amran) | 2004–2010 Six Wars Houthi insurgency | Yemen Polling Center conflict atlas; ACLED back-cast 2010–2014 as bridge; ICG reports |
+| Colombia | La Violencia mortality concentration zones | 1948–1958 (Bogotazo to National Front; extends to 1964) | CNMH *¡Basta Ya!* (2013) Map 2; CINEP Noche y Niebla; Guzmán Campos et al. (1962); Sánchez & Meertens (2001); Roldán (2002) |
+| Sudan | Fur dar (pre-1994) | Pre-1994 historical Fur Sultanate / Dar Fur dar boundary | Daly 2007 *Darfur's Sorrow* plates II + III; De Waal 2005 Map A1; Sudan Open Archive; Anglo-Egyptian Sudan Survey 1928 |
+| DRC | Kasai Luba expulsion zone | 1959–1965 (Katangan secession era + Lulua-Luba ethnic violence) | Young & Turner (1985); Lemarchand (1964); De Villers (2002); Stearns (2011); CRDA UCL Louvain colonial archives |
+| Yemen | Six Wars operational extent | 2004–2010 (Six Wars Houthi insurgency) | ICG MER N°86 (2009) + N°114 (2011); Salisbury 2015 Chatham House; Yemen Polling Center 2012; UCDP-GED 2004-2010 |
 
-The Colombia "CDO 1922" naming, DRC Kivu "pre-1996," and Yemen "pre-2014" are
-the author's best inference of the four locked Stage-A polygons. The Sudan
-Fur dar pre-1994 polygon is unambiguous. **The Colombian and DRC site names
-must be confirmed by the principal investigator in v2 redline before
-digitization begins.**
+All four polygon interpretations are PI-confirmed per redline Entry 002
+(2026-05-17). The Sudan polygon is the same as v1 (unambiguous from the
+start). The Colombia, DRC, and Yemen polygons were locked from
+placeholder interpretations to PI-confirmed ones.
 
-The 1922 CDO polygon and pre-1994 Fur dar polygon are the slowest-to-digitize
-components. Budgeted 2-3 days each. Provenance.md files in
+The Colombia La Violencia polygon and pre-1994 Fur dar polygon are the
+slowest-to-digitize components (2-3 days each). The DRC Kasai 1959-1965
+polygon also requires manual academic-history coding for its
+`historical_atrocity_count` covariate per §3.2 amendment (UCDP and EOSV
+data both begin at 1989, so neither covers the Kasai 1959-1965 window;
+manual coding from Young & Turner + Lemarchand + Stearns + CRDA replaces
+the event-database extraction). Provenance.md files in
 `historical_polygons/*/` document the digitization plan + source archive
 citations BEFORE the polygons are drawn.
 
@@ -131,13 +148,27 @@ schema, year coverage, admin-2 coverage) are inspected.
   within the country's Stage A polygon? Computed by spatial intersection on
   the digitized polygon vs GADM admin-2 boundary.
 - `historical_atrocity_count` — total documented atrocity events within the
-  admin-2's historical window per country:
-  - Colombia: CINEP archive 1948–2002 (La Violencia + early FARC period)
+  admin-2's historical window per country (PER COUNTRY SOURCE, LOCKED at
+  redline Entry 002-C):
+  - Colombia: CINEP Noche y Niebla per-municipio counts, 1948–1965 window
+    (La Violencia core + 7-year trailing per CNMH ¡Basta Ya! documentation)
   - Sudan: EOSV 2003–2010 (LIMITED to within EOSV coverage; EOSV ends 2013;
     post-2013 ethnic-targeting events fold into `current_conflict_intensity`,
-    NOT into atrocity-count)
-  - DRC: UCDP one-sided + EOSV 1996–2013
-  - Yemen: Six Wars timeline 2004–2010 from Salisbury 2015 / ICG reports
+    NOT into atrocity-count). PI-confirmed at redline Entry 002-F.
+  - **DRC (redline Entry 002-C amendment):** manual academic-history coding
+    for the 1959-1965 Kasai Luba expulsion window. Primary sources: Young
+    & Turner (1985) *Rise and Decline of the Zairian State*; Lemarchand
+    (1964) *Political Awakening in the Belgian Congo*; De Villers (2002)
+    *Tribu et État au Zaïre*; Stearns (2011) *Dancing in the Glory of
+    Monsters*; CRDA UCL Louvain Belgian colonial archives. UCDP/EOSV do
+    NOT cover this window (both start at 1989). Output:
+    `data/atrocity_counts/drc_kasai_atrocity_count.csv`. Methodological
+    asymmetry caveat reported in §6 disposition reading: DRC's
+    historical_atrocity_count is academic-secondary-source coded;
+    Colombia/Sudan/Yemen use primary-source event-database extraction.
+  - Yemen: UCDP-GED filtered to Yemen events 2004-2010, side_a/side_b
+    contains Houthi or Government, type_of_violence ∈ {1, 3}. Per
+    mudiriyah via ActionGeo spatial join to GADM admin-2.
 
 ### §3.3 Contemporary conflict shock (Stage B)
 - `current_conflict_intensity` — UCDP-GED fatality count within admin-2 × year
@@ -514,10 +545,10 @@ IDP/
 │   ├── v0_4_full.stan
 │   └── precond/               — pre-cond output artifacts
 ├── historical_polygons/
-│   ├── colombia_cdo_1922/provenance.md
+│   ├── colombia_la_violencia_1948_1958/provenance.md
 │   ├── sudan_fur_dar_pre1994/provenance.md
-│   ├── drc_kivu_pre1996/provenance.md
-│   └── yemen_houthi_zaydi/provenance.md
+│   ├── drc_kasai_1959_1965/provenance.md
+│   └── yemen_six_wars_2004_2010/provenance.md
 ├── notes/
 │   ├── displacement_research_design.md     — this file (v1)
 │   ├── shock_amplification_specification.md
@@ -533,23 +564,36 @@ IDP/
 
 ---
 
-## §12. Author flags for v2 redline
+## §12. Author flags — RESOLVED at redline Entry 002 (2026-05-17)
 
-Pending principal-investigator confirmation before Stage-A digitization
-begins:
+All 5 flagged items have been PI-confirmed and locked. See
+`notes/pre_reg_redline.md` Entry 002 for details. Summary:
 
-1. **Colombia Stage-A polygon naming:** "CDO 1922" — confirm exact polygon
-   meaning. Candidates: (a) Colombian 1922 colonial Comisarías
-   administrative boundaries, (b) La Violencia 1948–1958 mortality zones, (c)
-   FARC-pre-Caguán-zone historical foothold, (d) other. The author's
-   placeholder is (a) — confirm or correct.
-2. **DRC Stage-A polygon:** "pre-1994 Fur dar" was specified for Sudan, not
-   DRC. The DRC equivalent is the author's inference of "Kivu pre-1996
-   ethnic-targeting zones" (Banyamulenge, Hutu, Tutsi). Confirm or correct.
-3. **Yemen Stage-A polygon:** placeholder is "pre-2014 Houthi conflict
-   zones (Sa'dah / Hajjah / Amran)." Confirm or correct.
-4. **DRC 1984 census staleness:** confirm acceptance of 2024 INS estimates
-   for present-day population offsets with the staleness flagged in
-   `data/dtm/_population_provenance.md`.
-5. **EOSV cutoff 2003–2010 for Sudan atrocity-count:** confirm this is the
-   correct historical window (per locked constraint about EOSV ending 2013).
+1. **Colombia Stage-A polygon naming:** RESOLVED — La Violencia 1948–1958
+   mortality concentration zones (option b). PI rationale: La Violencia
+   is Colombia's founding modern displacement-atrocity event; geographically
+   distinct from modern FARC-era displacement (clean non-overlap
+   contrast for H_SHOCK_AMPLIFICATION). Directory renamed:
+   `historical_polygons/colombia_la_violencia_1948_1958/`.
+2. **DRC Stage-A polygon:** RESOLVED — Kasai 1959–1965 Luba expulsion zone
+   (NOT the placeholder Kivu pre-1996). PI rationale: founding
+   protracted-displacement geography reactivated by 2016-2018 Kamuina
+   Nsapu conflict; deeper historical layer than the eastern Kivu
+   alternative. Directory renamed:
+   `historical_polygons/drc_kasai_1959_1965/`. Additional source-list
+   amendment (Entry 002-C) for `historical_atrocity_count` since
+   UCDP/EOSV don't cover pre-1989 events.
+3. **Yemen Stage-A polygon:** RESOLVED — Six Wars (2004-2010) operational
+   extent (narrow framing; Sa'dah + N. Hajjah + W. Amran + N. Sana'a gov,
+   EXCLUDES Sana'a city). PI rationale: cleaner empirical contrast than
+   the broader Zaydi-imamate heartland. Directory renamed:
+   `historical_polygons/yemen_six_wars_2004_2010/`.
+4. **DRC 1984 census staleness:** CONFIRMED. 2024 INS estimates with
+   staleness flagged per Phase 0 locked constraint.
+5. **EOSV cutoff 2003–2010 for Sudan atrocity-count:** CONFIRMED. Post-2013
+   ethnic-targeting events fold into `current_conflict_intensity`, not
+   `historical_atrocity_count`, per Phase 0 locked constraint.
+
+Phase 1 unblocked: Stage-A polygon digitization can proceed for all 4
+polygons. DRC additionally requires manual academic-history coding
+(Entry 002-C amendment) for the historical_atrocity_count covariate.
