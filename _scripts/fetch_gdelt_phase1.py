@@ -47,6 +47,11 @@ DATE_END   = "20241231"
 GDELT_URL = "http://data.gdeltproject.org/events/{date}.export.CSV.zip"
 GDELT_COL_COUNTRY = 51
 
+# GDELT 1.0 has exactly 58 columns. ADM2Code does NOT exist in GDELT 1.0
+# (it was added in GDELT 2.0). Original fetch added it by mistake; corrected
+# here. Files written before 2026-05-18 had 61-col header over 58-col data
+# (3-column drift). The fix_gdelt_phase1_headers.py one-shot rewrites
+# headers in-place for those existing files.
 HEADER_COLS = [
     "globaleventid", "sqldate", "monthyear", "year", "fractiondate",
     "actor1code", "actor1name", "actor1countrycode", "actor1knowngroupcode",
@@ -58,13 +63,14 @@ HEADER_COLS = [
     "isrootevent", "eventcode", "eventbasecode", "eventrootcode",
     "quadclass", "goldsteinscale", "nummentions", "numsources", "numarticles", "avgtone",
     "actor1geo_type", "actor1geo_fullname", "actor1geo_countrycode",
-    "actor1geo_adm1code", "actor1geo_adm2code", "actor1geo_lat", "actor1geo_long", "actor1geo_featureid",
+    "actor1geo_adm1code", "actor1geo_lat", "actor1geo_long", "actor1geo_featureid",
     "actor2geo_type", "actor2geo_fullname", "actor2geo_countrycode",
-    "actor2geo_adm1code", "actor2geo_adm2code", "actor2geo_lat", "actor2geo_long", "actor2geo_featureid",
+    "actor2geo_adm1code", "actor2geo_lat", "actor2geo_long", "actor2geo_featureid",
     "actiongeo_type", "actiongeo_fullname", "actiongeo_countrycode",
-    "actiongeo_adm1code", "actiongeo_adm2code", "actiongeo_lat", "actiongeo_long", "actiongeo_featureid",
+    "actiongeo_adm1code", "actiongeo_lat", "actiongeo_long", "actiongeo_featureid",
     "dateadded", "sourceurl",
 ]
+assert len(HEADER_COLS) == 58, f"GDELT 1.0 has 58 columns; got {len(HEADER_COLS)}"
 
 
 def sha256(path):

@@ -47,7 +47,10 @@ def stub_result(country, reason):
 
 def check_country(country):
     ucdp_path = UCDP_DIR / f"ucdp-ged-{country}.csv"
-    gdelt_path = GDELT_DIR / f"gdelt-{country}.csv"   # was acled-{country}.csv per Entry 001
+    # Phase 1 full panel; fall back to Phase 0 smoke if not present
+    gdelt_phase1 = GDELT_DIR / f"gdelt-{country}-2014_2024.csv"
+    gdelt_phase0 = GDELT_DIR / f"gdelt-{country}.csv"
+    gdelt_path = gdelt_phase1 if gdelt_phase1.exists() else gdelt_phase0
     gadm_path = GADM_DIR / f"gadm41_{country}.gpkg"
     missing = []
     for p, name in [(ucdp_path, "UCDP"), (gdelt_path, "GDELT"), (gadm_path, "GADM")]:
@@ -57,13 +60,13 @@ def check_country(country):
 
     try:
         import geopandas as gpd
-        import fiona
+        import pyogrio
     except ImportError:
-        return stub_result(country, "geopandas/fiona not available")
+        return stub_result(country, "geopandas/pyogrio not available")
 
     # Load admin-2 polygons
     try:
-        layers = fiona.listlayers(gadm_path)
+        layers = [row[0] for row in pyogrio.list_layers(str(gadm_path))]
         adm2_layer = next((l for l in layers if "_2" in l or "ADM_2" in l.upper()), layers[-1])
         adm2 = gpd.read_file(gadm_path, layer=adm2_layer)
     except Exception as e:
@@ -86,10 +89,24 @@ def check_country(country):
     def to_year(df, col_candidates):
         for c in col_candidates:
             if c in df.columns:
-                try: return pd.to_datetime(df[c], errors="coerce").dt.year
-                except: pass
-                try: return pd.to_numeric(df[c], errors="coerce")
-                except: pass
+                # Try numeric first; pd.to_datetime treats int 2014 as nanoseconds
+                # since epoch -> 1970-01-01, which silently kills the year filter.
+                numeric = pd.to_numeric(df[c], errors="coerce")
+                if numeric.notna().sum() > 0 and numeric.min() >= 1900 and numeric.max() <= 2100:
+                    return numeric.astype("Int64")
+                # Date-string column (e.g. UCDP date_start="2014-03-15"): parse as datetime
+                try:
+                    dt = pd.to_datetime(df[c], errors="coerce")
+                    if dt.notna().sum() > 0:
+                        return dt.dt.year
+                except Exception:
+                    pass
+                # GDELT sqldate is YYYYMMDD integer; take first 4 chars
+                try:
+                    s = df[c].astype(str).str[:4]
+                    return pd.to_numeric(s, errors="coerce")
+                except Exception:
+                    pass
         return None
 
     ucdp_year = to_year(ucdp, ["year","date_start","Year"])

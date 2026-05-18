@@ -1,7 +1,7 @@
 {
   "study": "Internal Displacement Cross-Country Study (substrate 9)",
   "phase": "Phase 0 \u2014 pre-reg lock + data fetch + pre-cond scaffold",
-  "last_updated": "2026-05-17 22:35:35",
+  "last_updated": "2026-05-18 05:28:36",
   "lock_commit": "set on initial git commit",
   "files": [
     {
@@ -142,6 +142,46 @@
       "size_bytes": 260980,
       "row_count": 3160,
       "fetched_at": "2026-05-17 22:35:35"
+    },
+    {
+      "source": "GDELT 1.0 filtered: Colombia (Phase 1 full panel 20140101..20241231)",
+      "filename": "data\\gdelt\\gdelt-colombia-2014_2024.csv",
+      "sha256": "cea0689eedfc480e3cdace3ca44677aaba77b1b99b8c480c453d7d94988913b4",
+      "size_bytes": 348767529,
+      "row_count": 936326,
+      "fetched_at": "2026-05-18 05:28:34",
+      "fips_country_code": "CO",
+      "note": "Header repaired 2026-05-18 (61-col -> 58-col GDELT 1.0)"
+    },
+    {
+      "source": "GDELT 1.0 filtered: Sudan (Phase 1 full panel 20140101..20241231)",
+      "filename": "data\\gdelt\\gdelt-sudan-2014_2024.csv",
+      "sha256": "d29cadd6ecd61783ccc450ab2328becc2fe52529ddcc9889643d79a21e783f5a",
+      "size_bytes": 644722198,
+      "row_count": 1778121,
+      "fetched_at": "2026-05-18 05:28:35",
+      "fips_country_code": "SU",
+      "note": "Header repaired 2026-05-18 (61-col -> 58-col GDELT 1.0)"
+    },
+    {
+      "source": "GDELT 1.0 filtered: DRC (Phase 1 full panel 20140101..20241231)",
+      "filename": "data\\gdelt\\gdelt-drc-2014_2024.csv",
+      "sha256": "3c59a8868de5f5d520ba05bed349453eab280f78b3c72c8b5ae2459997a82a96",
+      "size_bytes": 97109600,
+      "row_count": 208187,
+      "fetched_at": "2026-05-18 05:28:35",
+      "fips_country_code": "CG",
+      "note": "Header repaired 2026-05-18 (61-col -> 58-col GDELT 1.0)"
+    },
+    {
+      "source": "GDELT 1.0 filtered: Yemen (Phase 1 full panel 20140101..20241231)",
+      "filename": "data\\gdelt\\gdelt-yemen-2014_2024.csv",
+      "sha256": "da7b2079d84ae917863d40d17fea93cc8899b571dfd810f751a4d18887f33f64",
+      "size_bytes": 554289119,
+      "row_count": 1531632,
+      "fetched_at": "2026-05-18 05:28:36",
+      "fips_country_code": "YM",
+      "note": "Header repaired 2026-05-18 (61-col -> 58-col GDELT 1.0)"
     }
   ]
 }

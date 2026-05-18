@@ -2,21 +2,21 @@
 
 **Redline:** Entry 001 — ACLED replaced by GDELT (notes/pre_reg_redline.md). Threshold unchanged.
 
-**Run at:** 2026-05-17 21:18:48
+**Run at:** 2026-05-18 05:39:22
 
 **Locked check:** Spearman corr >= 0.6 between GDELT and UCDP-GED event counts per admin-2 x year.
 
-**Overall verdict:** **PHASE0_STUB**
+**Overall verdict:** **FAIL_OR_MIXED**
 
 
 ## Per-country results
 
 | Country | Spearman corr | N cells | Verdict |
 |---|---|---|---|
-| colombia | — | — | PHASE0_STUB |
-| sudan | — | — | PHASE0_STUB |
-| drc | — | — | PHASE0_STUB |
-| yemen | — | — | PHASE0_STUB |
+| colombia | -0.113 | 5489 | FAIL |
+| sudan | 0.328 | 823 | FAIL |
+| drc | 0.182 | 1691 | FAIL |
+| yemen | 0.109 | 2820 | FAIL |
 
 ## Failure handling (locked walk-back §7)
 
