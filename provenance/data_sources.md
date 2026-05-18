@@ -14,19 +14,33 @@ per `.gitignore`; SHA-256 hashes recorded in `manifest.json`.
   georeferenced event dataset. *Journal of Peace Research*, 50(4),
   523-532.
 
-## ACLED (Armed Conflict Location & Event Data)
+## ACLED (Armed Conflict Location & Event Data) — DROPPED per redline Entry 001
 
-- **Homepage:** https://acleddata.com/
-- **Data export:** https://acleddata.com/data-export-tool/
-- **API:** https://api.acleddata.com/acled/read (requires registration +
-  API key)
-- **Coverage:** 1997-present (Africa) / 2014-present (other regions),
-  global event-level
-- **Use:** Cross-source conflict event validation against UCDP-GED
-  (pre-cond 2); Yemen post-2022 coverage check (pre-cond 4)
+- **Status:** v1 spec dropped via `notes/pre_reg_redline.md` Entry 001
+  (2026-05-17). Non-institutional PI access denied. ACLED replaced by
+  GDELT for cross-source validation. Threshold + aggregation unchanged.
+- **Homepage:** https://acleddata.com/ (retained for documentation)
+- **API:** https://api.acleddata.com/acled/read (requires institutional
+  registration + API key; non-institutional access gated)
 - **Citation:** Raleigh, C., Linke, A., Hegre, H., & Karlsen, J. (2010).
-  Introducing ACLED: An armed conflict location and event dataset.
-  *Journal of Peace Research*, 47(5), 651-660.
+  Introducing ACLED. *Journal of Peace Research*, 47(5), 651-660.
+
+## GDELT 2.0 Event Database (replaces ACLED per redline Entry 001)
+
+- **Homepage:** https://www.gdeltproject.org/
+- **Daily event files:** http://data.gdeltproject.org/events/{YYYYMMDD}.export.CSV.zip
+- **Documentation:** http://data.gdeltproject.org/documentation/GDELT-Data_Format_Codebook.pdf
+- **Coverage:** April 2013-present, global, machine-coded news events with lat/long
+- **Use:** Cross-source conflict event validation against UCDP-GED
+  (pre-cond 2); Yemen post-2022 coverage check (pre-cond 4); robustness
+  axis 1 substitution
+- **License:** Creative Commons (no auth, no institutional requirement)
+- **Citation:** Leetaru, K., & Schrodt, P. A. (2013). GDELT: Global Data
+  on Events, Language, and Tone, 1979-2012. *ISA Annual Convention*.
+- **FIPS country codes used:** Colombia=CO, Sudan=SU, DRC=CG, Yemen=YM
+- **Quality caveat:** GDELT is machine-coded from news; false-positive
+  rate higher than ACLED's human coding. Mitigated by admin-2 × year
+  aggregation in pre-cond 2.
 
 ## IOM DTM (Displacement Tracking Matrix)
 

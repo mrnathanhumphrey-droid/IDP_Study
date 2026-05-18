@@ -1,7 +1,7 @@
 {
   "study": "Internal Displacement Cross-Country Study (substrate 9)",
   "phase": "Phase 0 \u2014 pre-reg lock + data fetch + pre-cond scaffold",
-  "last_updated": "2026-05-17 20:00:07",
+  "last_updated": "2026-05-17 21:18:48",
   "lock_commit": "set on initial git commit",
   "files": [
     {
@@ -32,6 +32,30 @@
       "path": "data/gadm/gadm41_yemen.gpkg",
       "sha256": "6cc3de25e7520542c3bed027eaa92487c8a64df8605d2a2577da4c3599b2c7ac",
       "size_bytes": 5410816,
+      "kind": "raw_data_file (gitignored)"
+    },
+    {
+      "path": "data/gdelt/gdelt-colombia.csv",
+      "sha256": "bf4b3f76e7e9b88c2188c99e17e707679a21e96e622db9cc4bf03a66541dd380",
+      "size_bytes": 1653026,
+      "kind": "raw_data_file (gitignored)"
+    },
+    {
+      "path": "data/gdelt/gdelt-drc.csv",
+      "sha256": "f1c86561c02b36fcb661ddcbbe0a4b56e66d4879ca5259242e077f2a9fe3216c",
+      "size_bytes": 612534,
+      "kind": "raw_data_file (gitignored)"
+    },
+    {
+      "path": "data/gdelt/gdelt-sudan.csv",
+      "sha256": "3edd08ff88e55aa7f4b1c5ecb064db21d522c5359b10213f9209fa56056e6803",
+      "size_bytes": 3195570,
+      "kind": "raw_data_file (gitignored)"
+    },
+    {
+      "path": "data/gdelt/gdelt-yemen.csv",
+      "sha256": "54acc3bd0f1e80e9c61c591c07d52c262200f88f8186620bb88354b1036f50a8",
+      "size_bytes": 2356484,
       "kind": "raw_data_file (gitignored)"
     },
     {

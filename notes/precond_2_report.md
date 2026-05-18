@@ -1,8 +1,10 @@
-# Pre-cond 2 Report — Conflict-Source Agreement (ACLED vs UCDP-GED)
+# Pre-cond 2 Report — Conflict-Source Agreement (GDELT vs UCDP-GED)
 
-**Run at:** 2026-05-17 19:58:46
+**Redline:** Entry 001 — ACLED replaced by GDELT (notes/pre_reg_redline.md). Threshold unchanged.
 
-**Locked check:** Spearman corr >= 0.6 between ACLED and UCDP-GED event counts per admin-2 x year.
+**Run at:** 2026-05-17 21:18:48
+
+**Locked check:** Spearman corr >= 0.6 between GDELT and UCDP-GED event counts per admin-2 x year.
 
 **Overall verdict:** **PHASE0_STUB**
 

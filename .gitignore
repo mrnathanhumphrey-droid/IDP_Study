@@ -4,6 +4,8 @@ data/ucdp/*.zip
 data/ucdp/*.xlsx
 data/acled/*.csv
 data/acled/*.zip
+data/gdelt/*.csv
+data/gdelt/*.zip
 data/dtm/**/*.csv
 data/dtm/**/*.xlsx
 data/dtm/**/*.xls

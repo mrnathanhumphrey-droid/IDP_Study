@@ -1,16 +1,20 @@
-"""Pre-cond 2 — Conflict-source agreement (ACLED vs UCDP-GED).
+"""Pre-cond 2 — Conflict-source agreement (GDELT vs UCDP-GED).
 
-Locked check (§7 of design doc):
-  ACLED and UCDP-GED event counts per admin-2 x year correlate >= 0.6
+**REDLINE Entry 001 (notes/pre_reg_redline.md):** ACLED replaced by GDELT
+because non-institutional PI cannot access ACLED. Threshold (Spearman
+>= 0.6) and aggregation (admin-2 x year) UNCHANGED from v1.
+
+Locked check (§7 of design doc, as redlined v1 -> v2):
+  GDELT and UCDP-GED event counts per admin-2 x year correlate >= 0.6
   across the panel (Spearman). Cross-source validity check.
 
 Pass: all countries clear.
 Fail: reframe shock indicator as source-specific; rerun §5 Axis 1 as
       primary instead of robustness.
 
-Phase 0 status: runs against fetched UCDP + ACLED data spatial-joined to
-GADM admin-2 polygons. In Phase 0, if either data source not present,
-emits STUB.
+Phase 0 status: runs against fetched UCDP + GDELT data spatial-joined to
+GADM admin-2 polygons. In Phase 0 smoke test, GDELT covers Dec 2024 only;
+Phase 1 expands to full 2014-2024.
 """
 import pathlib, sys, json, time, io
 import warnings; warnings.filterwarnings("ignore")
@@ -23,7 +27,7 @@ import pandas as pd
 
 ROOT = pathlib.Path(r"D:/IDP")
 UCDP_DIR = ROOT / "data" / "ucdp"
-ACLED_DIR = ROOT / "data" / "acled"
+GDELT_DIR = ROOT / "data" / "gdelt"   # was ACLED_DIR; redlined per Entry 001
 GADM_DIR = ROOT / "data" / "gadm"
 NOTES = ROOT / "notes"
 REPORT = NOTES / "precond_2_report.md"
@@ -43,10 +47,10 @@ def stub_result(country, reason):
 
 def check_country(country):
     ucdp_path = UCDP_DIR / f"ucdp-ged-{country}.csv"
-    acled_path = ACLED_DIR / f"acled-{country}.csv"
+    gdelt_path = GDELT_DIR / f"gdelt-{country}.csv"   # was acled-{country}.csv per Entry 001
     gadm_path = GADM_DIR / f"gadm41_{country}.gpkg"
     missing = []
-    for p, name in [(ucdp_path, "UCDP"), (acled_path, "ACLED"), (gadm_path, "GADM")]:
+    for p, name in [(ucdp_path, "UCDP"), (gdelt_path, "GDELT"), (gadm_path, "GADM")]:
         if not p.exists(): missing.append(name)
     if missing:
         return stub_result(country, f"Missing data: {missing}")
@@ -75,7 +79,7 @@ def check_country(country):
     # Load + filter event tables to year + admin-2 join
     try:
         ucdp = pd.read_csv(ucdp_path, low_memory=False)
-        acled = pd.read_csv(acled_path, low_memory=False)
+        gdelt = pd.read_csv(gdelt_path, low_memory=False, sep="\t")
     except Exception as e:
         return stub_result(country, f"event table read failed: {e}")
 
@@ -89,15 +93,17 @@ def check_country(country):
         return None
 
     ucdp_year = to_year(ucdp, ["year","date_start","Year"])
-    acled_year = to_year(acled, ["year","event_date","Year"])
-    if ucdp_year is None or acled_year is None:
+    gdelt_year = to_year(gdelt, ["year","Year","sqldate"])  # GDELT 1.0 has 'year' + 'sqldate'
+    if gdelt_year is None and "sqldate" in gdelt.columns:
+        gdelt_year = pd.to_numeric(gdelt["sqldate"].astype(str).str[:4], errors="coerce")
+    if ucdp_year is None or gdelt_year is None:
         return stub_result(country, "year column not identified in events")
     ucdp = ucdp.assign(_year=ucdp_year)
-    acled = acled.assign(_year=acled_year)
+    gdelt = gdelt.assign(_year=gdelt_year)
 
     # Filter to panel years 2014-2024
     ucdp = ucdp[(ucdp["_year"] >= 2014) & (ucdp["_year"] <= 2024)]
-    acled = acled[(acled["_year"] >= 2014) & (acled["_year"] <= 2024)]
+    gdelt = gdelt[(gdelt["_year"] >= 2014) & (gdelt["_year"] <= 2024)]
 
     # Spatial join each event table to admin-2
     def make_gdf(df, lat_cols, lon_cols):
@@ -107,24 +113,25 @@ def check_country(country):
                     geometry=gpd.points_from_xy(df[lon], df[lat]), crs="EPSG:4326")
         return None
     u_g = make_gdf(ucdp, ["latitude","lat"], ["longitude","lon"])
-    a_g = make_gdf(acled, ["latitude","lat"], ["longitude","lon"])
-    if u_g is None or a_g is None:
+    g_g = make_gdf(gdelt, ["actiongeo_lat","ActionGeo_Lat","lat"],
+                          ["actiongeo_long","ActionGeo_Long","lon"])
+    if u_g is None or g_g is None:
         return stub_result(country, "lat/lon columns not identified")
     if adm2.crs is None or str(adm2.crs).lower() != "epsg:4326":
         adm2 = adm2.to_crs("EPSG:4326")
     u_join = gpd.sjoin(u_g, adm2[[adm2_id_col,"geometry"]], how="left", predicate="within")
-    a_join = gpd.sjoin(a_g, adm2[[adm2_id_col,"geometry"]], how="left", predicate="within")
+    g_join = gpd.sjoin(g_g, adm2[[adm2_id_col,"geometry"]], how="left", predicate="within")
 
     # Per-admin2 × year counts
     u_count = (u_join.dropna(subset=[adm2_id_col])
                      .groupby([adm2_id_col,"_year"]).size().rename("ucdp_events"))
-    a_count = (a_join.dropna(subset=[adm2_id_col])
-                     .groupby([adm2_id_col,"_year"]).size().rename("acled_events"))
-    panel = pd.concat([u_count, a_count], axis=1).fillna(0).reset_index()
+    g_count = (g_join.dropna(subset=[adm2_id_col])
+                     .groupby([adm2_id_col,"_year"]).size().rename("gdelt_events"))
+    panel = pd.concat([u_count, g_count], axis=1).fillna(0).reset_index()
     if len(panel) < 30:
         return stub_result(country, f"only {len(panel)} cells — too few for correlation")
 
-    rho = panel["ucdp_events"].corr(panel["acled_events"], method="spearman")
+    rho = panel["ucdp_events"].corr(panel["gdelt_events"], method="spearman")
     verdict = "PASS" if rho >= LOCKED_CORR_THRESHOLD else "FAIL"
     return {
         "country": country,
@@ -136,7 +143,7 @@ def check_country(country):
 
 
 def main():
-    print(f"=== Pre-cond 2: ACLED vs UCDP source agreement ===")
+    print(f"=== Pre-cond 2: GDELT vs UCDP source agreement (per redline Entry 001) ===")
     print(f"  Locked threshold: Spearman corr >= {LOCKED_CORR_THRESHOLD}")
     results = [check_country(c) for c in COUNTRIES]
     for r in results:
@@ -147,9 +154,10 @@ def main():
                else "FAIL_OR_MIXED")
 
     md = []
-    md.append("# Pre-cond 2 Report — Conflict-Source Agreement (ACLED vs UCDP-GED)\n")
+    md.append("# Pre-cond 2 Report — Conflict-Source Agreement (GDELT vs UCDP-GED)\n")
+    md.append(f"**Redline:** Entry 001 — ACLED replaced by GDELT (notes/pre_reg_redline.md). Threshold unchanged.\n")
     md.append(f"**Run at:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
-    md.append(f"**Locked check:** Spearman corr >= {LOCKED_CORR_THRESHOLD} between ACLED and UCDP-GED event counts per admin-2 x year.\n")
+    md.append(f"**Locked check:** Spearman corr >= {LOCKED_CORR_THRESHOLD} between GDELT and UCDP-GED event counts per admin-2 x year.\n")
     md.append(f"**Overall verdict:** **{overall}**\n")
     md.append("\n## Per-country results\n")
     md.append("| Country | Spearman corr | N cells | Verdict |")
