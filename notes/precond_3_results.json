@@ -1,29 +1,33 @@
 {
-  "overall": "PHASE0_STUB",
+  "overall": "PASS",
   "results": [
     {
       "country": "colombia",
-      "verdict": "PHASE0_STUB",
-      "reason": "No digitized polygon in historical_polygons\\colombia_cdo_1922 (only provenance.md present)",
-      "n_admin2_in_polygon": null
+      "polygon_file": "historical_polygons\\colombia_la_violencia_1948_1958\\stage_a_polygon.geojson",
+      "n_admin2_in_polygon": 658,
+      "threshold": 5,
+      "verdict": "PASS"
     },
     {
       "country": "sudan",
-      "verdict": "PHASE0_STUB",
-      "reason": "No digitized polygon in historical_polygons\\sudan_fur_dar_pre1994 (only provenance.md present)",
-      "n_admin2_in_polygon": null
+      "polygon_file": "historical_polygons\\sudan_fur_dar_pre1994\\stage_a_polygon.geojson",
+      "n_admin2_in_polygon": 21,
+      "threshold": 5,
+      "verdict": "PASS"
     },
     {
       "country": "drc",
-      "verdict": "PHASE0_STUB",
-      "reason": "No digitized polygon in historical_polygons\\drc_kivu_pre1996 (only provenance.md present)",
-      "n_admin2_in_polygon": null
+      "polygon_file": "historical_polygons\\drc_kasai_1959_1965\\stage_a_polygon.geojson",
+      "n_admin2_in_polygon": 59,
+      "threshold": 5,
+      "verdict": "PASS"
     },
     {
       "country": "yemen",
-      "verdict": "PHASE0_STUB",
-      "reason": "No digitized polygon in historical_polygons\\yemen_houthi_zaydi (only provenance.md present)",
-      "n_admin2_in_polygon": null
+      "polygon_file": "historical_polygons\\yemen_six_wars_2004_2010\\stage_a_polygon.geojson",
+      "n_admin2_in_polygon": 102,
+      "threshold": 5,
+      "verdict": "PASS"
     }
   ]
 }

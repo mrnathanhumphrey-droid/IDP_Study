@@ -1,0 +1,115 @@
+{
+  "polygon": "colombia_la_violencia_1948_1958",
+  "status": "BUILT",
+  "built_at": "2026-05-17 22:31:11",
+  "method": "department-level dissolution (Phase 1 first-pass; municipio-level subdivision deferred to verification)",
+  "n_features_dissolved": 9,
+  "decisions": [
+    {
+      "level": 1,
+      "source": "admin_units",
+      "decisions": [
+        {
+          "requested": "Tolima",
+          "normalized": "tolima",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Caldas",
+          "normalized": "caldas",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Risaralda",
+          "normalized": "risaralda",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Quind\u00edo",
+          "normalized": "quindio",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Valle del Cauca",
+          "normalized": "valle del cauca",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Antioquia",
+          "normalized": "antioquia",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Boyac\u00e1",
+          "normalized": "boyaca",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Cundinamarca",
+          "normalized": "cundinamarca",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Norte de Santander",
+          "normalized": "norte de santander",
+          "status": "MATCHED"
+        }
+      ],
+      "n_matched": 9
+    }
+  ],
+  "component_admin_units": [
+    {
+      "GID_0": "COL",
+      "GID_1": "COL.2_2",
+      "NAME_1": "Antioquia"
+    },
+    {
+      "GID_0": "COL",
+      "GID_1": "COL.7_2",
+      "NAME_1": "Boyac\u00e1"
+    },
+    {
+      "GID_0": "COL",
+      "GID_1": "COL.8_2",
+      "NAME_1": "Caldas"
+    },
+    {
+      "GID_0": "COL",
+      "GID_1": "COL.15_2",
+      "NAME_1": "Cundinamarca"
+    },
+    {
+      "GID_0": "COL",
+      "GID_1": "COL.23_2",
+      "NAME_1": "Norte de Santander"
+    },
+    {
+      "GID_0": "COL",
+      "GID_1": "COL.25_2",
+      "NAME_1": "Quind\u00edo"
+    },
+    {
+      "GID_0": "COL",
+      "GID_1": "COL.26_2",
+      "NAME_1": "Risaralda"
+    },
+    {
+      "GID_0": "COL",
+      "GID_1": "COL.30_2",
+      "NAME_1": "Tolima"
+    },
+    {
+      "GID_0": "COL",
+      "GID_1": "COL.31_2",
+      "NAME_1": "Valle del Cauca"
+    }
+  ],
+  "verification_status": "FIRST_PASS \u2014 locked dept list; municipio subdivision pending review against CNMH Map 2 + Rold\u00e1n regional appendix",
+  "sources": [
+    "Rold\u00e1n M., Blood and Fire: La Violencia in Antioquia, Colombia 1946-1953 (Duke UP, 2002)",
+    "S\u00e1nchez G. & Meertens D., Bandoleros, gamonales y campesinos: el caso de la Violencia en Colombia (1983)",
+    "Oquist P., Violence, Conflict, and Politics in Colombia (Academic Press, 1980)",
+    "CNMH \u00a1Basta Ya! Colombia: Memorias de guerra y dignidad (2013) Map 2"
+  ]
+}

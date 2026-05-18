@@ -1,0 +1,7 @@
+{
+  "country": "colombia",
+  "fetched_at": "2026-05-17 22:21:41",
+  "source": "HDX HAPI v2 /api/v2/affected-people/idps",
+  "n_rows": 0,
+  "coverage_note": "HDX HAPI returned zero admin-2 rows for this country. DTM presence may be minimal (esp. Colombia) or rounds may not have been ingested into HAPI yet."
+}

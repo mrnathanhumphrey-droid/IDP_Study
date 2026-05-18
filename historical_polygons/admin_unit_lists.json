@@ -1,0 +1,132 @@
+{
+  "_schema": "First-pass Stage-A polygon admin-unit lists. Per locked pre-reg §2 (Entry 002, 2026-05-17), each polygon marks a founding-atrocity geography where chronic IDP burden has lived for decades. Polygons here are built by dissolving GADM admin-2 units that match the historical operational/expulsion extent documented in academic + primary sources. Verification pass against source maps remains a follow-up step before locking the polygon for analysis use.",
+  "_locked_at": "2026-05-17",
+  "_methodology_note": "Alternative to CV-based polygon tracing from historic maps (which introduces ground-control-point error). Admin-unit-list dissolution is reproducible, auditable, and matches how most historic-violence-zone empirical work codes geography.",
+
+  "colombia_la_violencia_1948_1958": {
+    "country": "Colombia",
+    "iso3": "COL",
+    "gadm_file": "gadm41_colombia.gpkg",
+    "gadm_admin_level": 1,
+    "gadm_name_field": "NAME_1",
+    "method": "department-level dissolution (Phase 1 first-pass; municipio-level subdivision deferred to verification)",
+    "admin_units": [
+      "Tolima",
+      "Caldas",
+      "Risaralda",
+      "Quindío",
+      "Valle del Cauca",
+      "Antioquia",
+      "Boyacá",
+      "Cundinamarca",
+      "Norte de Santander"
+    ],
+    "sources": [
+      "Roldán M., Blood and Fire: La Violencia in Antioquia, Colombia 1946-1953 (Duke UP, 2002)",
+      "Sánchez G. & Meertens D., Bandoleros, gamonales y campesinos: el caso de la Violencia en Colombia (1983)",
+      "Oquist P., Violence, Conflict, and Politics in Colombia (Academic Press, 1980)",
+      "CNMH ¡Basta Ya! Colombia: Memorias de guerra y dignidad (2013) Map 2"
+    ],
+    "verification_status": "FIRST_PASS — locked dept list; municipio subdivision pending review against CNMH Map 2 + Roldán regional appendix"
+  },
+
+  "sudan_fur_dar_pre1994": {
+    "country": "Sudan",
+    "iso3": "SDN",
+    "gadm_file": "gadm41_sudan.gpkg",
+    "gadm_admin_level": 1,
+    "gadm_name_field": "NAME_1",
+    "method": "state-level dissolution corresponding to pre-1994 Darfur Province (modern Darfur is 5 states post-2012 split)",
+    "admin_units": [
+      "North Darfur",
+      "South Darfur",
+      "West Darfur",
+      "Central Darfur",
+      "East Darfur"
+    ],
+    "sources": [
+      "Daly M.W., Darfur's Sorrow: A History of Destruction and Genocide (Cambridge UP, 2007)",
+      "De Waal A., Famine that Kills: Darfur, Sudan (Oxford UP, 2005, rev. ed.)",
+      "Anglo-Egyptian Survey of Sudan (pre-1994 Darfur Province boundary)"
+    ],
+    "verification_status": "FIRST_PASS — modern 5-state Darfur aligns with pre-1994 Darfur Province extent within ~50km on eastern boundary"
+  },
+
+  "drc_kasai_1959_1965": {
+    "country": "DRC",
+    "iso3": "COD",
+    "gadm_file": "gadm41_drc.gpkg",
+    "gadm_admin_level": 1,
+    "gadm_name_field": "NAME_1",
+    "method": "province-level dissolution covering modern Kasai + Kasai-Central + Kasai-Oriental + Lomami + Sankuru (pre-2015 = Kasai-Occidental + Kasai-Oriental)",
+    "admin_units": [
+      "Kasaï",
+      "Kasai",
+      "Kasaï-Central",
+      "Kasai-Central",
+      "Kasaï-Oriental",
+      "Kasai-Oriental",
+      "Lomami",
+      "Sankuru"
+    ],
+    "sources": [
+      "Young C. & Turner T., The Rise and Decline of the Zairian State (U Wisconsin Press, 1985) — Kasai chapter",
+      "Lemarchand R., Political Awakening in the Belgian Congo (U California Press, 1964)",
+      "Stearns J.K., Dancing in the Glory of Monsters (PublicAffairs, 2011) — Kasai context ch. 1",
+      "CRDA UCL Louvain — Centre de Recherche et de Documentation sur les Afriques"
+    ],
+    "documented_territoires_pending_subdivision": [
+      "Luiza",
+      "Demba",
+      "Dimbelenge",
+      "Mweka",
+      "Tshikapa",
+      "Luebo",
+      "Ilebo",
+      "Lusambo",
+      "Lodja",
+      "Lubefu",
+      "Mwene-Ditu",
+      "Kabinda"
+    ],
+    "verification_status": "FIRST_PASS — province-level lock; territoire subdivision deferred pending verification against Young & Turner + Stearns admin maps"
+  },
+
+  "yemen_six_wars_2004_2010": {
+    "country": "Yemen",
+    "iso3": "YEM",
+    "gadm_file": "gadm41_yemen.gpkg",
+    "gadm_admin_level": 2,
+    "gadm_name_field": "NAME_2",
+    "method": "admin-2 district-level dissolution from ICG MER N°86 explicit district citations + governorate-level expansion zones",
+    "admin_units_admin2_explicit_in_icg_mer86": [
+      "Haydan",
+      "Majz",
+      "Sahar",
+      "Baqim",
+      "Ghamir",
+      "Razih",
+      "Harf Sufyan",
+      "Bani Hushaysh"
+    ],
+    "admin_units_admin1_full_governorate_coverage": [
+      "Sa'dah",
+      "Saada",
+      "Sa`dah",
+      "Al Jawf",
+      "Al-Jawf"
+    ],
+    "admin_units_admin1_partial_expansion": [
+      "Amran",
+      "'Amran",
+      "Hajjah"
+    ],
+    "sources": [
+      "ICG Middle East Report N°86, Yemen: Defusing the Saada Time Bomb (27 May 2009)",
+      "ICG Middle East Report N°114 (Yemen follow-up)",
+      "Salisbury P., Yemen's Houthi Conflict (Chatham House, 2015)",
+      "UCDP-GED v25.1 (event-level Yemen 2004-2010 cross-check)"
+    ],
+    "verification_status": "FIRST_PASS — district-level extracted from ICG MER N°86 text; governorate-level expansion zones aligned with literature consensus"
+  }
+}

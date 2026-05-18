@@ -1,0 +1,74 @@
+{
+  "polygon": "sudan_fur_dar_pre1994",
+  "status": "BUILT",
+  "built_at": "2026-05-17 22:31:11",
+  "method": "state-level dissolution corresponding to pre-1994 Darfur Province (modern Darfur is 5 states post-2012 split)",
+  "n_features_dissolved": 5,
+  "decisions": [
+    {
+      "level": 1,
+      "source": "admin_units",
+      "decisions": [
+        {
+          "requested": "North Darfur",
+          "normalized": "north darfur",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "South Darfur",
+          "normalized": "south darfur",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "West Darfur",
+          "normalized": "west darfur",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Central Darfur",
+          "normalized": "central darfur",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "East Darfur",
+          "normalized": "east darfur",
+          "status": "MATCHED"
+        }
+      ],
+      "n_matched": 5
+    }
+  ],
+  "component_admin_units": [
+    {
+      "GID_0": "SDN",
+      "GID_1": "SDN.4_1",
+      "NAME_1": "Central Darfur"
+    },
+    {
+      "GID_0": "SDN",
+      "GID_1": "SDN.5_1",
+      "NAME_1": "East Darfur"
+    },
+    {
+      "GID_0": "SDN",
+      "GID_1": "SDN.8_1",
+      "NAME_1": "North Darfur"
+    },
+    {
+      "GID_0": "SDN",
+      "GID_1": "SDN.14_1",
+      "NAME_1": "South Darfur"
+    },
+    {
+      "GID_0": "SDN",
+      "GID_1": "SDN.16_1",
+      "NAME_1": "West Darfur"
+    }
+  ],
+  "verification_status": "FIRST_PASS \u2014 modern 5-state Darfur aligns with pre-1994 Darfur Province extent within ~50km on eastern boundary",
+  "sources": [
+    "Daly M.W., Darfur's Sorrow: A History of Destruction and Genocide (Cambridge UP, 2007)",
+    "De Waal A., Famine that Kills: Darfur, Sudan (Oxford UP, 2005, rev. ed.)",
+    "Anglo-Egyptian Survey of Sudan (pre-1994 Darfur Province boundary)"
+  ]
+}

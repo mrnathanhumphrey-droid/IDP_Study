@@ -1,0 +1,65 @@
+{
+  "country": "sudan",
+  "fetched_at": "2026-05-17 22:21:52",
+  "source": "HDX HAPI v2 /api/v2/affected-people/idps",
+  "n_rows": 16452,
+  "columns_present": [
+    "location_code",
+    "location_name",
+    "admin1_code",
+    "admin1_name",
+    "admin2_code",
+    "admin2_name",
+    "admin_level",
+    "resource_hdx_id",
+    "reporting_round",
+    "assessment_type",
+    "operation",
+    "population",
+    "reference_period_start",
+    "reference_period_end"
+  ],
+  "n_unique_admin2": 186,
+  "n_unique_admin1": 19,
+  "reporting_round_range": [
+    0,
+    70
+  ],
+  "reference_period_start_range": [
+    "2010-06-30T00:00:00",
+    "2025-12-31T00:00:00"
+  ],
+  "reference_period_end_range": [
+    "2010-06-30T23:59:59",
+    "2025-12-31T23:59:59"
+  ],
+  "assessment_types": [
+    "BA",
+    "SA"
+  ],
+  "operations": [
+    "Armed Clashes in Sudan",
+    "Armed Clashes in Sudan (Monthly)",
+    "Armed Clashes in Sudan (Overview)",
+    "Biometric Registration",
+    "Darfur conflict"
+  ],
+  "n_unique_operations": 5,
+  "null_counts": {
+    "location_code": 0,
+    "location_name": 0,
+    "admin1_code": 0,
+    "admin1_name": 0,
+    "admin2_code": 0,
+    "admin2_name": 0,
+    "admin_level": 0,
+    "resource_hdx_id": 0,
+    "reporting_round": 0,
+    "assessment_type": 0,
+    "operation": 0,
+    "population": 0,
+    "reference_period_start": 0,
+    "reference_period_end": 0
+  },
+  "upstream_harmonization_note": "HDX HAPI v2 pre-aggregates IOM DTM rounds into a uniform admin-2 schema; the harmonization above (rename + type coerce + missing-fill) happens upstream at IOM/OCHA. This log records the SHAPE we received."
+}

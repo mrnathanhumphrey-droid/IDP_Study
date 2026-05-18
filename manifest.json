@@ -1,7 +1,7 @@
 {
   "study": "Internal Displacement Cross-Country Study (substrate 9)",
   "phase": "Phase 0 \u2014 pre-reg lock + data fetch + pre-cond scaffold",
-  "last_updated": "2026-05-17 21:18:48",
+  "last_updated": "2026-05-17 22:35:35",
   "lock_commit": "set on initial git commit",
   "files": [
     {
@@ -99,6 +99,49 @@
       "sha256": "b3a5ac370dffde8faeb19467ceec2e6f24fdb15792cece5043b2e25a73e77620",
       "size_bytes": 3952333,
       "kind": "raw_data_file (gitignored)"
+    },
+    {
+      "source": "HDX HAPI v2 IDP admin2 fetch (SDN)",
+      "filename": "data\\dtm\\sudan\\hdx_idps_admin2_sudan.csv",
+      "sha256": "2b90933238e97ce47a05c13c4c479483ce5d850fb8578e8b0465ee43ccb3d168",
+      "size_bytes": 2685816,
+      "row_count": 16452,
+      "fetched_at": "2026-05-17 22:21:52",
+      "iso3": "SDN"
+    },
+    {
+      "source": "HDX HAPI v2 IDP admin2 fetch (COD)",
+      "filename": "data\\dtm\\drc\\hdx_idps_admin2_drc.csv",
+      "sha256": "bd79e2ff80399c9e75ad9842d2dd30fc63b969d8fc131c2441a160cb5fc00518",
+      "size_bytes": 237823,
+      "row_count": 1366,
+      "fetched_at": "2026-05-17 22:21:53",
+      "iso3": "COD"
+    },
+    {
+      "source": "HDX HAPI v2 IDP admin2 fetch (YEM)",
+      "filename": "data\\dtm\\yemen\\hdx_idps_admin2_yemen.csv",
+      "sha256": "7ab8e0763c048034c0685feff85c2ea9e70072faacbf65aefe559e448829f43a",
+      "size_bytes": 674649,
+      "row_count": 4641,
+      "fetched_at": "2026-05-17 22:21:56",
+      "iso3": "YEM"
+    },
+    {
+      "source": "DRC Kasai 1959-1965 atrocity-count first-pass (admin-2 0/1/2 coding from documented territoire list)",
+      "filename": "data\\atrocity_drc_kasai_1959_1965_first_pass.csv",
+      "sha256": "126941e5f75e91dfb85d31974033d1ae7877deb022330a69c18f627215847081",
+      "size_bytes": 16703,
+      "row_count": 240,
+      "fetched_at": "2026-05-17 22:33:26"
+    },
+    {
+      "source": "Combined admin-2 \u00d7 year IDP panel from HDX HAPI v2 (Phase 1 first-pass; Colombia gap)",
+      "filename": "data\\panels\\idp_admin2_annual.csv",
+      "sha256": "8b13c31cac91563e5e7db36f03dada4471c706f0d6697fd0478ed7e08e5a48c9",
+      "size_bytes": 260980,
+      "row_count": 3160,
+      "fetched_at": "2026-05-17 22:35:35"
     }
   ]
 }

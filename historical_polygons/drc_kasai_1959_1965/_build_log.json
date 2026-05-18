@@ -1,0 +1,90 @@
+{
+  "polygon": "drc_kasai_1959_1965",
+  "status": "BUILT",
+  "built_at": "2026-05-17 22:31:11",
+  "method": "province-level dissolution covering modern Kasai + Kasai-Central + Kasai-Oriental + Lomami + Sankuru (pre-2015 = Kasai-Occidental + Kasai-Oriental)",
+  "n_features_dissolved": 5,
+  "decisions": [
+    {
+      "level": 1,
+      "source": "admin_units",
+      "decisions": [
+        {
+          "requested": "Kasa\u00ef",
+          "normalized": "kasai",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Kasai",
+          "normalized": "kasai",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Kasa\u00ef-Central",
+          "normalized": "kasai central",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Kasai-Central",
+          "normalized": "kasai central",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Kasa\u00ef-Oriental",
+          "normalized": "kasai oriental",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Kasai-Oriental",
+          "normalized": "kasai oriental",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Lomami",
+          "normalized": "lomami",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Sankuru",
+          "normalized": "sankuru",
+          "status": "MATCHED"
+        }
+      ],
+      "n_matched": 5
+    }
+  ],
+  "component_admin_units": [
+    {
+      "GID_0": "COD",
+      "GID_1": "COD.9_1",
+      "NAME_1": "Kasa\u00ef"
+    },
+    {
+      "GID_0": "COD",
+      "GID_1": "COD.7_1",
+      "NAME_1": "Kasa\u00ef-Central"
+    },
+    {
+      "GID_0": "COD",
+      "GID_1": "COD.8_1",
+      "NAME_1": "Kasa\u00ef-Oriental"
+    },
+    {
+      "GID_0": "COD",
+      "GID_1": "COD.14_1",
+      "NAME_1": "Lomami"
+    },
+    {
+      "GID_0": "COD",
+      "GID_1": "COD.21_1",
+      "NAME_1": "Sankuru"
+    }
+  ],
+  "verification_status": "FIRST_PASS \u2014 province-level lock; territoire subdivision deferred pending verification against Young & Turner + Stearns admin maps",
+  "sources": [
+    "Young C. & Turner T., The Rise and Decline of the Zairian State (U Wisconsin Press, 1985) \u2014 Kasai chapter",
+    "Lemarchand R., Political Awakening in the Belgian Congo (U California Press, 1964)",
+    "Stearns J.K., Dancing in the Glory of Monsters (PublicAffairs, 2011) \u2014 Kasai context ch. 1",
+    "CRDA UCL Louvain \u2014 Centre de Recherche et de Documentation sur les Afriques"
+  ]
+}

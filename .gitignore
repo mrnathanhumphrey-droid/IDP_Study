@@ -6,6 +6,10 @@ data/acled/*.csv
 data/acled/*.zip
 data/gdelt/*.csv
 data/gdelt/*.zip
+data/gdelt/**/*.zip
+data/gdelt/**/*.csv
+data/gdelt/_progress.json
+data/gdelt/_raw/
 data/dtm/**/*.csv
 data/dtm/**/*.xlsx
 data/dtm/**/*.xls
@@ -22,6 +26,18 @@ data/eosv/*.zip
 data/polygons/*.geojson
 data/polygons/*.shp
 data/polygons/*.gpkg
+
+# DTM raw JSON (HDX HAPI snapshots; harmonization logs are tracked)
+data/dtm/**/*_raw.json
+# Colombia RUV cross-section snapshot from datos.gov.co (regeneratable)
+data/dtm/colombia_ruv/*.json
+data/dtm/colombia_ruv/_socrata_catalog_search.json
+
+# Historical-polygon source PDFs (copyrighted; re-fetchable via build scripts)
+historical_polygons/_sources/*.pdf
+historical_polygons/_sources/*.txt
+historical_polygons/_sources/*.png
+historical_polygons/_sources/*.jpg
 
 # Historical polygon digitization outputs (committed when ready;
 # provenance.md tracked separately)

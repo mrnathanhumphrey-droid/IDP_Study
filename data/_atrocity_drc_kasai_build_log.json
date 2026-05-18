@@ -1,0 +1,29 @@
+{
+  "build_at": "2026-05-17 22:33:26",
+  "method": "Phase 1 first-pass admin-2 coding (0/1/2) from documented-territoire list + Kasai dissolved polygon intersection",
+  "documented_territoires_high": [
+    "Demba",
+    "Dimbelenge",
+    "Ilebo",
+    "Kabinda",
+    "Lodja",
+    "Lubefu",
+    "Luebo",
+    "Luiza",
+    "Lusambo",
+    "Mweka",
+    "Mwene-Ditu",
+    "Tshikapa"
+  ],
+  "n_high": 12,
+  "n_medium": 47,
+  "n_zero": 181,
+  "verification_status": "FIRST_PASS \u2014 true per-territoire event counts deferred pending Young & Turner / Lemarchand / Stearns PDF retrieval",
+  "feeds": "Stan H_HISTORICAL_INTENSITY: log1p(atrocity_count_first_pass)",
+  "sources": [
+    "Young C. & Turner T., The Rise and Decline of the Zairian State (1985) \u2014 Kasai chapter",
+    "Lemarchand R., Political Awakening in the Belgian Congo (1964)",
+    "Stearns J.K., Dancing in the Glory of Monsters (2011) \u2014 ch. 1",
+    "Wikipedia Invasion of South Kasai (2026-05-17 snapshot, multi-source-cross-cited)"
+  ]
+}

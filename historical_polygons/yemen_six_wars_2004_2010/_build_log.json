@@ -1,0 +1,714 @@
+{
+  "polygon": "yemen_six_wars_2004_2010",
+  "status": "BUILT",
+  "built_at": "2026-05-17 22:31:11",
+  "method": "admin-2 district-level dissolution from ICG MER N\u00b086 explicit district citations + governorate-level expansion zones",
+  "n_features_dissolved": 79,
+  "decisions": [
+    {
+      "level": 2,
+      "source": "admin_units_admin2_explicit_in_icg_mer86",
+      "decisions": [
+        {
+          "requested": "Haydan",
+          "normalized": "haydan",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Majz",
+          "normalized": "majz",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Sahar",
+          "normalized": "sahar",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Baqim",
+          "normalized": "baqim",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Ghamir",
+          "normalized": "ghamir",
+          "status": "NOT_FOUND"
+        },
+        {
+          "requested": "Razih",
+          "normalized": "razih",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Harf Sufyan",
+          "normalized": "harf sufyan",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Bani Hushaysh",
+          "normalized": "bani hushaysh",
+          "status": "MATCHED"
+        }
+      ],
+      "n_matched": 7
+    },
+    {
+      "level": 1,
+      "source": "admin_units_admin1_full_governorate_coverage",
+      "decisions": [
+        {
+          "requested": "Sa'dah",
+          "normalized": "sadah",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Saada",
+          "normalized": "saada",
+          "status": "NOT_FOUND"
+        },
+        {
+          "requested": "Sa`dah",
+          "normalized": "sadah",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Al Jawf",
+          "normalized": "al jawf",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Al-Jawf",
+          "normalized": "al jawf",
+          "status": "MATCHED"
+        }
+      ],
+      "n_matched": 2
+    },
+    {
+      "level": 1,
+      "source": "admin_units_admin1_partial_expansion",
+      "decisions": [
+        {
+          "requested": "Amran",
+          "normalized": "amran",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "'Amran",
+          "normalized": "amran",
+          "status": "MATCHED"
+        },
+        {
+          "requested": "Hajjah",
+          "normalized": "hajjah",
+          "status": "MATCHED"
+        }
+      ],
+      "n_matched": 2
+    }
+  ],
+  "component_admin_units": [
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.10_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Harf Sufyan"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.4_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Baqim"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.6_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Haydan"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.8_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Majz"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.11_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Razih"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.13_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Sahar"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.19_1",
+      "GID_2": "YEM.19.7_1",
+      "NAME_1": "San`a'",
+      "NAME_2": "Bani Hushaysh"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.1_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Al Ghayl"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.2_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Al Hazm"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.3_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Al Humaydat"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.4_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Al Khalq"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.5_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Al Maslub"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.6_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Al Matammah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.7_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Al Maton"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.8_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Az Zahir"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.9_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Bart Al Anan"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.10_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Khabb wa ash Sha'af"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.11_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Kharab Al Marashi"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.6_1",
+      "GID_2": "YEM.6.12_1",
+      "NAME_1": "Al Jawf",
+      "NAME_2": "Rajuzah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.1_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Al Dhaher"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.2_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Al Hashwah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.3_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "As Safra"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.4_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Baqim"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.5_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Ghamr"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.6_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Haydan"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.7_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Kitaf wa Al Boqe'e"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.8_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Majz"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.9_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Monabbih"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.10_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Qatabir"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.11_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Razih"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.12_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Sa'adah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.13_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Sahar"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.14_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Saqayn"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.18_1",
+      "GID_2": "YEM.18.15_1",
+      "NAME_1": "Sa`dah",
+      "NAME_2": "Shada'a"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.1_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Al Ashah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.2_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Al Madan"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.3_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Al Qaflah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.4_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Amran"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.5_1",
+      "NAME_1": "Amran",
+      "NAME_2": "As Sawd"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.6_1",
+      "NAME_1": "Amran",
+      "NAME_2": "As Sudah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.7_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Bani Suraim"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.8_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Dhi Bin"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.9_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Habur Zulaymah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.10_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Harf Sufyan"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.11_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Huth"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.12_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Iyal Surayh"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.13_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Jabal Iyal Yazid"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.14_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Khamir"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.15_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Kharif"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.16_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Maswar"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.17_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Raydah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.18_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Shaharah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.19_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Suwayr"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.10_1",
+      "GID_2": "YEM.10.20_1",
+      "NAME_1": "Amran",
+      "NAME_2": "Thula"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.1_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Abs"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.2_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Aflah Al Yaman"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.3_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Aflah Ash Shawm"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.4_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Al Jamimah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.5_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Al Maghrabah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.6_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Al Mahabishah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.7_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Al Miftah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.8_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Ash Shaghadirah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.9_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Ash Shahil"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.10_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Aslem"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.11_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Bakil Al Mir"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.12_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Bani Al Awam"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.13_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Bani Qa'is"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.14_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Hajjah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.15_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Hajjah City"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.16_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Harad"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.17_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Hayran"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.18_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Khayran Al Muharraq"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.19_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Ku'aydinah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.20_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Kuhlan Affar"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.21_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Kuhlan Ash Sharaf"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.22_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Kushar"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.23_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Mabyan"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.24_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Midi"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.25_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Mustaba"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.26_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Najrah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.27_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Qafl Shamer"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.28_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Qarah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.29_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Sharas"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.30_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Wadhrah"
+    },
+    {
+      "GID_0": "YEM",
+      "GID_1": "YEM.13_1",
+      "GID_2": "YEM.13.31_1",
+      "NAME_1": "Hajjah",
+      "NAME_2": "Washhah"
+    }
+  ],
+  "verification_status": "FIRST_PASS \u2014 district-level extracted from ICG MER N\u00b086 text; governorate-level expansion zones aligned with literature consensus",
+  "sources": [
+    "ICG Middle East Report N\u00b086, Yemen: Defusing the Saada Time Bomb (27 May 2009)",
+    "ICG Middle East Report N\u00b0114 (Yemen follow-up)",
+    "Salisbury P., Yemen's Houthi Conflict (Chatham House, 2015)",
+    "UCDP-GED v25.1 (event-level Yemen 2004-2010 cross-check)"
+  ]
+}

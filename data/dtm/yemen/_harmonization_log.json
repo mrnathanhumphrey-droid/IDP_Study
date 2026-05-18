@@ -1,0 +1,60 @@
+{
+  "country": "yemen",
+  "fetched_at": "2026-05-17 22:21:56",
+  "source": "HDX HAPI v2 /api/v2/affected-people/idps",
+  "n_rows": 4641,
+  "columns_present": [
+    "location_code",
+    "location_name",
+    "admin1_code",
+    "admin1_name",
+    "admin2_code",
+    "admin2_name",
+    "admin_level",
+    "resource_hdx_id",
+    "reporting_round",
+    "assessment_type",
+    "operation",
+    "population",
+    "reference_period_start",
+    "reference_period_end"
+  ],
+  "n_unique_admin2": 329,
+  "n_unique_admin1": 22,
+  "reporting_round_range": [
+    3,
+    40
+  ],
+  "reference_period_start_range": [
+    "2015-07-30T00:00:00",
+    "2025-02-01T00:00:00"
+  ],
+  "reference_period_end_range": [
+    "2015-07-30T23:59:59",
+    "2025-02-01T23:59:59"
+  ],
+  "assessment_types": [
+    "BA"
+  ],
+  "operations": [
+    "Yemen conflict"
+  ],
+  "n_unique_operations": 1,
+  "null_counts": {
+    "location_code": 0,
+    "location_name": 0,
+    "admin1_code": 0,
+    "admin1_name": 0,
+    "admin2_code": 0,
+    "admin2_name": 0,
+    "admin_level": 0,
+    "resource_hdx_id": 0,
+    "reporting_round": 0,
+    "assessment_type": 0,
+    "operation": 0,
+    "population": 0,
+    "reference_period_start": 0,
+    "reference_period_end": 0
+  },
+  "upstream_harmonization_note": "HDX HAPI v2 pre-aggregates IOM DTM rounds into a uniform admin-2 schema; the harmonization above (rename + type coerce + missing-fill) happens upstream at IOM/OCHA. This log records the SHAPE we received."
+}

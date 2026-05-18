@@ -48,11 +48,14 @@ def check_country(country):
     if not gadm_path.exists():
         return stub_result(country, f"GADM file missing: {gadm_path.relative_to(ROOT)}")
     try:
-        import geopandas as gpd, fiona
+        import geopandas as gpd, pyogrio
     except ImportError:
-        return stub_result(country, "geopandas/fiona not available")
-    poly = gpd.read_file(poly_files[0])
-    layers = fiona.listlayers(gadm_path)
+        return stub_result(country, "geopandas/pyogrio not available")
+    # Prefer the dissolved stage_a_polygon.geojson if present (built by build_admin_unit_polygons.py)
+    canonical = poly_dir / "stage_a_polygon.geojson"
+    poly_path = canonical if canonical.exists() else poly_files[0]
+    poly = gpd.read_file(poly_path)
+    layers = [row[0] for row in pyogrio.list_layers(str(gadm_path))]
     adm2_layer = next((l for l in layers if "_2" in l or "ADM_2" in l.upper()), layers[-1])
     adm2 = gpd.read_file(gadm_path, layer=adm2_layer)
     if poly.crs is None: poly.set_crs("EPSG:4326", inplace=True)
