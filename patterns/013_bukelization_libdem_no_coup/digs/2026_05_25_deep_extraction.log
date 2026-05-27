@@ -1,0 +1,278 @@
+[load] V-Dem full
+  V-Dem cols available: ['country_text_id', 'country_name', 'year', 'v2x_libdem', 'v2x_polyarchy', 'v2x_jucon', 'v2x_freexp_altinf', 'v2xcl_rol', 'v2x_clpol', 'v2elfrfair', 'v2juhcind', 'v2mecenefm', 'v2cseeorgs']
+[load] UCDP-GED
+[load] GIDD displacement
+[load] done
+
+
+================================================================================
+DIG A: Full libdem trajectory 1990-2024 — 5 confirming + 4 falsifying
+================================================================================
+
+iso    1990  1992  1994  1996  1998  2000  2002  2004  2006  2008  2010  2012  2014  2016  2018  2020  2022  2024
+SLV    0.09  0.14  0.26  0.28  0.29  0.32  0.33  0.34  0.35  0.36  0.42  0.43  0.47  0.46  0.43  0.32  0.12  0.09
+HUN    0.71  0.76  0.76  0.76  0.75  0.75  0.76  0.76  0.74  0.77  0.68  0.62  0.52  0.47  0.37  0.35  0.34  0.33
+TUR    0.35  0.37  0.37  0.38  0.39  0.42  0.49  0.50  0.48  0.41  0.36  0.35  0.25  0.14  0.10  0.12  0.11  0.11
+VEN    0.59  0.61  0.60  0.60  0.57  0.31  0.26  0.22  0.17  0.16  0.15  0.14  0.10  0.12  0.06  0.06  0.05  0.05
+POL    0.66  0.80  0.81  0.80  0.80  0.80  0.81  0.81  0.81  0.82  0.83  0.82  0.81  0.60  0.52  0.45  0.42  0.61
+RUS    0.10  0.30  0.29  0.29  0.28  0.22  0.17  0.15  0.15  0.14  0.14  0.12  0.11  0.11  0.11  0.10  0.07  0.06
+IND    0.54  0.57  0.58  0.59  0.59  0.58  0.59  0.58  0.57  0.57  0.53  0.53  0.49  0.41  0.36  0.29  0.29  0.28
+BRA    0.68  0.70  0.71  0.71  0.71  0.72  0.72  0.72  0.77  0.77  0.78  0.78  0.78  0.65  0.61  0.53  0.54  0.71
+USA    0.80  0.81  0.81  0.81  0.81  0.81  0.77  0.80  0.80  0.84  0.85  0.84  0.85  0.83  0.74  0.73  0.77  0.75
+
+================================================================================
+DIG B: Sub-indicator generalization — judicial / media / civil liberties / elections
+================================================================================
+
+SLV (2019-2024):  libdem  judicial constraints  free expression + alt info  elections free + fair  high court independence  media censorship (higher = MORE censorship)  civil society entry/exit
+  start   0.393   0.575   0.720   0.880   0.713   -0.173   1.330
+  end     0.090   0.021   0.392   -0.276   -2.630   -1.517   0.611
+  delta   -0.303   -0.554   -0.328   -1.156   -3.343   -1.344   -0.719
+
+HUN (2010-2024):  libdem  judicial constraints  free expression + alt info  elections free + fair  high court independence  media censorship (higher = MORE censorship)  civil society entry/exit
+  start   0.677   0.832   0.885   2.139   1.165   1.341   1.205
+  end     0.325   0.630   0.512   -0.306   -1.137   0.043   0.246
+  delta   -0.352   -0.202   -0.373   -2.445   -2.302   -1.298   -0.959
+
+TUR (2003-2024):  libdem  judicial constraints  free expression + alt info  elections free + fair  high court independence  media censorship (higher = MORE censorship)  civil society entry/exit
+  start   0.498   0.839   0.740   1.990   1.719   0.576   0.585
+  end     0.109   0.197   0.183   -0.195   0.100   -1.995   -0.595
+  delta   -0.389   -0.642   -0.557   -2.185   -1.619   -2.571   -1.180
+
+VEN (1999-2018):  libdem  judicial constraints  free expression + alt info  elections free + fair  high court independence  media censorship (higher = MORE censorship)  civil society entry/exit
+  start   0.440   0.576   0.762   1.348   -0.187   0.352   1.208
+  end     0.061   0.019   0.234   -2.339   -2.489   -2.647   -0.570
+  delta   -0.379   -0.557   -0.528   -3.687   -2.302   -2.999   -1.778
+
+POL (2015-2024):  libdem  judicial constraints  free expression + alt info  elections free + fair  high court independence  media censorship (higher = MORE censorship)  civil society entry/exit
+  start   0.775   0.867   0.951   2.223   1.721   2.668   1.820
+  end     0.613   0.728   0.911   0.129   1.253   2.144   1.468
+  delta   -0.162   -0.139   -0.040   -2.094   -0.468   -0.524   -0.352
+
+================================================================================
+DIG C: Displacement consequence — GIDD conflict-IDP during consolidation
+================================================================================
+
+SLV conflict-displacement (GIDD):
+ Year  Conflict Internal Displacements
+ 2008                              NaN
+ 2009                              NaN
+ 2010                              NaN
+ 2011                              NaN
+ 2013                              NaN
+ 2014                         191000.0
+ 2015                         170000.0
+ 2016                         220000.0
+ 2017                         296000.0
+ 2018                         246000.0
+ 2019                         454000.0
+ 2020                         114000.0
+ 2021                         175000.0
+ 2022                          73000.0
+ 2023                          66000.0
+ 2024                          39000.0
+
+HUN conflict-displacement (GIDD):
+ Year  Conflict Internal Displacements
+ 2013                              NaN
+ 2014                              NaN
+ 2017                              NaN
+ 2019                              NaN
+ 2020                              NaN
+ 2023                              NaN
+ 2024                              NaN
+
+TUR conflict-displacement (GIDD):
+ Year  Conflict Internal Displacements
+ 2008                              NaN
+ 2009                              NaN
+ 2010                              NaN
+ 2011                              NaN
+ 2012                            200.0
+ 2013                              NaN
+ 2014                              NaN
+ 2015                              NaN
+ 2016                         204000.0
+ 2017                              NaN
+ 2018                              NaN
+ 2019                           2000.0
+ 2020                              NaN
+ 2021                              NaN
+ 2022                              NaN
+ 2023                              NaN
+ 2024                              NaN
+
+VEN conflict-displacement (GIDD):
+ Year  Conflict Internal Displacements
+ 2008                              NaN
+ 2010                              NaN
+ 2012                              NaN
+ 2015                              NaN
+ 2016                              NaN
+ 2017                              NaN
+ 2018                              NaN
+ 2019                              NaN
+ 2020                              NaN
+ 2021                              NaN
+ 2022                              NaN
+ 2023                              NaN
+ 2024                              NaN
+
+POL conflict-displacement (GIDD):
+ Year  Conflict Internal Displacements
+ 2010                              NaN
+ 2019                              NaN
+ 2020                              NaN
+ 2021                              NaN
+ 2024                              NaN
+
+================================================================================
+DIG D: UCDP fatality data — confirm no coup-like fatality jump during consolidation
+================================================================================
+
+SLV (2019-2024) UCDP annual: events=71, total_fatal=98
+   one-sided by year: {2019: np.int64(1), 2021: np.int64(9), 2022: np.int64(88)}
+
+HUN (2010-2024) UCDP annual: events=0, total_fatal=0
+
+TUR (2003-2024) UCDP annual: events=2241, total_fatal=8014
+   state-based by year: {2003: np.int64(105), 2004: np.int64(220), 2005: np.int64(295), 2006: np.int64(226), 2007: np.int64(495), 2008: np.int64(474), 2009: np.int64(138), 2010: np.int64(234), 2011: np.int64(410), 2012: np.int64(788), 2013: np.int64(20), 2014: np.int64(11), 2015: np.int64(915), 2016: np.int64(1445), 2017: np.int64(415), 2018: np.int64(454), 2019: np.int64(281), 2020: np.int64(214), 2021: np.int64(130), 2022: np.int64(96), 2023: np.int64(106), 2024: np.int64(37)}
+   one-sided by year: {2003: np.int64(45), 2004: np.int64(1), 2007: np.int64(7), 2008: np.int64(17), 2012: np.int64(1), 2013: np.int64(52), 2015: np.int64(146), 2016: np.int64(116), 2017: np.int64(47), 2019: np.int64(9), 2020: np.int64(12), 2022: np.int64(7), 2023: np.int64(2), 2024: np.int64(6)}
+
+VEN (1999-2018) UCDP annual: events=875, total_fatal=673
+   state-based by year: {2007: np.int64(2)}
+   one-sided by year: {1999: np.int64(26), 2000: np.int64(27), 2001: np.int64(27), 2002: np.int64(20), 2003: np.int64(25), 2004: np.int64(31), 2005: np.int64(30), 2006: np.int64(22), 2007: np.int64(15), 2008: np.int64(27), 2009: np.int64(27), 2010: np.int64(23), 2011: np.int64(11), 2012: np.int64(8), 2013: np.int64(9), 2014: np.int64(49), 2015: np.int64(32), 2016: np.int64(60), 2017: np.int64(76), 2018: np.int64(94)}
+
+POL (2015-2024) UCDP annual: events=1, total_fatal=2
+   state-based by year: {2022: np.int64(2)}
+
+================================================================================
+DIG E: Recovery dynamics — POL 2023 (Tusk) + BRA 2023 (Lula)
+================================================================================
+
+POL libdem 2015-2025:
+   2015: libdem=0.775
+   2016: libdem=0.598
+   2017: libdem=0.542
+   2018: libdem=0.524
+   2019: libdem=0.505
+   2020: libdem=0.450
+   2021: libdem=0.424
+   2022: libdem=0.417
+   2023: libdem=0.457
+   2024: libdem=0.613
+   2025: libdem=0.645
+
+   sub-indicator changes 2022 -> 2024:
+      judicial constraints               : 0.564 -> 0.728 (+0.164) RECOVERY
+      free expression + alt info         : 0.606 -> 0.911 (+0.305) RECOVERY
+      elections free + fair              : 0.162 -> 0.129 (-0.033) stable
+      high court independence            : -0.433 -> 1.253 (+1.686) RECOVERY
+      media censorship (higher = MORE censorship): -0.331 -> 2.144 (+2.475) RECOVERY
+      civil society entry/exit           : 1.032 -> 1.468 (+0.436) RECOVERY
+
+BRA libdem 2015-2025:
+   2015: libdem=0.769
+   2016: libdem=0.653
+   2017: libdem=0.641
+   2018: libdem=0.608
+   2019: libdem=0.528
+   2020: libdem=0.534
+   2021: libdem=0.531
+   2022: libdem=0.540
+   2023: libdem=0.695
+   2024: libdem=0.712
+   2025: libdem=0.704
+
+   sub-indicator changes 2022 -> 2024:
+      judicial constraints               : 0.827 -> 0.954 (+0.127) RECOVERY
+      free expression + alt info         : 0.704 -> 0.923 (+0.219) RECOVERY
+      elections free + fair              : 1.251 -> 1.251 (+0.000) stable
+      high court independence            : 1.837 -> 2.036 (+0.199) RECOVERY
+      media censorship (higher = MORE censorship): 0.449 -> 2.958 (+2.509) RECOVERY
+      civil society entry/exit           : 1.770 -> 2.386 (+0.616) RECOVERY
+
+================================================================================
+DIG F: New unpredicted candidates — scan for Bukelization shape (sliding 10y windows)
+================================================================================
+SRB: NO fit; max libdem since 1995 = 0.53, 2024 = 0.225
+BGR: NO fit; max libdem since 1995 = 0.623, 2024 = 0.533
+ROU: NO fit; max libdem since 1995 = 0.676, 2024 = 0.449
+NIC: NO fit; max libdem since 1995 = 0.485, 2024 = 0.02
+BOL: NO fit; max libdem since 1995 = 0.541, 2024 = 0.31
+PHL: NO fit; max libdem since 1995 = 0.439, 2024 = 0.301
+BIH: NO fit; max libdem since 1995 = 0.426, 2024 = 0.336
+
+TUN: 4 fitting 10y window(s)
+   2012-2022: 0.642 -> 0.196, delta=-0.446, up-years=0
+   2013-2023: 0.635 -> 0.283, delta=-0.352, up-years=1
+   2014-2024: 0.632 -> 0.271, delta=-0.361, up-years=1
+MDG: NO fit; max libdem since 1995 = 0.357, 2024 = 0.201
+ZWE: NO fit; max libdem since 1995 = 0.229, 2024 = 0.156
+
+BLR: 3 fitting 10y window(s)
+   1992-2002: 0.443 -> 0.100, delta=-0.343, up-years=0
+   1993-2003: 0.440 -> 0.098, delta=-0.342, up-years=0
+   1994-2004: 0.404 -> 0.097, delta=-0.307, up-years=0
+NPL: NO fit; max libdem since 1995 = 0.557, 2024 = 0.52
+ECU: NO fit; max libdem since 1995 = 0.504, 2024 = 0.443
+
+================================================================================
+DIG G: IND slow-burn — sub-indicators 2014-2024 + comparison with confirming cases
+================================================================================
+
+IND year-by-year libdem + key sub-indicators:
+year   libdem  jucon  freexp  el_ff   hcind  cens(hi=bad)
+2010   0.532  0.822  0.889  1.401  1.519  1.736
+2011   0.532  0.822  0.889  1.401  1.519  1.736
+2012   0.525  0.822  0.874  1.401  1.519  1.639
+2013   0.522  0.827  0.869  1.401  1.519  1.639
+2014   0.488  0.818  0.812  1.316  1.525  1.410
+2015   0.417  0.799  0.658  1.316  1.373  0.121
+2016   0.406  0.800  0.612  1.316  1.317  0.121
+2017   0.371  0.777  0.568  1.316  1.280  -0.105
+2018   0.363  0.777  0.546  1.316  1.528  -0.105
+2019   0.324  0.766  0.527  0.310  1.288  -0.249
+2020   0.292  0.753  0.449  0.310  0.938  -0.524
+2021   0.307  0.761  0.466  0.310  0.938  -0.487
+2022   0.291  0.764  0.442  0.310  0.951  -0.360
+2023   0.273  0.724  0.422  0.310  0.796  -0.188
+2024   0.281  0.710  0.477  0.309  0.796  0.125
+2025   0.260  0.667  0.458  0.309  0.612  -0.258
+
+IND extended sliding windows (12y, 14y, 16y):
+   18y window 2007-2025: 0.569 -> 0.260, delta=-0.309, up-yrs=0 FITS
+   20y window 2003-2023: 0.583 -> 0.273, delta=-0.310, up-yrs=0 FITS
+   20y window 2005-2025: 0.573 -> 0.260, delta=-0.313, up-yrs=0 FITS
+   22y window 1998-2020: 0.593 -> 0.292, delta=-0.301, up-yrs=0 FITS
+   22y window 2001-2023: 0.584 -> 0.273, delta=-0.311, up-yrs=0 FITS
+   22y window 2002-2024: 0.587 -> 0.281, delta=-0.306, up-yrs=0 FITS
+   22y window 2003-2025: 0.583 -> 0.260, delta=-0.323, up-yrs=0 FITS
+   24y window 1998-2022: 0.593 -> 0.291, delta=-0.302, up-yrs=0 FITS
+   24y window 1999-2023: 0.586 -> 0.273, delta=-0.313, up-yrs=0 FITS
+   24y window 2000-2024: 0.584 -> 0.281, delta=-0.303, up-yrs=0 FITS
+   24y window 2001-2025: 0.584 -> 0.260, delta=-0.324, up-yrs=0 FITS
+
+================================================================================
+DIG H: Bukelization speed — Δ per year for each confirming country
+================================================================================
+
+iso        window   start     end   delta   delta/yr
+SLV   2019-2024    0.393   0.090  -0.303    -0.0606
+VEN   1997-2007    0.603   0.162  -0.441    -0.0441
+POL   2010-2020    0.827   0.450  -0.377    -0.0377
+TUR   2007-2017    0.461   0.101  -0.360    -0.0360
+HUN   2010-2020    0.677   0.351  -0.326    -0.0326
+
+================================================================================
+DIG I: Leader-tenure alignment — when did consolidation actually start?
+================================================================================
+SLV Bukele FMLN→Nuevas Ideas took office 2019: libdem=0.393 | key event: state-of-exception 2022
+HUN Orbán return (Fidesz) took office 2010: libdem=0.677 | key event: 2/3 supermajority + 2011 Fundamental Law
+TUR Erdoğan PM/AKP took office 2003: libdem=0.498 | key event: 2007 const referendum; 2017 const referendum
+VEN Chávez took office 1999: libdem=0.440 | key event: 1999 const + Bolivarian Revolution
+POL PiS (Kaczyński/Duda/Morawiecki) took office 2015: libdem=0.775 | key event: 2015 Constitutional Tribunal capture
+
+================================================================================
+PATTERN_013 DEEP DIG COMPLETE
+================================================================================

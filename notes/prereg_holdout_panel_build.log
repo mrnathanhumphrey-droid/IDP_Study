@@ -1,0 +1,167 @@
+[10:08:50] === Building prereg_holdout panel for ['AGO', 'MOZ', 'COL', 'IND', 'TUR', 'BRA', 'HTI', 'DOM', 'CUB', 'USA', 'FJI', 'VUT', 'SLB', 'HUN', 'VEN', 'RUS', 'DEU', 'FRA', 'GBR', 'CAN', 'AUS', 'JPN'] ===
+[1] GIDD displacement
+  GIDD: 318 country-year rows
+[2] GIDD Disasters hazard
+  Disasters: 313 rows x 12 hazard cols
+[3] UCDP-GED
+  UCDP-GED events for cluster: 51336
+[4] HAPI food security
+  HAPI food: 2 rows
+[5] V-Dem + WDI
+
+[10:09:02] panel saved: D:\IDP\analysis\prereg_holdout_stratified_panel_2026_05_21.parquet
+  shape: (594, 38)
+
+=== prereg_holdout period x country x cause ===
+              period iso3  conflict_disp  disaster_disp  war_fatal  strife_fatal  one_sided_fatal
+     acute_2020_2024  AGO              0         212800         66             0               22
+     acute_2020_2024  AUS              0         153700          0             0                0
+     acute_2020_2024  BRA          61600        3384000          0         10610              540
+     acute_2020_2024  CAN              0         338000          0             0                0
+     acute_2020_2024  COL        1348000         819000        628           448              969
+     acute_2020_2024  CUB              0        1445000          0             0                0
+     acute_2020_2024  DEU              0          27932          0             0                3
+     acute_2020_2024  DOM              0         139800          0             0                0
+     acute_2020_2024  FJI              0          63260          0             0                0
+     acute_2020_2024  FRA              0          76000          0            50                1
+     acute_2020_2024  GBR              0          16410          0             0                0
+     acute_2020_2024  HTI        1267900         262600        193           422             1675
+     acute_2020_2024  HUN              0             88          0             0                0
+     acute_2020_2024  IND          86600       17225000       2034           195              397
+     acute_2020_2024  JPN              0         369600          0             0                0
+     acute_2020_2024  MOZ        1346000        1445000       2511           100             2444
+     acute_2020_2024  RUS         249100          66550       7978             0              147
+     acute_2020_2024  SLB           1011            976          0             0                0
+     acute_2020_2024  TUR              0        4193500          0             0                0
+     acute_2020_2024  USA              0       14165000          0             0                0
+     acute_2020_2024  VEN              0          52030          1            16               75
+     acute_2020_2024  VUT              0         152490          0             0                0
+     early_2014_2019  AGO              0          56300         77             0               26
+     early_2014_2019  AUS              0          77100          1             0                1
+     early_2014_2019  BRA              0         673000          0          7621               77
+     early_2014_2019  CAN              0         256800          0             0                0
+     early_2014_2019  COL         955000         183600        596            22              347
+     early_2014_2019  CUB              0        2880900          0             0                0
+     early_2014_2019  DEU              0           3410          0             0               12
+     early_2014_2019  DOM              0         233900          0             0                0
+     early_2014_2019  FJI              0          92770          0             0                0
+     early_2014_2019  FRA              0          37910          9             0              226
+     early_2014_2019  GBR              0          26280          2             0                2
+     early_2014_2019  HTI           2100         389000          0             0               80
+     early_2014_2019  HUN              0            496          0             0                0
+     early_2014_2019  IND        1053000       18522000       3796            18              837
+     early_2014_2019  JPN              0        2488000          0             0                0
+     early_2014_2019  MOZ          24230         796000        427             0              445
+     early_2014_2019  RUS              0          55900        446             0               11
+     early_2014_2019  SLB              0          13011          0             0                0
+     early_2014_2019  TUR         206000           3360          0             0                0
+     early_2014_2019  USA              0        4968000          0             0                0
+     early_2014_2019  VEN              0          79650          0             0              394
+     early_2014_2019  VUT              0          93350          0             0                0
+pre_crisis_1998_2013  AGO              0         400800       6081             0             1930
+pre_crisis_1998_2013  AUS              0          48500          0             0                0
+pre_crisis_1998_2013  BRA              0        1349000          0           854              119
+pre_crisis_1998_2013  CAN              0         122000          0            62                0
+pre_crisis_1998_2013  COL        1056000        3303100      17143          3288            13618
+pre_crisis_1998_2013  CUB              0        3082000          0             0                0
+pre_crisis_1998_2013  DEU              0          53000          0             0                0
+pre_crisis_1998_2013  DOM              0          82900          0             0                0
+pre_crisis_1998_2013  FJI              0          58000          0             0                0
+pre_crisis_1998_2013  FRA              0          12070          2             0                4
+pre_crisis_1998_2013  GBR              0          20300         32             0               62
+pre_crisis_1998_2013  HTI              0        1809500        207             0               75
+pre_crisis_1998_2013  HUN              0           1300          0             0                0
+pre_crisis_1998_2013  IND         756000       26135000      21631          1151             8801
+pre_crisis_1998_2013  JPN              0        1924800          0             0                0
+pre_crisis_1998_2013  MOZ              0         498300         57             0               11
+pre_crisis_1998_2013  RUS              0          87500      16308             0             2599
+pre_crisis_1998_2013  SLB              0          12300          0             0                0
+pre_crisis_1998_2013  TUR            200         272500          0             0                0
+pre_crisis_1998_2013  USA              0        3162300          0             0                0
+pre_crisis_1998_2013  VEN              0         107700          2            32              338
+pre_crisis_1998_2013  VUT              0           1169          0             0                0
+
+=== prereg_holdout V-Dem libdem trajectory ===
+  AGO 2018: 0.161
+  MOZ 2018: 0.264
+  COL 2018: 0.533
+  IND 2018: 0.363
+  TUR 2018: 0.104
+  BRA 2018: 0.608
+  HTI 2018: 0.257
+  DOM 2018: 0.339
+  CUB 2018: 0.061
+  USA 2018: 0.739
+  FJI 2018: 0.280
+  VUT 2018: 0.680
+  SLB 2018: 0.480
+  HUN 2018: 0.373
+  VEN 2018: 0.061
+  RUS 2018: 0.107
+  DEU 2018: 0.834
+  FRA 2018: 0.802
+  GBR 2018: 0.811
+  CAN 2018: 0.763
+  AUS 2018: 0.817
+  JPN 2018: 0.755
+  AGO 2020: 0.160
+  MOZ 2020: 0.238
+  COL 2020: 0.496
+  IND 2020: 0.292
+  TUR 2020: 0.115
+  BRA 2020: 0.534
+  HTI 2020: 0.237
+  DOM 2020: 0.449
+  CUB 2020: 0.060
+  USA 2020: 0.734
+  FJI 2020: 0.276
+  VUT 2020: 0.659
+  SLB 2020: 0.494
+  HUN 2020: 0.351
+  VEN 2020: 0.056
+  RUS 2020: 0.097
+  DEU 2020: 0.821
+  FRA 2020: 0.789
+  GBR 2020: 0.800
+  CAN 2020: 0.745
+  AUS 2020: 0.790
+  JPN 2020: 0.742
+  AGO 2024: 0.161
+  MOZ 2024: 0.189
+  COL 2024: 0.554
+  IND 2024: 0.281
+  TUR 2024: 0.109
+  BRA 2024: 0.712
+  HTI 2024: 0.101
+  DOM 2024: 0.495
+  CUB 2024: 0.056
+  USA 2024: 0.751
+  FJI 2024: 0.410
+  VUT 2024: 0.686
+  SLB 2024: 0.536
+  HUN 2024: 0.325
+  VEN 2024: 0.046
+  RUS 2024: 0.057
+  DEU 2024: 0.778
+  FRA 2024: 0.800
+  GBR 2024: 0.750
+  CAN 2024: 0.744
+  AUS 2024: 0.796
+  JPN 2024: 0.737
+
+=== prereg_holdout disaster hazard types (acute 2020-2024) ===
+iso3                             AGO    AUS      BRA     CAN     COL      CUB    DEU     DOM    FJI    FRA    GBR     HTI  HUN      IND     JPN      MOZ    RUS  SLB      TUR       USA    VEN     VUT
+disaster_drought                7400      0    69133       0    7864        0      0       0      0      0      0       0    0        0       0        0      0    0        0         0      0       0
+disaster_earthquake                0      2      210       0     892        0      0       0      0    570      0  223760    0        0   66279        0      5   16  4087295       301      0    3962
+disaster_erosion                   0      0     3054       0    1350        0      0       0      0      0      0       0    0        0       0        0    220    0        0         0      0       0
+disaster_extreme_temperature       0      0     2201     500      95        0      0    1700      0      0      0       0    0        0     113        0      0    0        0     18359      0       0
+disaster_flood                113241  65724  1607864   51641  620587    34840  23448   13240   1245   9806    438   11827   62  9481599   33733   103308  56755   11     8389    533363  48769       0
+disaster_mass_movement             0     80    43895     456   23592        0     10       0     17    167    223       0    0   325158    2905        0     13    0     2684       247     54       0
+disaster_mixed_disasters           0      0        0      25       0        0      0       0      0      0      0    4803    0        0       0        0      0    0      110         0      0       0
+disaster_sea_level_rise            0      0        0       0       0        0      0       0      0      0      0       0    0        0       0        0      0    0        0      9100      0       0
+disaster_storm                 91971  36716  1645203    2131  117086  1406033   3974  125785  61100   6640  14823   22560   26  7415688  265386  1342150   6182  950      875  11761787   2380  148282
+disaster_volcanic_activity         0      0        0       0     100        0      0       0      0      0      0       0    0        0      35        0      0    0        0        56      0       8
+disaster_wave_action               0      0        0       0       0        0      0       0     49      0      0       0    0        0       0        0      0    0        0         0      0       0
+disaster_wildfire                  0  52445    11696  284611   46430     4770    780       0      0  58714    922       0    0        0      43      200   3929    0    93630   1838586    320       0
+
+[10:09:02] complete

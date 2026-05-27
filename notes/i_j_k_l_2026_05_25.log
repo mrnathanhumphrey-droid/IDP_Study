@@ -1,0 +1,120 @@
+
+================================================================================
+I: UN DESA emigration retest — does emigration LEAD or LAG libdem decline?
+================================================================================
+
+iso     window  libdem_Δ   emig_start     emig_end      emig_Δ        pop_avg   emig_pct
+SLV  2019-2024    -0.303    1,679,667    1,834,670    +155,003        6273484      2.47%
+HUN  2010-2024    -0.352      378,410      538,794    +160,384        9756307      1.64%
+TUR  2003-2024    -0.389    2,651,430    3,130,337    +478,907       76821440      0.62%
+VEN  1999-2024    -0.394      338,356    8,328,514  +7,990,158       28052489     28.48%
+POL  2015-2024    -0.162    4,154,666    4,572,613    +417,947       37443719      1.12%
+TUN  2019-2024    -0.361      674,089      715,249     +41,160       12082439      0.34%
+BLR  1994-2024    -0.368    1,680,350      790,232    -890,118        9635903     -9.24%
+IND  2014-2024    -0.207   15,277,263   18,533,845  +3,256,582     1385349359      0.24%
+USA  2017-2024    +0.002        3,795        4,047        +252      332497054      0.00%
+SRB  2012-2024    -0.261      620,292      963,307    +343,015        6939215      4.94%
+BGD  2009-2024    -0.096    6,221,642    8,706,947  +2,485,305      161588905      1.54%
+BRA  2018-2022    -0.068    1,854,912    1,854,912          +0      208416054      0.00%
+
+UN DESA cross-country (n=12):
+  Pearson r(libdem_Δ, emig_pct) = -0.244 (p=0.4444)
+  Spearman ρ = -0.315 (p=0.3191)
+  Expected: negative (more emigration → more libdem decline)
+
+VEN-removed (n=11): Pearson r = 0.189 (p=0.5786)
+
+================================================================================
+I.b: VEN UN DESA stock vs V-Dem libdem — pre-vs-post crisis chronology
+================================================================================
+
+ year  libdem   emig_stock              libdem chunk
+ 1990   0.595      216,183
+ 1995   0.604      248,789   libdem Δ from prev 5y: +0.009, emig stock chg: +15%
+ 2000   0.310      338,356   libdem Δ from prev 5y: -0.294, emig stock chg: +36%
+ 2005   0.182      451,384   libdem Δ from prev 5y: -0.128, emig stock chg: +33%
+ 2010   0.154      550,930   libdem Δ from prev 5y: -0.028, emig stock chg: +22%
+ 2015   0.103      760,196   libdem Δ from prev 5y: -0.051, emig stock chg: +38%
+ 2020   0.056    5,477,198   libdem Δ from prev 5y: -0.047, emig stock chg: +620%
+ 2024   0.046    8,328,514   libdem Δ from prev 5y: -0.010, emig stock chg: +52%
+
+================================================================================
+J: POL: pre-PiS vs PiS-era vs post-PiS emigration stock
+================================================================================
+POL emigration stock (UN DESA, by origin):
+   1990: 2,317,607
+   2000: 2,502,866
+   2010: 3,673,715
+   2015: 4,154,666
+   2020: 4,365,879
+   2024: 4,572,613
+
+Pre-PiS 2010-2015 growth: +480,951.0 (+96,190/yr)
+PiS-era 2015-2020 growth: +211,213.0 (+42,243/yr)
+Tusk-recovery 2020-2024 growth: +206,734.0 (+51,684/yr)
+
+Note: UN DESA migrant stock counts cumulative POLES LIVING ABROAD. If reverse brain drain happens 2023+, the 2024 stock should grow SLOWER than 2015-2020 (or even shrink).
+
+================================================================================
+K: 2x2 typology — speed × institutional vehicle
+================================================================================
+
+2x2 Typology cells:
+
+
+--- single_event (Single dramatic event triggers consolidation) ---
+   party_state: []
+   personalist: ['SLV', 'TUN', 'USA', 'NIC']
+
+--- incremental (Incremental legalistic consolidation over years) ---
+   party_state: ['HUN', 'VEN', 'POL', 'IND', 'BGD']
+   personalist: ['TUR', 'BLR', 'SRB']
+
+Predicted durability ranking (best-to-worst recovery prospects):
+1. SINGLE-EVENT × PERSONALIST: post-leader-exit RECOVERY most likely (SLV, TUN, USA, NIC)
+2. INCREMENTAL × PERSONALIST: succession-crisis RECOVERY possible (TUR, BLR, SRB)
+3. INCREMENTAL × PARTY-STATE: STALLED-RECOVERY likely (HUN, POL, IND, BGD)
+4. SINGLE-EVENT × PARTY-STATE: rare config; could rebound or freeze (VEN late-stage)
+
+================================================================================
+L: Durability monitoring — locked predictions for forward 2026-2030
+================================================================================
+
+Forward-watch predictions LOCKED per case + cell:
+
+CELL: single-event × personalist (best recovery prospect)
+- SLV: predict if Bukele exits 2027/2029 → libdem rises ≥0.20 within 3y of exit
+- TUN: predict Saied's coalition fragmentation → libdem rises ≥0.10 by 2028
+- USA: predict if Trump exits 2029 → libdem rises ≥0.10 within 2y (caveat: GOP party-state fusion progress)
+- NIC: Ortega aging → succession crisis → likely rapid trajectory either way
+
+CELL: incremental × personalist (moderate recovery prospect)
+- TUR: predict Erdoğan succession 2028 → if free election, libdem rises ≥0.15 by 2031
+- BLR: Lukashenko aging → if Russia doesn't engineer continuation, libdem rises ≥0.10 by 2030
+- SRB: Vučić 2027 election → competitive election triggers reform OR consolidation deepens
+
+CELL: incremental × party-state (STALLED-RECOVERY expected)
+- HUN: Orbán 2026 election loss scenario → predict libdem rises ≤0.10 in first 2y (Fidesz inst. resistance)
+- POL: 2027 parliamentary election (Tusk hold?) → predict stalled per PRE_REG_006 at 0.55-0.65
+- IND: continued slow-burn → libdem 0.22-0.28 by 2030 regardless of election outcomes
+- BGD: Yunus transition → captured judiciary blocks reform → predict libdem 0.15-0.25 by 2028
+
+CELL: single-event × party-state (rare; treat as outlier)
+- VEN late-stage: Maduro continuation → libdem 0.05-0.10 floor
+
+KEY HOLDOUT EVENTS TO WATCH:
+- 2026 HUN parliamentary election
+- 2026 BRA presidential election (Bolsonaro return scenario)
+- 2027 POL parliamentary election
+- 2028 USA presidential election
+- 2028 TUR succession (Erdoğan term-limited unless constitutional workaround)
+- 2026 V-Dem v16 release (covers 2025)
+- 2027 V-Dem v17 release (covers 2026)
+
+If 3+ of these predictions land correctly = STRONG SUPPORT for 2x2 typology
+If 0-1 = WALK-BACK 2x2 typology
+
+
+================================================================================
+I + J + K + L COMPLETE
+================================================================================

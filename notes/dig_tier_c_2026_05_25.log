@@ -1,0 +1,239 @@
+[load] UCDP-GED
+  GED: 385,918 events
+[load] GIDD displacement
+[load] EM-DAT
+  EM-DAT: 27,640 rows; cols=['DisNo.', 'Historic', 'Classification Key', 'Disaster Group', 'Disaster Subgroup', 'Disaster Type', 'Disaster Subtype', 'External IDs', 'Event Name', 'ISO']...
+
+================================================================================
+DIG 003: BFA — 22x fatality jump, actor decomposition, admin-1
+================================================================================
+BFA GED events: 1,816
+
+BFA annual fatality + event count:
+ year  events  fatalities  fatal_ratio_yoy
+ 2016       2          26              NaN
+ 2017      27          54         2.076923
+ 2018      65         195         3.611111
+ 2019     222        1246         6.389744
+ 2020     166        1167         0.936597
+ 2021     191        1458         1.249357
+ 2022     237        2704         1.854595
+ 2023     599        6122         2.264053
+ 2024     307        4251         0.694381
+
+BFA actor (side_a / side_b) totals 2014-2024:
+
+  side_a (initiator) fatalities:
+side_a
+Government of Burkina Faso    12675
+JNIM                           2792
+IS                             1367
+Koglweogo                       331
+Ansaroul Islam                   33
+AQIM                             25
+
+  side_b (target) fatalities:
+side_b
+JNIM         9611
+Civilians    5845
+IS           1711
+Koglweogo      56
+
+BFA admin-1 acute (2020-2024) fatalities:
+adm_1
+Sahel region                4602
+Est region                  3003
+Centre Nord region          2541
+Nord region                 1714
+Boucle du Mouhoun region    1542
+Centre Est region           1512
+Hauts Bassins region         269
+Cascades region              267
+Sud-Ouest region              75
+Centre Ouest region           64
+
+BFA GIDD conflict-displacement by year:
+ Year  Conflict Internal Displacements
+ 2008                              NaN
+ 2009                              NaN
+ 2010                              NaN
+ 2013                              NaN
+ 2015                              NaN
+ 2016                            700.0
+ 2017                           4900.0
+ 2018                          42000.0
+ 2019                         513000.0
+ 2020                         515000.0
+ 2021                         682000.0
+ 2022                         438000.0
+ 2023                         713000.0
+ 2024                         380000.0
+
+================================================================================
+DIG 004: NER 2024 flood — singular event vs accumulation
+================================================================================
+NER GIDD disaster-displacement by year (all hazards):
+Hazard Type    Flood
+Year                
+2008            4300
+2009            5600
+2010          205600
+2011           28000
+2012          540000
+2013          201000
+2014           47000
+2015           38000
+2016           46000
+2017          188500
+2018           40000
+2019          121000
+2020          276100
+2021          125000
+2022          248000
+2023           95400
+2024         1172000
+
+NER GIDD conflict-displacement by year:
+ Year  Conflict Internal Displacements
+ 2008                              NaN
+ 2009                              NaN
+ 2010                              NaN
+ 2011                              NaN
+ 2012                              NaN
+ 2013                              NaN
+ 2014                              NaN
+ 2015                          47000.0
+ 2016                         166000.0
+ 2017                          40000.0
+ 2018                          52000.0
+ 2019                          56000.0
+ 2020                         136000.0
+ 2021                         110000.0
+ 2022                         101000.0
+ 2023                         181000.0
+ 2024                         100000.0
+
+NER EM-DAT 2024 events (all):
+Disaster Type Disaster Subtype  Start Month  End Month                                  Location  Total Deaths  No. Affected  Total Affected  No. Homeless
+        Flood  Flood (General)          6.0       10.0 Maradi, Zinder, Agadez, Tahoua, Tilleberi         396.0     1526653.0       1527058.0           NaN
+
+================================================================================
+DIG 012: Tigray — conflict_name filter, time profile, scale
+================================================================================
+ETH GED events: 5,386
+
+ETH unique conflict_name values (top 20 by fatality):
+conflict_name
+Ethiopia: Government                                         349515
+Eritrea - Ethiopia                                            78429
+Ethiopia: Eritrea                                             43470
+Government of Ethiopia - Civilians                             6316
+Ethiopia: Oromiya                                              4411
+Government of Eritrea - Civilians                              4011
+Ethiopia: Government/Amhara                                    3357
+Government of Eritrea, Government of Ethiopia - Civilians      1991
+Gedeo - Guji                                                   1725
+Ethiopia: Ogaden                                               1363
+TPLF - Civilians                                                884
+Fano - Civilians                                                643
+Oromo - Somali                                                  516
+Ogaden clan (Darod) - Sheikhal clan (Dir)                       435
+OLA - Civilians                                                 419
+Amhara - Oromo                                                  413
+Anuak - Nuer                                                    401
+Borana - Gabra, Garre                                           384
+Arbore - Borana                                                 319
+Borana - Garre                                                  317
+
+Tigray-named events: 0, fatalities: 0
+
+Tigray annual + monthly profile:
+Empty DataFrame
+Columns: [events, fatalities]
+Index: []
+
+ETH GIDD conflict-displacement 2018-2024:
+ Year  Conflict Internal Displacements
+ 2024                         387000.0
+ 2023                         794000.0
+ 2022                        2032000.0
+ 2021                        5142000.0
+ 2020                        1692000.0
+ 2019                        1052000.0
+ 2018                        2895000.0
+
+================================================================================
+DIG 015: DRC — one-sided actor decomposition, eastern provinces
+================================================================================
+COD GED events: 8,901
+COD acute (2020-2024) events: 4,451, total fatalities: 23,043
+
+COD acute type_of_violence breakdown:
+               sum  count
+tov_label                
+non-state     2764    467
+one-sided    14322   2864
+state-based   5957   1120
+
+COD acute one-sided (type=3) actor decomposition (top 15):
+side_a
+IS                                7731
+URDPC                             2576
+Government of DR Congo (Zaire)     820
+Zaire self-defense group           469
+M23                                438
+FDBC                               300
+AFC                                268
+Mobondo                            267
+FPIC Chambre noire sanduku         256
+Government of Rwanda               187
+VDP                                125
+CODECO-BTD                         100
+ALC                                 98
+CNPSC                               81
+NDC-R                               79
+
+COD acute admin-1 (top 10 by fatality):
+adm_1
+Nord Kivu province       10244
+Ituri province            9093
+Sud Kivu province         1549
+Mai-Ndombe province        360
+Tshopo province            201
+Tanganyika province        187
+Kinshasa province          148
+Haut-Katanga province       83
+Kwilu province              75
+Tshuapa province            68
+
+================================================================================
+DIG 016: PAK 2022 floods — sub-event profile + EM-DAT confirm
+================================================================================
+PAK GIDD disaster-displacement by year (all hazards):
+Hazard Type  Drought  Earthquake  Extreme Temperature     Flood  Mass Movement  Storm  Wildfire
+Year                                                                                           
+2008               0        7000                    0     82200              0      0         0
+2009               0           0                    0     84000              0      0         0
+2010               0           0                    0  11000000              0  60000         0
+2011               0           0                    0    300000              0      0         0
+2012               0           0                    0   1857000              0      0         0
+2013               0      284000                    0    124000              0      0         0
+2014               0       11560                    0    758636              0     81         0
+2015               0      666000                    0    331200           4000    560         0
+2016               0           0                    0     12700              0      0         0
+2017               0           0                    0      1630            120      0         0
+2018               0          11                    0       760           1016    130         0
+2019             270       55002                    0     33082          10410   1157         0
+2020               0        1800                16136    810170            166      0         0
+2021               0       68000                    0      2028              0      0         0
+2022               0         540                    0   8163375              0     49      4000
+2023               0         150                    0    647034             68  85118         0
+2024               0           0                  101    169064            247     28        14
+
+PAK EM-DAT 2022 flood events:
+Disaster Type Disaster Subtype  Start Month  End Month                                                                                                                                                                                               Location  Total Deaths  No. Affected  Total Affected  No. Homeless
+        Flood  Flood (General)          6.0        9.0 Lasbela, Jhal Magsi, Killa Saifullah, Pishin, Noshki, Kachhi, Khuzdar, Kalat and Chaman districts (Balochistan); Khyber Pakhtunkhwa, Sindh, Punjab, Azad Jammu, Gilgit Baltistan and Kashmir provinces        1739.0    33000000.0      33012865.0           NaN
+
+================================================================================
+TIER C DIG COMPLETE
+================================================================================

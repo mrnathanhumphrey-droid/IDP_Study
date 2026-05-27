@@ -1,0 +1,128 @@
+[load] V-Dem
+[load] GIDD displacement + disasters
+[load] holdout panel
+  panel: (594, 38), countries: ['AGO', 'AUS', 'BRA', 'CAN', 'COL', 'CUB', 'DEU', 'DOM', 'FJI', 'FRA', 'GBR', 'HTI', 'HUN', 'IND', 'JPN', 'MOZ', 'RUS', 'SLB', 'TUR', 'USA', 'VEN', 'VUT']
+
+================================================================================
+PRE_REG 002: Range+Trigger libdem collapse
+================================================================================
+
+Watch list libdem trajectory (2018, 2020, 2022, 2024):
+iso       2018     2020     2022     2024  delta_(2018-24)   range_yes  trigger-risk
+AGO      0.161     0.16    0.153    0.161        0.000          NO  succession-2027
+MOZ      0.264    0.238     0.24    0.189       -0.075         YES  Cabo Delgado insurgency + 2024 election
+COL      0.533    0.496    0.561    0.554        0.021         YES  post-Petro succession
+IND      0.363    0.292    0.291    0.281       -0.082         YES  BJP supermajority
+TUR      0.104    0.115     0.11    0.109        0.005          NO  post-Erdoğan succession
+BRA      0.608    0.534     0.54    0.712        0.104         YES  2026 election Bolsonaro return scenario
+
+PAK control (range-yes, no trigger): 2018=0.250, 2024=0.193, delta_=-0.057  -> no collapse confirmed
+
+================================================================================
+PRE_REG 002b: Floor-saturated countries (range-no): predict no collapse possible
+================================================================================
+  ETH: 2018=0.131, 2024=0.093, delta_=-0.038
+  SOM: 2018=0.106, 2024=0.127, delta_=+0.021
+  SDN: 2018=0.068, 2024=0.030, delta_=-0.038  *** range-no but DROPPED BELOW 0.05
+  SSD: 2018=0.053, 2024=0.071, delta_=+0.018
+  ERI: 2018=0.007, 2024=0.009, delta_=+0.002
+  SYR: 2018=0.025, 2024=0.054, delta_=+0.029
+  YEM: 2018=0.034, 2024=0.047, delta_=+0.013
+  COD: 2018=0.117, 2024=0.123, delta_=+0.006
+  CMR: 2018=0.120, 2024=0.126, delta_=+0.006
+  IRQ: 2018=0.238, 2024=0.210, delta_=-0.028
+  LBN: 2018=0.282, 2024=0.226, delta_=-0.056
+
+================================================================================
+PRE_REG 003: Disaster-displacement regime typology — holdout fit
+================================================================================
+
+iso   regime                                       totalIDP  flood%  storm%    eq%  fl_max/med
+HTI   6_EARTHQUAKE_DOMINANT (new regime)          2,460,350    1.9%   27.5%  70.4%        20.1x
+DOM   3_STORM_DOMINANT                              458,975   23.7%   75.9%   0.0%         6.0x
+CUB   3_STORM_DOMINANT                            7,408,863    0.8%   99.2%   0.0%         infx
+USA   3_STORM_DOMINANT                           22,292,822    4.7%   80.3%   0.0%        45.2x
+FJI   3_STORM_DOMINANT                              213,473   13.8%   86.1%   0.0%      2657.1x
+VUT   3_STORM_DOMINANT                              246,752    0.1%   88.8%   1.6%         infx
+SLB   INSUFFICIENT_DATA (< 100K total disaster-IDP)       26,290   40.3%   30.7%  29.0%         infx
+BRA   4_MIXED                                     5,404,585   64.8%   31.8%   0.0%         5.0x
+
+================================================================================
+PRE_REG 003b: Drought-dominant test (SOM, ETH) — does Regime 5 emerge?
+================================================================================
+SOM   4_MIXED                                  drought%= 41.8%  storm%=  1.3%  flood%= 56.8%
+ETH   4_MIXED                                  drought%= 32.6%  storm%=  0.3%  flood%= 66.0%
+AFG   4_MIXED                                  drought%= 16.4%  storm%=  0.2%  flood%= 58.2%
+BFA   4_MIXED                                  drought%=  0.0%  storm%=  0.1%  flood%= 99.9%
+NER   4_MIXED                                  drought%=  0.0%  storm%=  0.0%  flood%=100.0%
+
+================================================================================
+PRE_REG 004: 3-channel displacement orthogonality
+================================================================================
+
+iso   years  rho(con,flood)  rho(con,drought)   rho(flood,drought) flag
+AGO      15             nan               nan               -0.247
+MOZ      17          -0.298               nan                  nan
+COL      17           0.292             0.357                0.204
+IND      17          -0.237            -0.153                0.102
+TUR      17          -0.111               nan                  nan
+BRA      17           0.415             0.697                0.386  CD>0.5
+HTI      17          -0.276               nan                  nan
+DOM      15             nan               nan                  nan
+CUB      12             nan               nan                  nan
+USA      16             nan               nan                  nan
+FJI      13             nan               nan                  nan
+VUT      12             nan               nan                  nan
+SLB      14          -0.294               nan                  nan
+PHL      17          -0.091             0.051                0.204
+SOM      17           0.260             0.786                0.413  CD>0.5
+SDN      17           0.054               nan                  nan
+PAK      17           0.241             0.051               -0.204
+BFA      14          -0.275               nan                  nan
+
+================================================================================
+PRE_REG 004b: H3 specific exception checks (predicted couplings)
+================================================================================
+  PHL conf-storm: predicted 0.3-0.5, actual = 0.186
+  SOM conf-drought: predicted >0.5, actual = 0.786
+  SDN conf-drought: predicted >0.4, actual = nan
+
+================================================================================
+PRE_REG 005: Bukelization shape — retrospective test (HUN/TUR/VEN/RUS)
+================================================================================
+
+iso       window   start     end   delta range>=0.30  delta<=-0.30  fit  notes
+  HUN 2010-2015    0.677   0.477  -0.200         YES           NO    NO  Orban short window (mono=True, ↑yrs=0)
+  HUN 2010-2020    0.677   0.351  -0.326         YES          YES   FIT  Orban long window (mono=True, ↑yrs=0)
+  TUR 2014-2019    0.252   0.107  -0.145          NO           NO    NO  Erdoğan post-Gezi (mono=True, ↑yrs=0)
+  VEN 2002-2007    0.255   0.162  -0.093          NO           NO    NO  Chavez consolidation (mono=True, ↑yrs=0)
+  VEN 2013-2018    0.109   0.061  -0.048          NO           NO    NO  Maduro deepening (mono=True, ↑yrs=0)
+  RUS 2000-2005    0.223   0.149  -0.074          NO           NO    NO  early Putin (mono=True, ↑yrs=0)
+  RUS 2007-2012    0.146   0.122  -0.024          NO           NO    NO  Medvedev/return (mono=True, ↑yrs=0)
+
+================================================================================
+PRE_REG 005b: Forward scoring (IND/BRA/TUR/HUN/USA) — current libdem snapshot 2024
+================================================================================
+  IND: 2018=0.363, 2020=0.292, 2022=0.291, 2024=0.281
+  BRA: 2018=0.608, 2020=0.534, 2022=0.54, 2024=0.712
+  TUR: 2018=0.104, 2020=0.115, 2022=0.11, 2024=0.109
+  HUN: 2018=0.373, 2020=0.351, 2022=0.335, 2024=0.325
+  USA: 2018=0.739, 2020=0.734, 2022=0.769, 2024=0.751
+
+================================================================================
+PRE_REG 005c: Negative-control countries (predict no Bukelization)
+================================================================================
+  DEU: 2014=0.845, 2024=0.778, delta_=-0.067
+  FRA: 2014=0.821, 2024=0.800, delta_=-0.021
+  GBR: 2014=0.794, 2024=0.750, delta_=-0.044
+  CAN: 2014=0.742, 2024=0.744, delta_=+0.002
+  AUS: 2014=0.815, 2024=0.796, delta_=-0.019
+  JPN: 2014=0.739, 2024=0.737, delta_=-0.002
+  NLD: 2014=0.831, 2024=0.766, delta_=-0.065
+  NOR: 2014=0.866, 2024=0.847, delta_=-0.019
+  SWE: 2014=0.885, 2024=0.846, delta_=-0.039
+  FIN: 2014=0.858, 2024=0.782, delta_=-0.076
+
+================================================================================
+ALL 4 PRE-REG FITS COMPLETE
+================================================================================

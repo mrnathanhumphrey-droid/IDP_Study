@@ -1,0 +1,67 @@
+[09:07:51] === Building flood_corpus panel for ['PHL', 'BGD', 'IND', 'VNM', 'MOZ', 'PAK'] ===
+[1] GIDD displacement
+  GIDD: 102 country-year rows
+[2] GIDD Disasters hazard
+  Disasters: 102 rows x 10 hazard cols
+[3] UCDP-GED
+  UCDP-GED events for cluster: 32428
+[4] HAPI food security
+[5] V-Dem + WDI
+
+[09:07:59] panel saved: D:\IDP\analysis\flood_corpus_stratified_panel_2026_05_21.parquet
+  shape: (162, 34)
+
+=== flood_corpus period x country x cause ===
+              period iso3  conflict_disp  disaster_disp  war_fatal  strife_fatal  one_sided_fatal
+     acute_2020_2024  BGD           3130       10259000         11           361               34
+     acute_2020_2024  IND          86600       17225000       2034           195              397
+     acute_2020_2024  MOZ        1346000        1445000       2511           100             2444
+     acute_2020_2024  PAK           7140        9968000       4066           263              314
+     acute_2020_2024  PHL         728000       27208000       1322             0               84
+     acute_2020_2024  VNM              0        2749000          0             0                0
+     early_2014_2019  BGD           6329        6796000         94            27               43
+     early_2014_2019  IND        1053000       18522000       3796            18              837
+     early_2014_2019  MOZ          24230         796000        427             0              445
+     early_2014_2019  PAK        1001100        1889700       7381           213             1335
+     early_2014_2019  PHL        1729000       24764000       3963            17              261
+     early_2014_2019  VNM              0        1023600          0             0                0
+pre_crisis_1998_2013  BGD          14100        4183000        214           256              110
+pre_crisis_1998_2013  IND         756000       26135000      21631          1151             8801
+pre_crisis_1998_2013  MOZ              0         498300         57             0               11
+pre_crisis_1998_2013  PAK        4142000       13797000      26570          2865             3017
+pre_crisis_1998_2013  PHL        1072000       19201000       9153           153              885
+pre_crisis_1998_2013  VNM              0        2020000          0             0                0
+
+=== flood_corpus V-Dem libdem trajectory ===
+  PHL 2018: 0.295
+  BGD 2018: 0.097
+  IND 2018: 0.363
+  VNM 2018: 0.113
+  MOZ 2018: 0.264
+  PAK 2018: 0.250
+  PHL 2020: 0.270
+  BGD 2020: 0.094
+  IND 2020: 0.292
+  VNM 2020: 0.106
+  MOZ 2020: 0.238
+  PAK 2020: 0.253
+  PHL 2024: 0.301
+  BGD 2024: 0.097
+  IND 2024: 0.281
+  VNM 2024: 0.109
+  MOZ 2024: 0.189
+  PAK 2024: 0.193
+
+=== flood_corpus disaster hazard types (acute 2020-2024) ===
+iso3                              BGD      IND      MOZ      PAK       PHL      VNM
+disaster_earthquake                 0        0        0    70490    651776       68
+disaster_erosion                 4405        0        0        0       180        0
+disaster_extreme_temperature        0        0        0    16237         0        0
+disaster_flood                4024718  9481599   103308  9791671   3379381    85182
+disaster_mass_movement          11634   325158        0      481     18591     7972
+disaster_storm                6218185  7415688  1342150    85195  22556733  2656318
+disaster_volcanic_activity          0        0        0        0    599400        0
+disaster_wave_action                0        0        0        0       353        0
+disaster_wildfire                   0        0      200     4014         0      720
+
+[09:07:59] complete

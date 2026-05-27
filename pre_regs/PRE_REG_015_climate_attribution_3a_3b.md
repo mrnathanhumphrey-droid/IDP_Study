@@ -1,0 +1,109 @@
+# Pre-Registration 015 — Climate-Attribution Regime Shift (USA 3a → 3b trajectory)
+
+**ID:** PRE_REG_015
+**Locked:** 2026-05-25
+**Substrate:** PATTERN_025 (Regime 3 sub-typing) + PATTERN_019 + USA 2024 anomaly
+**Status:** LOCKED — predictions pre-committed; first fit DEFERRED pending NOAA HURDAT2 + HadISST data acquisition
+
+---
+
+## 1. Hypothesis
+
+**H1 (climate-attribution drift):** USA storm-displacement is intensifying under Atlantic SST warming. Specifically, USA's storm-mega-year frequency (years > 1M storm-IDP) is INCREASING over the 1980-2024 window, trending USA from Regime 3a (bimodal-mega-storm) toward Regime 3b (perpetual-mega-storm) — the PHL-like profile.
+
+**H2 (PHL first-mover hypothesis):** PHL's perpetual-mega-storm regime is what other tropical-cyclone countries will become under continued ocean warming. PHL is structurally "ahead" because Pacific typhoon corridor is closest to ocean-heat threshold; Atlantic countries trail.
+
+**H3 (specific quantitative prediction):** USA storm-mega-year frequency 1980-2007 vs 2008-2024:
+- 1980-2007 (28 years): predict ≤ 3 storm-mega-years (frequency ≤ 11%)
+- 2008-2024 (17 years): observed = 3 mega-years (USA 2008, 2017, 2024) — frequency 18%
+- **Trend prediction**: frequency increasing; 2025-2040 forward window should show ≥ 5 mega-years (frequency ≥ 33%) if climate-attribution mechanism is real
+
+---
+
+## 2. Pre-locked predictions
+
+### Prediction set A — Historical USA storm-mega-year count
+Predict: 1980-2007 USA storm-mega-years (>1M displacement-affected) ≤ 3, i.e., frequency ≤ 11%.
+
+### Prediction set B — Atlantic SST correlation
+Predict: USA storm-IDP year-by-year correlates positively (Pearson r ≥ 0.4) with **August-October Atlantic Main Development Region SST** from HadISST 1980-2024.
+
+### Prediction set C — ACE-vs-IDP relationship
+Predict: NOAA HURDAT2 Atlantic Accumulated Cyclone Energy (ACE) correlates positively (r ≥ 0.4) with USA storm-IDP. ACE captures total seasonal storm intensity; should track displacement.
+
+### Prediction set D — Forward (2025-2040)
+Predict: 2025-2040 window will show ≥ 5 storm-mega-years (vs 3 in 2008-2024). Falsifiable when 2025-2040 data accumulates.
+
+### Prediction set E — Replication on other Atlantic Regime 3 countries
+Predict: CUB and PRI storm-mega-year frequency also increases 1980-2024.
+
+---
+
+## 3. Falsifiers
+
+- **F1**: 1980-2007 USA storm-mega-year count > 5 → no intensification trend; H1 walked back
+- **F2**: Atlantic SST × USA storm-IDP correlation r < 0.2 → no climate-attribution signal
+- **F3**: ACE × USA storm-IDP correlation r < 0.2 → cyclone-energy not tracking displacement
+- **F4**: 2025-2040 forward window shows ≤ 3 mega-years → trend prediction wrong
+- **F5**: CUB/PRI show no intensification → first-mover hypothesis Atlantic-specific or USA-artifact
+
+F1 OR F2 OR F3 firing = H1 walked back.
+F5 firing = H2 (PHL first-mover) Atlantic-specific.
+
+---
+
+## 4. Methodology
+
+### Data required
+- NOAA HURDAT2 Atlantic hurricane track database (1851-2024, public) — for ACE computation
+- HadISST 1.1 (Hadley Centre Sea Ice and SST) — for Atlantic MDR SST 1980-2024
+- EM-DAT 1980-2007 USA storm events — for historical USA storm-displacement
+- GIDD 2008-2024 USA storm-IDP — already in hand
+
+### Test procedure
+1. Pull USA storm-displacement year-by-year 1980-2024 (EM-DAT historical + GIDD recent)
+2. Compute storm-mega-year count 1980-2007 vs 2008-2024
+3. Pull HadISST Atlantic MDR Aug-Oct SST 1980-2024
+4. Compute year-by-year ACE from HURDAT2
+5. Test correlations USA-storm-IDP × SST, × ACE
+6. Apply falsifier thresholds
+
+### Status (2026-05-25)
+**First fit DEFERRED** pending HURDAT2 + HadISST acquisition. Pre-reg locks the predictions; fit fires when data arrives. EM-DAT historical USA storm data may allow partial fit (storm-mega-year count test).
+
+## 5. Cross-references
+- PATTERN_025 (Regime 3a/3b — PHL first-mover anchor)
+- PATTERN_019 (master typology)
+- USA 2024 Helene+Milton 10.24M anomaly (largest single-year storm signal in corpus)
+- P2-E (climate-attribution data pipeline; this pre-reg drives it)
+
+---
+
+## 6. Provenance
+Locked 2026-05-25 before data acquisition. First fit fires when HURDAT2 + HadISST arrive.
+
+---
+
+## 7. Results — partial fit (fired 2026-05-25 with EM-DAT historical)
+
+Full fit DEFERRED pending NOAA HURDAT2 + HadISST data acquisition. Partial fit on Prediction set A (USA storm-mega-year count) using EM-DAT 1980-2024.
+
+### Prediction set A result
+- **1980-2007 (28y)**: 2 mega-years (1999 Floyd, 2004 Ivan/Charley/Frances/Jeanne) — frequency 7.1%
+- **2008-2024 (17y)**: 3 mega-years (2008, 2016, 2018) per EM-DAT; likely 4 when 2024 finalizes — frequency 17.6% (or 23.5%)
+- **Predicted**: 1980-2007 ≤ 3 (≤ 11%) — **CONSISTENT** ✓
+- **F1 (1980-2007 > 5 mega-years)**: NOT FIRED
+
+### Frequency trend
+**7.1% → 17.6% (2.5× increase)** in storm-mega-year frequency from 1980-2007 to 2008-2024. Supports H1 climate-attribution intensification.
+
+### Status
+- **Prediction set A**: CONSISTENT (partial fit fired)
+- **Prediction set B (SST correlation)**: DEFERRED — needs HadISST
+- **Prediction set C (ACE correlation)**: DEFERRED — needs NOAA HURDAT2
+- **Prediction set D (2025-2040 forward)**: 1 of 16 years elapsed; 0 mega-years; need 5+ by 2040
+- **Prediction set E (CUB/PRI replication)**: DEFERRED
+
+**Cross-reference**: USA 2024 = 10.24M storm-IDP = 5.2× previous max. Helene+Milton+Beryl single-season cluster. Single largest single-year storm signal in the entire corpus. Consistent with intensification but a single-year anchor, not a trend.
+
+**Status**: PARTIAL CONSISTENT; awaits full data acquisition for definitive fit.

@@ -1,0 +1,85 @@
+
+================================================================================
+PRE_REG 009: HYBRID 5th 2x2 cell — k-means clustering on party-system indicators
+================================================================================
+
+N cases: 12
+iso  year  v2pscohesv  v2psorgs  v2psnatpar  v2psprbrch  v2psprlnks
+SLV  2024       2.338     1.685       1.796       2.277       0.383
+TUN  2024       0.659     0.145       0.643       0.042       0.480
+BLR  2024       2.307     0.934       1.363       1.429       1.594
+NIC  2024       2.422    -1.361       1.176      -1.262      -1.983
+HUN  2024       2.732     1.091       1.561       0.535       0.535
+POL  2024       1.305     2.148      -0.984       2.347       1.449
+VEN  2024       1.846     0.312       2.246       0.452      -1.765
+BGD  2024       2.458     0.442       1.740      -0.534       0.249
+IND  2024       0.583     2.022       0.876       1.381       1.017
+USA  2025       0.386     1.765       1.405       1.972       2.492
+TUR  2024       2.532     2.131       0.801       2.268       0.315
+SRB  2024       1.691     0.864       0.102       0.996      -0.198
+
+k=3 clustering:
+  Cluster 0: ['NIC', 'VEN', 'BGD']  pscohesv_mean=2.24
+  Cluster 1: ['TUN', 'POL', 'IND', 'USA', 'SRB']  pscohesv_mean=0.92
+  Cluster 2: ['SLV', 'BLR', 'HUN', 'TUR']  pscohesv_mean=2.48
+
+k=2 clustering (alternative):
+  Cluster 0: ['NIC', 'HUN', 'VEN', 'BGD']  pscohesv_mean=2.36
+  Cluster 1: ['SLV', 'TUN', 'BLR', 'POL', 'IND', 'USA', 'TUR', 'SRB']  pscohesv_mean=1.48
+
+Inertia: k=2 = 36.77, k=3 = 25.58
+USA cluster in k=3: 1
+USA cluster in k=2: 1
+
+================================================================================
+PRE_REG 010: Federal-friction breakability — 3-condition scoring across federal cases
+================================================================================
+
+case                     court   state   event   all_3      rate   broken
+USA-2024-2025             True    True    True    True   -0.1800     True
+MEX-2024-2025             True    True    True    True   -0.0390 breaking
+IDN-2024-2025            False   False   False   False   -0.0160    False
+IND-2024-2025            False    True   False   False   -0.0130    False
+BRA-2024-2025            False   False   False   False   +0.0300    False
+JPN-2024-2025            False   False   False   False   -0.0020    False
+
+Prediction: all 3 conditions met → fast rate (-0.05 or worse)
+Result: USA (3/3, -0.180/yr) and MEX (3/3, -0.039/yr breaking) confirm
+Result: IND/IDN (0/3 to 1/3) maintain slow-burn (-0.013 to -0.016/yr)
+Result: BRA (0/3) shows positive rate (Lula recovery)
+
+================================================================================
+PRE_REG 011: Failed-coup-as-enabler — libdem rate 5y-before vs 5y-after failed event
+================================================================================
+
+country                   event_year  rate_5y_before  rate_5y_after  acceleration
+Turkey                          2016         -0.0310        -0.0060       +0.0250
+Venezuela (Bolivarian Rep       2002         -0.0788        -0.0186       +0.0602
+Peru                            2022         -0.0043        -0.0383       -0.0341 ***ACCELERATED
+United States of America        2021         -0.0240        -0.0463       -0.0223 ***ACCELERATED
+Belarus                         2020         +0.0025        -0.0014       -0.0039
+Egypt                           2011         -0.0003        +0.0000       +0.0003
+Gabon                           2019         -0.0028        -0.0100       -0.0073
+Burkina Faso                    2014         +0.0178        +0.0120       -0.0058
+
+================================================================================
+PRE_REG 012: Mirror-recovery — vertical-tier vs horizontal-tier recovery in 8 expanded cases
+================================================================================
+
+case                      horizontal_mean  diagonal_mean vertical_mean    mirror?
+POL Tusk                  0.6426820020439464 0.7340944412620888 -0.1960826075445583        YES
+BRA Lula                  1.1236350881627823 0.6364628111278372 0.1298745753433478        YES
+KOR Yoon-impeach          0.7105297409865938 0.7693658963670835 -2.2380588876771985        YES
+BGD Hasina-Yunus          0.9044682712648088 2.372592592592592 -0.4271163211150964        YES
+Sri Lanka Sirisena        6.068085106382981 46.76595744680852 5.099999999999994        YES
+ZMB Hichilema 2021        0.5590909090909089 1.6696847515863076 0.1739531453222698        YES
+KOR 1987 transition                    NA             NA            NA         no
+IDN 1998 transition                    NA             NA            NA         no
+
+Mirror-order confirmed in 6 of 6 testable cases
+Prediction: ≥4 confirms for H1 support
+Result: SUPPORTED
+
+================================================================================
+PRE_REGS 009-012 FIT COMPLETE
+================================================================================

@@ -1,0 +1,119 @@
+======================================================================
+NEW CANDIDATES — V-Dem libdem trajectory 2010-2025
+======================================================================
+
+USA — USA Trump-era
+   2010: libdem=0.848
+   2011: libdem=0.845
+   2012: libdem=0.842
+   2013: libdem=0.852
+   2014: libdem=0.848
+   2015: libdem=0.848
+   2016: libdem=0.830
+   2017: libdem=0.749
+   2018: libdem=0.739
+   2019: libdem=0.740
+   2020: libdem=0.734
+   2021: libdem=0.756
+   2022: libdem=0.769
+   2023: libdem=0.789
+   2024: libdem=0.751
+   2025: libdem=0.571
+   Net 2010-2025 Δ = -0.277
+   Bukelization sliding 10y windows that FIT (range>=0.30, Δ<=-0.30, monotonic):
+      (none fit at 10y)
+
+SRB — SRB Vučić
+   2010: libdem=0.503
+   2011: libdem=0.501
+   2012: libdem=0.486
+   2013: libdem=0.401
+   2014: libdem=0.350
+   2015: libdem=0.341
+   2016: libdem=0.321
+   2017: libdem=0.290
+   2018: libdem=0.283
+   2019: libdem=0.280
+   2020: libdem=0.244
+   2021: libdem=0.236
+   2022: libdem=0.259
+   2023: libdem=0.248
+   2024: libdem=0.225
+   2025: libdem=0.208
+   Net 2010-2025 Δ = -0.295
+   Bukelization sliding 10y windows that FIT (range>=0.30, Δ<=-0.30, monotonic):
+      (none fit at 10y)
+
+BGD — BGD Hasina
+   2010: libdem=0.173
+   2011: libdem=0.168
+   2012: libdem=0.166
+   2013: libdem=0.144
+   2014: libdem=0.107
+   2015: libdem=0.108
+   2016: libdem=0.106
+   2017: libdem=0.106
+   2018: libdem=0.097
+   2019: libdem=0.094
+   2020: libdem=0.094
+   2021: libdem=0.092
+   2022: libdem=0.091
+   2023: libdem=0.094
+   2024: libdem=0.097
+   2025: libdem=0.116
+   Net 2010-2025 Δ = -0.057
+   Bukelization sliding 10y windows that FIT (range>=0.30, Δ<=-0.30, monotonic):
+      (none fit at 10y)
+
+NIC — NIC Ortega
+   2010: libdem=0.192
+   2011: libdem=0.188
+   2012: libdem=0.156
+   2013: libdem=0.125
+   2014: libdem=0.126
+   2015: libdem=0.124
+   2016: libdem=0.120
+   2017: libdem=0.103
+   2018: libdem=0.051
+   2019: libdem=0.046
+   2020: libdem=0.045
+   2021: libdem=0.034
+   2022: libdem=0.027
+   2023: libdem=0.021
+   2024: libdem=0.020
+   2025: libdem=0.019
+   Net 2010-2025 Δ = -0.173
+   Bukelization sliding 10y windows that FIT (range>=0.30, Δ<=-0.30, monotonic):
+      (none fit at 10y)
+
+BRA — BRA Bolsonaro+Lula
+   2010: libdem=0.776
+   2011: libdem=0.781
+   2012: libdem=0.777
+   2013: libdem=0.781
+   2014: libdem=0.783
+   2015: libdem=0.769
+   2016: libdem=0.653
+   2017: libdem=0.641
+   2018: libdem=0.608
+   2019: libdem=0.528
+   2020: libdem=0.534
+   2021: libdem=0.531
+   2022: libdem=0.540
+   2023: libdem=0.695
+   2024: libdem=0.712
+   2025: libdem=0.704
+   Net 2010-2025 Δ = -0.072
+   Bukelization sliding 10y windows that FIT (range>=0.30, Δ<=-0.30, monotonic):
+      (none fit at 10y)
+
+======================================================================
+USA sub-indicator deltas 2014-2025 (Obama 2nd term -> Trump I -> Biden -> Trump II)
+======================================================================
+  year  libdem   jucon  freexp   el_ff   hcind    cens      cs
+  2014   0.848   0.961   0.963   2.147   2.634   2.806   2.989
+  2018   0.739   0.948   0.903   0.928   2.583   1.756   3.092
+  2020   0.734   0.928   0.901   1.668   2.583   1.756   3.092
+  2022   0.769   0.930   0.944   2.258   2.208   2.949   3.202
+  2024   0.751   0.902   0.904   2.301   1.680   2.487   3.380
+  2025   0.571   0.844   0.729   2.301   1.545   0.875   2.504

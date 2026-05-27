@@ -1,0 +1,385 @@
+# IDP Substrate — Threads Register
+
+**Purpose:** Master adaptable list of every thread surfaced by the substrate work. Anchor for structured thread-pulling. Updated as threads are chased, found, closed, or downgraded.
+
+**Format per thread**: `ID — short title — status — last update — destination paper (if any)`
+
+**Status codes**:
+- `open` — thread is live, no investigation yet
+- `chasing` — actively being worked on
+- `closed-supported` — investigated and supports hypothesis
+- `closed-null` — investigated and walked back / null result
+- `closed-by-lit` — literature already settled it
+- `forward-watch` — locked prediction awaiting future data
+- `spilled-paper-X` — moved to a different paper's scope
+
+**Reporting cadence**: each thread gets a one-line update when its status changes. Substantive findings go to relevant pattern dig folder.
+
+---
+
+## PAPER 1 — Critical-path threads (must close before paper draft)
+
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P1-A | GOP party-state fusion question (USA personalist vs party-state) | **closed-supported as HYBRID** | 2026-05-25 | Neither pure. V-Dem pscohesv = 0.39 (low) but Federalist Society + SCOTUS 6-3 + state machines = party-state infrastructure. 5th 2x2 cell: HYBRID personalist-activated party-state. See digs/2026_05_25_P1_A_USA_personalist_or_partystate.md |
+| P1-B | Federal-friction slow-burn class (MEX/IDN/JPN/BRA test) | **closed-supported with refinement** | 2026-05-25 | 4 confirmed members (IND/MEX/IDN/USA-pre-2024) at rates -0.009 to -0.017/yr (2-5× slower than non-federal). Critical finding: federal-friction is BREAKABLE (USA -0.180/yr in 2024-25). See digs/2026_05_25_P1_B_federal_friction_class.md |
+| P1-C | Elections-free-fair as recovery bellwether | **closed-supported** | 2026-05-25 | v2elfrfair median 6.72% recovery vs other indicators 80%+; rank 7-LAST in POL/BRA/KOR. See digs/2026_05_25_P1_E_C_recovery_asymmetry.md |
+| P1-D | Sub-indicator order within 2x2 cells | **closed-coarse** | 2026-05-25 | Coarse answer via P1-G event chronology: single-event cells compress H-to-V gap (0-3y); incremental cells stretch (4-9y). Fine-grain analysis remains open as P1-D2 if needed |
+| P1-E | Recovery-mechanism asymmetry catalog | **closed-supported** | 2026-05-25 | Clean bifurcation: horizontal/diagonal recover FAST (80-122%), vertical recovers SLOW (2-9%). Recovery order is MIRROR of Sato's capture order. n=5 cases. See same dig |
+| P1-F | PER complication resolution | **closed-supported (sub-pattern identified)** | 2026-05-25 | Failed-coup-as-enabler sub-pattern: PER (Castillo→Boluarte), TUR 2016, VEN 2002. PATTERN_027 refined: TRUE BLOCK vs DELAYED vs DISPLACED vs POSTPONED typology. See digs/2026_05_25_P1_F_PER_complication.md |
+| P1-G | Time-stamped consolidation event coding | **closed-supported** | 2026-05-25 | 10/10 cases show H capture first (or compressed-first); median 4y H-to-V gap; single-event cells compress (0-3y), incremental stretch (4-9y). See digs/2026_05_25_P1_G_event_chronology.md |
+| P1-H | UN DESA destination data for POL reverse brain drain | **closed-supported (aggregate)** | 2026-05-25 | POL emigration rate HALVED during PiS (no surge); modest rebound under Tusk (no dramatic reversal). CONSISTENT w/ PRE_REG_007 v2 (POL had no econ crisis → no emig). Granular Eurostat OOS. See digs/2026_05_25_P1_H_POL_reverse_drain.md |
+| P1-I | V-Dem sub-national data acquisition (IND, USA) | **closed-data-identified** | 2026-05-25 | ISED dataset (Harbers et al. 2023 Democratization) covers US/CAN states + IND states + 9 LatAm. Acquisition non-trivial; out-of-session-scope. Paper 1 doesn't require it (country-level evidence sufficient). See digs/2026_05_25_P1_I_subnational_data.md |
+
+## PAPER 1 — Forward-watch threads (predictions locked; data arrives 2026-2030)
+
+| ID | Title | Status | Trigger date | Notes |
+|---|---|---|---|---|
+| P1-W1 | HUN 2026 election outcome | forward-watch | ~Apr 2026 | Slow-recovery prediction if Orbán loses |
+| P1-W2 | BRA 2026 election scenario | forward-watch | Oct 2026 | STF independence prediction |
+| P1-W3 | POL 2027 parliamentary election | forward-watch | Autumn 2027 | Tusk durability test |
+| P1-W4 | 2026 V-Dem v16 release | forward-watch | ~Mar 2026 | USA 2025 LDI registers; POL stalled signal |
+| P1-W5 | 2027 V-Dem v17 release | forward-watch | ~Mar 2027 | POL stalled vs durable test fires |
+| P1-W6 | USA 2026 midterms | forward-watch | Nov 2026 | Vertical-accountability test |
+| P1-W7 | BGD Yunus interim continuation | forward-watch | ongoing | Recovery registers in V-Dem 2025 or stalls? |
+| P1-W8 | Constitutional Tribunal rulings POL 2026-2027 | forward-watch | ongoing | Block ≥3 reforms predicted |
+
+---
+
+## PAPER 2 — Disaster-Displacement Regime Typology (PROMOTED 2026-05-25)
+
+**Status**: substrate-ready; hunt phase. Scope doc: `papers/PAPER_2_SCOPE.md`. Hunt plan: `papers/PAPER_2_DISASTER_REGIMES/HUNT_PLAN.md`. Folder: `papers/PAPER_2_DISASTER_REGIMES/`.
+
+### Phase 1 — CLOSED 2026-05-25
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P2-A | Regime 3/4/6 sub-typing | **closed-supported + refined** | 2026-05-25 | Regime 4: 5/6 SUPPORTED. Regime 6: walked back → uniform single-event-driven. Regime 3a expanded to 5 members |
+| P2-I | Displacement-per-affected ratios by regime | **closed-partial + walk-back** | 2026-05-25 | H1 supported, H2 (state-capacity moderation) WALKED BACK; H3 (PAK>IND, 3b>3a) FALSIFIED; new post-hoc 3a>>3b finding |
+| PRE_REG_013 | Within-regime sub-typing | **locked + fired** | 2026-05-25 | H1 SUPPORTED with refinement |
+| PRE_REG_016 | Displacement-per-affected ratios | **locked + fired** | 2026-05-25 | H1 supported; H2 walked back; H3 falsified |
+
+### Phase 2 — CLOSED 2026-05-25
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_017 | Phase 2 regime-expansion predictions | **locked + fired** | 2026-05-25 | F3 + F4 fired; H1 partially walked back |
+| P2-B | Regime 6 expansion (IRN/GRC/NZL/AFG) | **closed-walk-back** | 2026-05-25 | F3 fired. 0/3 testable confirm. R6 capped at 6 |
+| P2-C | Caribbean (JAM/PRI/BHS/TTO/BRB/GRD/LCA) | **closed-data-limited** | 2026-05-25 | PRI=3a ✓; 6/7 data-sparse |
+| P2-D | South Pacific (KIR/TUV/WSM/TON/NRU/PLW/COK) | **closed-data-gap** | 2026-05-25 | All <20K; untestable from GIDD |
+| P2-G | Regime 2 replication (CHN/MMR/ARG/KHM/THA) | **closed-mixed** | 2026-05-25 | THA → R1 candidate; ARG/KHM = typology gap (F4) |
+
+### Phase 3 — PARTIALLY CLOSED 2026-05-25
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_014 | Regime stability 1980-2024 | **locked + fired** | 2026-05-25 | F1 FIRED — 15/29 shifts; H1 walked back; refined to R6 event-latency |
+| P2-H | Historical stability test | **closed-walk-back + refined** | 2026-05-25 | H1 walked back; R6 event-latency confirmed |
+| PRE_REG_015 | Climate-attribution USA 3a-3b | **locked + partial fit** | 2026-05-25 | A: CONSISTENT (USA mega-year freq 7.1%→17.6%); B/C deferred |
+| P2-F | USA 2024 mega-storm decomposition | **closed-supported** | 2026-05-25 | 11.0M total; 93% storm; 22.9× median, 5.2× prior max |
+| P2-E | Climate attribution layer (ERA5/CHIRPS/HadISST/HURDAT2) | open | 2026-05-25 | Data acquisition required; full PRE_REG_015 fit awaits |
+
+### Optional / sidebar
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P2-J | High-capacity vs low-capacity within Regime 3 | open | 2026-05-25 | USA vs PHL displacement-per-affected |
+| P2-K | Multi-hazard interaction (HTI EQ + cyclone simultaneous) | open | 2026-05-25 | Single-case anomaly |
+| P2-L | Volcanic-displacement as 7th regime? (ISL/TON) | open | 2026-05-25 | Scoping only |
+
+---
+
+## PAPER 3 candidate — Strife Epicenter Diffusion
+
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P3-A | TGO/CIV/GHA emergence (PRE_REG_001) | forward-watch | 2027 ETA | UCDP-GED updates needed |
+| P3-B | Actor-overlap test (JNIM/IS-Sahel dyads cross-border) | spilled-paper-3 | 2026-05-25 | UCDP dyad_name overlap matrix |
+| P3-C | CAR sub-cluster diffusion test | spilled-paper-3 | 2026-05-25 | CAR → CMR/TCD/COD |
+| P3-D | HTI → DOM gang-war diffusion | forward-watch | 2027 ETA | PRE_REG_001 prediction set D |
+| P3-E | Geographic centroid speed measurement | spilled-paper-3 | 2026-05-25 | Diffusion velocity quantification |
+
+---
+
+## PAPER 4 — Conflict-Type Meta-Typology (PROMOTED 2026-05-25)
+
+**Status**: substrate-existing; hunt phase. Scope doc: `papers/PAPER_4_SCOPE.md`. Hunt plan: `papers/PAPER_4_CONFLICT_TYPES/HUNT_PLAN.md`. Folder: `papers/PAPER_4_CONFLICT_TYPES/`.
+
+### Phase 1 — CLOSED 2026-05-27
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_018 | Conflict-type classifier | **locked + fired** | 2026-05-27 | F1+F2 FIRED; substantive typology expands to 5 types; H2 4th-type RESOLVED via Type D |
+| P4-C | Apply classifier to full corpus | **closed-walk-back + 2 NEW TYPES** | 2026-05-27 | 35 country-periods; 5/8 anchors match strict rules; 4th type (D criminal-violence) + 5th type (E civil-war-mass-displacement) emerge |
+
+### Phase 2 — CLOSED 2026-05-27
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_018 v2 | Conflict-type classifier (refined) | **locked + fired** | 2026-05-27 | SUPPORTED 16/18 anchors; 1 unclassified; all falsifiers NOT FIRED |
+| PRE_REG_019 | Type-distinct DPF ratios | **locked + fired** | 2026-05-27 | H1 SUPPORTED 5/5 bands; H2 SUPPORTED rank D<A<C<B<E 4/4 pairs; H3 WALKED BACK (C heterogeneous) |
+| PRE_REG_020 | Type-distinct spatial concentration | **locked + fired** | 2026-05-27 | H1 SUPPORTED 5/5 bands; A=95.7%, B=97.3% both very concentrated |
+| P4-F | Compute ratios per case | **closed-supported** | 2026-05-27 | All bands match; rank EXACTLY predicted |
+| P4-G | Admin-1 dominance per case | **closed-supported** | 2026-05-27 | Type-distinct spatial signature confirmed |
+
+### Phase 3 — PARTIALLY CLOSED 2026-05-27
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_021 | Within-country phase decomposition (IRQ + AZE + NGA) | **locked + fired** | 2026-05-27 | **H1 LOAD-BEARING SUPPORTED** — F4 NOT FIRED — IRQ + NGA show type-shifts |
+| P4-D | IRQ phase decomposition | **closed-LOAD-BEARING-SUPPORTED** | 2026-05-27 | IRQ 2003=A → 2004-2011=E → 2018-2024=E; type-shifts visible |
+| P4-A | Type A historical expansion (AZE Karabakh) | **closed-data-limited** | 2026-05-27 | AZE 1992-94 + 2020 + 2023 phases tested; data-gap + classifier-edge limit; v3 refinement candidate (short-duration A rule) |
+| P4-B | Type B historical expansion (NGA Boko Haram) | **closed-type-shift-visible** | 2026-05-27 | NGA shifts C → E → unclass across BH phases; B threshold close-miss in 2015-2017 (29.5% one-sided vs 40%); v3 refinement candidate |
+| P4-E | 4th-type test | resolved-via-PRE_REG_018-v1 | 2026-05-25 | Type D criminal-violence already confirmed; SSD classifies C; HTI classifies B |
+
+### Optional / sidebar
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P4-J | Funding-per-fatality by type | open | 2026-05-25 | Cross-link to FTS |
+| P4-K | Displacement-per-affected by conflict-type | open | 2026-05-25 | Mirror Paper 2 P2-I |
+| P4-L | Conflict-type × disaster-regime co-occurrence | open | 2026-05-25 | Twin-paper synthesis |
+
+### Forward-watch
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P4-W1 | ISR-Gaza 2024+ trajectory (Type A or B?) | forward-watch | 2026-05-25 | UCDP-GED 2025 release |
+| P4-W2 | SDN RSF vs civilians 2024+ (Type B test) | forward-watch | 2026-05-25 | UCDP-GED 2025 release |
+| P4-W3 | HTI gang-state 2025+ (Type D2 candidate) | forward-watch | 2026-05-25 | UCDP-GED 2025 release |
+
+---
+
+## Other-substrate threads (not paper-aligned yet)
+
+### Channel-coupling exceptions (PATTERN_001 family)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| O-A | BRA Amazon conf-drought coupling mechanism (PATTERN_021) | open | 2026-05-25 | Spearman ρ=0.697; admin-1 decomposition needed |
+| O-B | ETH triple-channel coupling mechanism (PATTERN_023) | open | 2026-05-25 | All 3 pairs >0.5; synchronized-crisis hypothesis |
+| O-C | Synchronized-crisis hypothesis test on other countries | open | 2026-05-25 | Find other countries with multi-channel shock periods |
+
+### Active-spillover monitoring
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| O-D | BEN doubling-trajectory watch (30→46→85 fatalities) | forward-watch | UCDP 2025 | Predict ~170 in 2025 |
+| O-E | Range+trigger watch list (AGO, MOZ, COL, IND for PRE_REG_002) | forward-watch | annual V-Dem | Pre-locked predictions |
+
+### Methodology infrastructure
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| O-F | Residue-class partial pooling Stan fit | open | 2026-05-25 | The framework's actual model — never fit |
+| O-G | Admin-1 panels for hotspots (Nord Kivu, Mopti, Tigray, Sahel BFA, Alibori BEN, Sindh PAK) | open | 2026-05-25 | Within-country mechanism tests |
+| O-H | Conflict-type classifier formal scoring | open | 2026-05-25 | Score every country-period across 4 types |
+
+### Blockers / queued data acquisition
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| O-I | ReliefWeb retry (appname approved ~48h after 2026-05-21) | open | 2026-05-25 | Should be ready now |
+| O-J | HAPI 10K pagination cap fix | open | 2026-05-25 | Endpoint pulls capped at 10K |
+| O-K | UNHCR RDF UTF-8 encoding fix | open | 2026-05-25 | Sweep encoding issue |
+| O-L | FEWS NET 46-country files join into panels | open | 2026-05-25 | Have shapefiles + geojson |
+| O-M | UNDP HDR XLSX parsing fix | open | 2026-05-25 | Low priority |
+| O-N | IMF v3 SDMX central fallback | open | 2026-05-25 | v1 dataservices.imf.org dead |
+
+---
+
+## CLOSED THREADS (for reference; don't reopen unless new data)
+
+### Closed by literature
+- C-Lit-1 — Sub-indicator chronology (Sato 2022 horizontal→diagonal→vertical established)
+- C-Lit-2 — Naming convention (Lührmann-Lindberg / Scheppele / Bermeo academic terms)
+- C-Lit-3 — Causality canonical (Bermeo + Levitsky-Way settled mechanism)
+- C-Lit-4 — Recovery base rate (V-Dem WP #147: 52% reverse)
+
+### Closed by our analysis
+- C-Ours-1 — PATTERN_013 mechanism replication (7 cases firmed)
+- C-Ours-2 — PATTERN_020 Regime 6 EQ-dominant firmed (6 cases)
+- C-Ours-3 — PATTERN_016 PAK uniquely bimodal-mega-flood (NOT a class — falsified)
+- C-Ours-4 — PATTERN_014 UCDP pycountry name bug fixed
+- C-Ours-5 — PRE_REG_007 v1 cross-country emigration coupling (walked back; v2 reframed)
+- C-Ours-6 — PRE_REG_008 H2 speed-by-classification (walked back; null)
+- C-Ours-7 — Regime 5 drought-dominant (falsified; drought is sub-channel within Regime 4)
+- C-Ours-8 — PATTERN_027 4-lever blocking model (5 cases support; 3+ levers = blocked)
+- C-Ours-9 — POL recovery sub-indicator symmetry (5 of 6 confirmed; CONFIRMED)
+- C-Ours-10 — IND federal counter-pressure (jucon held 17 years; CONFIRMED)
+- C-Ours-11 — VEN emigration is late-stage consequence (chronology smoking gun CONFIRMED)
+- **C-Ours-12 — P1-C elections-free-fair recovery bellwether CONFIRMED** (median 6.72% recovery vs others 80%+; rank 7-LAST in 3 modern cases)
+- **C-Ours-13 — P1-E recovery-mechanism asymmetry CONFIRMED** (horizontal/diagonal recover fast 80-122%; vertical recovers slow 2-9%; MIRROR of Sato's capture order)
+- **C-Ours-14 — P1-G event chronology CONFIRMED** (10/10 cases show H capture first; median 4y H-to-V gap; speed-typology validated via event spacing)
+- **C-Ours-15 — P1-D within-cell sub-indicator order COARSE-CLOSED** (single-event cells compress H-to-V to 0-3y; incremental cells stretch to 4-9y)
+- **C-Ours-16 — P1-A USA is HYBRID (personalist-activated party-state)** — v2pscohesv 0.39 + GOP institutional infrastructure (Federalist Society + SCOTUS 6-3 + state machines) = 5th 2x2 cell; refines PATTERN_026 and PRE_REG_008
+- **C-Ours-17 — P1-B federal-friction slow-burn class CONFIRMED + REFINED** — 4 cases (IND/MEX/IDN/USA-pre-2024) at -0.009 to -0.017/yr (2-5× slower than non-federal); CRITICAL: friction is BREAKABLE when court captured + state machines align (USA 2024-25 breakout)
+- **C-Ours-18 — P1-F PER complication RESOLVED + SUB-PATTERN** — failed-coup-as-enabler: PER Castillo→Boluarte, TUR 2016, VEN 2002. PATTERN_027 refined: TRUE BLOCK / DELAYED / DISPLACED / POSTPONED typology
+- **C-Ours-19 — P1-H POL reverse brain drain aggregate-closed** — POL emig rate halved during PiS, modest rebound under Tusk; consistent with PRE_REG_007 v2 (no econ crisis → no emig mechanism activation); Eurostat granular OOS
+- **C-Ours-20 — P1-I subnational data closed-data-identified** — ISED (Harbers et al. 2023) is the data source; acquisition non-trivial; Paper 1 doesn't require it (country-level evidence sufficient)
+- **C-Ours-21 — PRE_REG_009 HYBRID cell SOFT-supported** — k=3 clusters emerge but V-Dem party indicators alone don't cleanly discriminate HYBRID; needs institutional-infrastructure measures (Federalist Society, SCOTUS network, state machines)
+- **C-Ours-22 — PRE_REG_010 federal-friction BREAKABLE STRONGLY SUPPORTED** — 6/6 cases match 3-condition scoring; USA 3/3=-0.180/yr, MEX 3/3=-0.039/yr, IND/IDN 0-1/3 holds slow-burn
+- **C-Ours-23 — PRE_REG_011 failed-coup-as-enabler v1 WALKED BACK, v2 REFINED** — only 2/8 cases accelerate; v2: applies when coup TARGETS DEMOCRACY (PER, USA Jan 6) not when targets autocrat (TUR/VEN already collapsing)
+- **C-Ours-24 — PRE_REG_012 mirror-recovery STRONGLY SUPPORTED** — 6/6 testable cases (incl new ZMB Hichilema 2021); vertical-tier recovers LAST consistently
+- **C-Ours-25 — P2-A within-regime sub-typing SUPPORTED + REFINED** — Regime 4 5/6 cases match (BGD/BRA/IDN/JPN/PER ✓, MEX boundary); Regime 6 uniformly single-event-driven (no 6a/6b sub-types — all 6 confirmed countries show ≥50% single-event share); Regime 3a expanded to 5 members (USA, CUB, DOM, FJI, VUT)
+- **C-Ours-26 — P2-I displacement-per-affected H1 SUPPORTED qualitatively** — EQ 33.6% ≥ Flood 31.5% ≥ Storm 28.8% >> Drought 1.3%; mechanism-distinct ratios survive at coarse level
+- **C-Ours-27 — P2-I state-capacity moderation H2 WALKED BACK** — 0 of 3 contrasts meet threshold; ITA > NPL and JPN > HTI INVERTED. Reporting heterogeneity dominates over state-capacity effect
+- **C-Ours-28 — P2-I post-hoc finding: Regime 3a >> Regime 3b ratio** — USA/CUB 85.1% vs PHL 37.1%. Bimodal mega-storms drive HIGHER displacement-per-affected than perpetual storms (forced-evacuation counting hypothesis; needs forward pre-reg if formally tested)
+- **C-Ours-29 — PRE_REG_017 Phase 2 H1 partially walked back** — typology absorbs additions broadly (30 confirmed members up from 22) but exposes 2 specific gaps: Regime 6 doesn't expand (F3); flood-dominant transitional class needed (F4)
+- **C-Ours-30 — P2-B Regime 6 expansion fail** — IRN/GRC/NZL fail R6 classification. IRN flood-dominant (51.5%), GRC wildfire-dominant (82% "other"), NZL data-sparse. R6 stays at 6 confirmed: HTI/NPL/TUR/CHL/ECU/ITA
+- **C-Ours-31 — P2-G THA emerges as Regime 1 second member** (PATTERN_028) — flood 94.3%, storm 5.7%; PAK no longer uniquely Regime 1
+- **C-Ours-32 — P2-G ARG/KHM = typology gap** (PATTERN_030) — flood-dominant (>75%) but secondary storm exposure >10% disqualifies from R1 strict; doesn't fit R2 either. Proposed Regime 2b
+- **C-Ours-33 — GRC wildfire-dominant candidate Regime 7** (PATTERN_029) — 82% "other" channel; Mediterranean wildfire-displacement candidate; needs ESP/PRT/CYP co-validation
+- **C-Ours-34 — P2-C/P2-D data-limited** — Caribbean (PRI sole confirms; 6/7 sub-30K cumulative IDP) and South Pacific (all <20K) below GIDD threshold; theory holds where measurable, theory-failure cannot be tested without event-level supplementation
+- **C-Ours-35 — PRE_REG_014 stability H1 WALKED BACK** — 15 of 29 confirmed regime members shift between 1980-2007 and 2008-2024 windows (52% shift rate); F1 fired. ~3-4 drought-reporting artifacts, ~4 R6 arrivals (predicted), ~3-4 R4 sub-type shifts, ~3-4 genuine geographic shifts
+- **C-Ours-36 — Regime 6 is EVENT-LATENT** — 4 of 6 R6 members (HTI/NPL/CHL/ECU) gained R6 only after post-2007 major quakes. R6 = JOINT product of (geophysical exposure) × (major event in window). PATTERN_020 refined with event-latency property
+- **C-Ours-37 — PRE_REG_015 partial fit CONSISTENT** — USA storm-mega-year frequency 7.1% (1980-2007) → 17.6% (2008-2024); 2.5× increase supports H1 climate-attribution intensification. Full fit deferred pending HURDAT2 + HadISST
+- **C-Ours-38 — P2-F USA 2024 corpus record** — 11.0M total disaster-IDP / 93% storm (Helene 2.5M + Milton 5.9M + Beryl 1.57M); 22.9× baseline median, 5.2× previous max. Single-year single-country corpus high
+- **C-Ours-39 — PRE_REG_018 classifier F1+F2 fired, walk-back + refinement** — 5/8 anchors match strict rules (MLI/BFA/SOM fail due to too-strict admin-1 threshold); 12/35 unclassified. Rules need refinement (loosen admin-1 ≤80% for Type C). v2 lock pending
+- **C-Ours-40 — Type D criminal-violence CONFIRMED as 4th conflict-type** (PATTERN_032) — MEX 99.5% non-state / 30 DPF; BRA 95.2% / 6 DPF; ECU 99.7% / 38 DPF. Cartel/gang violence with low DPF; distinct from Type B (predator-militia 250-800 DPF) and Type C (irregular insurgency)
+- **C-Ours-41 — Type E civil-war-mass-displacement EMERGED unpredicted as 5th candidate** (PATTERN_033) — SYR/YEM/AFG/IRQ/LBY/CMR/CAF at DPF 300-2300; state-dominated but mass civilian displacement. Distinct from Type A (DPF ≤ 150)
+- **C-Ours-42 — MOZ Cabo Delgado confirms Type B beyond COD** (PATTERN_031) — ASWJ insurgency: 5,055 fat / 3.6M displaced / 48% one-sided / 97% admin-1 / 82.5% single-actor. Mechanism replication
+- **C-Ours-43 — F4 (regional uniformity) NOT FIRED** — Sahel/Horn/LatAm/Central Africa all split across multiple conflict-types within region. **Conflict-form > region** as load-bearing variable. Load-bearing positive finding for Paper 4
+- **C-Ours-44 — PRE_REG_018 v2 SUPPORTED (16/18 anchors)** — 5-type framework empirically confirmed. Refined Type A (loosened admin-1 to 60%+ OR fat ≥100K); added Type D (criminal-violence, strife ≥80% + DPF ≤100) and Type E (civil-war-mass-displacement, state ≥55% + DPF ≥300 + IDP ≥500K). BFA/SOM mismatch (predicted C, actual E) — refinement direction for v3
+- **C-Ours-45 — PRE_REG_019 DPF rank D<A<C<B<E EXACTLY matches** — 4/4 pairwise pairs correct. Type-distinct DPF medians: D=30, A=37, C=238, B=715, E=938. All 5 fall within predicted bands. H3 walked back (Type C IQR 1765 > inter-type spread 908; C is heterogeneous → sub-typing candidate)
+- **C-Ours-46 — PRE_REG_020 spatial concentration type-distinct** — A=95.7%, B=97.3% (both very concentrated); C=65.1%, D=55.5%, E=59.3% (mid-range). All 5 bands match. F2 not fired. Spatial signature firmed
+- **C-Ours-47 — PRE_REG_021 LOAD-BEARING SUPPORTED — conflict-form > country identity** — F4 NOT FIRED. IRQ shifts A (2003 interstate) → E (post-2004 prolonged civil war). NGA shifts C (BH insurgency) → E (BH territorial-control phase). Within-country type-shifts confirm classifier operates on organizational form of violence
+- **C-Ours-48 — AZE Karabakh classifier-edge surfaced** — AZE 2020 + 2023 should be Type A but mid-scale + low admin-1 concentration triggers UNCLASSIFIED or mis-classifies E. v3 refinement candidate: short-duration high-state-share A rule
+- **C-Ours-49 — PRE_REG_018 v3 WALKED BACK** — Type E narrowing rule wrong-directional (fatality-share ≠ organized-opposition); 14/18 anchors vs v2's 16/18; 9 unclassified vs v2's 1. Pre-reg discipline win: caught over-correction before publication. v2 remains Paper 4's supported classifier. Future-work: use UCDP conflict_type column or side_b actor presence to detect organized opposition
+- **C-Ours-50 — Type C sub-typing (C1/C2/C-mixed) confirmed within v3** — MLI=C1, SSD=C2, COL=C2, IRN=C-mixed. Survives v3 walk-back as constructive sub-finding addressing PRE_REG_019 H3 Type C heterogeneity
+- **C-Ours-51 — Paper 3 RULAC NIAC cross-validation** — Geneva Academy's Rule of Law in Armed Conflicts (RULAC) project classified Togo as being in a non-international armed conflict with JNIM (Feb 2026). 62 fatalities Jan-July 2025; 10,171 IDPs registered. INDEPENDENT confirmation of PRE_REG_001 H2 mechanism via separate IHL methodology. Pre-reg's UCDP type-2 strife operational threshold may not formally fire (UCDP coding gap: TGO-vs-JNIM coded as type-1 state-based + type-3 one-sided, not type-2 strife)
+- **C-Ours-52 — Paper 7 Phase 1 partial fit fired** — Cross-country comparison table built (16 countries × 6 metrics from SIPRI + World Bank). US triple-outlier 2/3 conditions confirmed (mil-spend 3.40% top quartile; homelessness 196/100K top quartile; public-housing-spend bottom quartile pending OECD data). Costa Rica 1948 case SUPPORTED (life exp +6.2y above Central American peers); Mauritius 1968 partial (life exp +11.2y but GDP-confound); Finland Housing First indirect support (13/100K vs Nordic peers 65+).
+- **C-Ours-53 — US healthcare paradox surfaced (unpredicted finding)** — US is highest in healthcare-spend % GDP (17.0%) AND lowest in life expectancy (77.9y) among OECD peer set. Multi-dimensional outlier on spending; below-peer on outcomes. Sub-claim candidate for Paper 7.
+- **C-Ours-54 — Paper 7 homelessness rate REFINED** — original "US top quartile" claim was measurement-dependent. Under unsheltered-rate definition (rough sleeping / streets-living), **US is structural outlier (12/10K)** — 13× UK, 120× Finland. Under broad-total-homelessness definition (includes statutory + temporary accommodation), US is mid-pack (19.5/10K vs UK 56, FRA 49, NZL 217). Refined framing: SDP specifically describes unsheltered / streets-living homelessness produced by lack of welfare-state housing-rights architecture.
+- **C-Ours-55 — Finland Housing First partial fit SUPPORTED + 2025 inflection** — Finland declined 11 consecutive years 2014-2024 (Wikipedia confirms 2021 = 4,396 total / 1,318 long-term, well below pre-reg trajectory predictions). **Feb 2025: REVERSED**, attributed to "rising living costs and social security cuts." Pre-reg Prediction set A SUPPORTED through 2024; 2025 reversal is unpredicted-but-framework-consistent finding showing SDP framework operates in BOTH directions (investment → decline; retrenchment → reversal). Finland is the cleanest within-country empirical demonstration of revealed-preference framework.
+
+## PAPER 6 — Methodology / Channel-Orthogonality + Residue-Class (PROMOTED 2026-05-27)
+
+**Status**: substrate-existing from Papers 2 + 4. Scope: `papers/PAPER_6_SCOPE.md`. Hunt: `papers/PAPER_6_METHODOLOGY/HUNT_PLAN.md`.
+
+### Phase 1 (Stan residue-class fit)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_022 | Residue-class Stan model > classical baseline | pending lock | 2026-05-27 | Lock before Stan fit |
+| P6-B | Fit Stan residue-class model on full corpus | open | 2026-05-27 | Heavy compute; uses Papers 2+4 type assignments as classes |
+| P6-C | LOO-CV / WAIC vs baseline | open | 2026-05-27 | Medium effort; depends on P6-B success |
+
+### Phase 2 (admin-1 + cross-paper unification)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_023 | Admin-1 sub-national orthogonality | pending lock | 2026-05-27 | Lock before sub-national test |
+| P6-D | Admin-1 orthogonality test | open | 2026-05-27 | Some admin-1 panels exist; need pipeline |
+| P6-E | Cross-paper unification synthesis writeup | open | 2026-05-27 | Light; analytical |
+
+### Phase 3 (forward validation)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_023 | Admin-1 sub-national orthogonality | **locked** | 2026-05-27 | First fit deferred pending admin-1 panel construction |
+| PRE_REG_024 | Forward-prediction residue-class > baseline | **locked** | 2026-05-27 | First fit fires when UCDP-GED v26 + GIDD 2025 arrive (~April 2026) |
+| P6-F | Forward-watch fire | forward-watch | 2026-05-27 | UCDP-GED + GIDD 2025/2026/2027 |
+
+---
+
+## PAPER 7 — SDP Framework / Structural Displacement (PROMOTED 2026-05-27)
+
+**Status**: framing locked; substrate proposed; no data pulled. Scope: `papers/PAPER_7_SCOPE.md`. Hunt: TBD. Folder: `papers/PAPER_7_SDP_FRAMEWORK/`.
+
+**Locked framing**: SDP coined as parallel-not-replacement to IDP. Equivalence as empirical question. Causation dropped. Voluntary operationalized as "not externally imposed."
+
+### Phase 1 (data acquisition + cross-country) — PARTIAL FIT FIRED 2026-05-27
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_025 | SDP framework definitional + IDP-equivalence as empirical question | **locked** | 2026-05-27 | Definitional pre-reg; specific empirical tests in 026/027/028 |
+| P7-A | HUD AHAR data pull | **partial** | 2026-05-27 | 2024 PDF acquired (5MB); CoC-level CSV needs Eviction Lab + HMIS manual |
+| P7-B | SIPRI + World Bank cross-country pull | **closed-supported** | 2026-05-27 | SIPRI Excel acquired; WB 5 indicators × 16 countries pulled; OECD SOCX + Affordable Housing pending |
+| P7-C | Country-year panel build | **closed-partial** | 2026-05-27 | 16-country × 6-metric table built |
+| P7-D | Cross-country comparison + revealed-preference table | **closed-supported** | 2026-05-27 | US triple-outlier 2/3 confirmed; CR case supported; MU partial; FIN indirect support |
+
+### Phase 2 (case studies)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P7-E | Costa Rica 1948 case study | open | 2026-05-27 | Life expectancy + education + democracy; NOT homelessness (incommensurable) |
+| P7-F | Mauritius 1968 case study | open | 2026-05-27 | Independence-era first-order reallocation |
+| P7-G | Peace dividend 1990s wave case study | open | 2026-05-27 | With Maastricht 1992 confounder explicitly named |
+| P7-H | Finland Housing First 2008+ case study | open | 2026-05-27 | Second-order within-welfare reallocation |
+
+### Phase 3 (channel-orthogonality + residue-class on SDP)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_026 | US SDP channel-orthogonality (parallel to PRE_REG_004) | **locked** | 2026-05-27 | First fit fires after HUD + Eviction Lab + ACS pulled |
+| P7-I | Decompose US SDP into eviction/unaffordability/etc channels | open | 2026-05-27 | State-year level |
+| P7-J | Test orthogonality of SDP channels | open | 2026-05-27 | Mirror IDP test |
+| PRE_REG_027 | Cross-country spending-allocation + SDP outcome correlation | **locked** | 2026-05-27 | First fit fires after SIPRI + OECD pulled |
+| P7-K | Cluster US states into homelessness regimes | open | 2026-05-27 | Parallel to Paper 2 disaster regimes |
+
+### Phase 4 (SDP-IDP equivalence test)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_028 | Finland Housing First as second-order reallocation case | **locked** | 2026-05-27 | First fit fires after ARA + Y-Foundation pulled |
+| P7-L | Apply methodology to both IDP + SDP | open | 2026-05-27 | After Phase 3 |
+| P7-M | Compare channel + residue-class structures | open | 2026-05-27 | Equivalence resolution |
+| P7-N | Empirically resolve H3 equivalence question | open | 2026-05-27 | Paper 7's headline finding |
+
+---
+
+## PAPER 3 — Strife Epicenter Diffusion (PARTIAL FIT DONE 2026-05-27)
+
+**Status**: scope-doc-existing; partial fit fired; 6/9 closure criteria met. Publishable as forward-watch working-paper / blog post.
+
+### Partial-fit closed
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_001 | Strife epicenter diffusion | **locked + partial fit fired + RULAC cross-validation** | 2026-05-27 | In-sample CONFIRMED (MLI→BFA→NER); TGO early-emergence JNIM active; F2 partial-fire for GHA (non-JNIM); F3 partial-fire for CAR sub-cluster |
+| P3-partial-fit | Partial-fit dig | **closed-supported** | 2026-05-27 | Framework narrowed to Sahel-specific + JNIM-corridor-specific |
+| **P3-RULAC** | **Geneva Academy RULAC TGO NIAC cross-validation** | **closed-cross-validated** | 2026-05-27 | **RULAC classified TGO as NIAC with JNIM (Feb 2026); 62 fatalities Jan-July 2025; 10,171 IDPs registered; mechanism INDEPENDENTLY CONFIRMED via separate IHL methodology** |
+
+### Forward-watch (closure awaits 2025-2027 data)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P3-A | TGO type-2 strife threshold-crossing | forward-watch | 2027 ETA | UCDP-GED 2025 release |
+| P3-B | CIV emergence | forward-watch | 2027 ETA | UCDP-GED 2025-2026 |
+| P3-C | GHA emergence (mechanism check) | forward-watch | 2027 ETA | F2 risk if non-JNIM |
+| P3-D | HTI → DOM cross-border | forward-watch | 2027 ETA | UCDP-GED 2025-2027 |
+| P3-E | CAR sub-cluster walk-back writeup | open | 2026-05-27 | Light writeup pending |
+
+---
+
+## WORKFLOW for structured thread pulling
+
+When chasing a thread:
+1. **Pick** a thread from this register (priority: Paper 1 critical-path > Paper 2+ readiness > methodology infrastructure)
+2. **Move status** open → chasing
+3. **Work** the thread (analysis script / lit fetch / write-up)
+4. **Report** findings in the relevant pattern's `digs/` folder
+5. **Update status** chasing → closed-supported / closed-null / forward-watch / spilled
+6. **Cross-link** in PAPER_X_SCOPE.md if it changes paper readiness
+7. **Pick next**
+
+Each session-close should leave this register accurate to the last status change.
+
+**Adaptability rule**: when an unexpected finding surfaces a NEW thread, add it here immediately. Don't lose threads even if they're not on the current critical path.
+
+---
+
+## SUMMARY of register state (2026-05-25, after Paper 2 Phase 1 + Phase 2 closed)
+
+- **Paper 1 critical-path open**: 0 threads — ALL CLOSED
+- **Paper 1 forward-watch**: 8 threads (P1-W1 through P1-W8)
+- **Paper 2 — Phase 1 + 2 CLOSED**
+  - Phase 1 (P2-A, P2-I, PRE_REG_013, PRE_REG_016): CLOSED
+  - Phase 2 (P2-B, P2-C, P2-D, P2-G, PRE_REG_017): CLOSED
+  - Phase 3 (P2-H, P2-E, P2-F, PRE_REG_014, PRE_REG_015): open, pending locks
+  - Optional sidebars: P2-J, P2-K, P2-L
+- **Paper 3 candidate threads**: 5 (P3-A through P3-E) — strife epicenter diffusion
+- **Paper 4 candidate threads**: 4 (P4-A through P4-D) — conflict-type meta-typology
+- **Other-substrate threads**: 14 (channel-coupling, monitoring, methodology, data acquisition)
+- **Closed threads**: 34 total (was 28)
+
+**Total tracked**: ~67 threads across all categories. **Closed**: 34. **Open + watching**: ~33.
+
+**Paper 2 substrate status**: 10 of 11 closure criteria met. Phase 1 + 2 + 3 (partial) closed. Only outstanding: full PRE_REG_015 fit (deferred pending HURDAT2 + HadISST data acquisition).
+
+**Closed threads (post-Phase 3)**: 38 total (up from 34).
+
+**Paper 4 promoted 2026-05-25; Phase 1+2+3 closed 2026-05-27**: substrate-complete at 10/10. 5-type typology supported. PRE_REG_018 v2 SUPPORTED (16/18 anchors); v3 walked back (over-correction); Type C sub-typing C1/C2/C-mixed survives v3 walk-back.
+
+**Paper 6 (methodology) promoted 2026-05-27**: substrate exists from Papers 2 + 4 (channel-orthogonality + 6-regime + 5-type typology). Hunt phase. 3/9 closure criteria met. Next: PRE_REG_022 Stan residue-class lock + fit.
+
+**Paper 7 (SDP framework) promoted 2026-05-27**: framing locked; PRE_REG_025 locked; substrate proposed; no data pulled. 1/9 closure criteria met. Next phase: data acquisition (HUD + Eviction Lab + SIPRI + OECD SOCX).
+
+**Paper 3 partial fit fired 2026-05-27**: 6/9 closure criteria met; publishable as forward-watch working-paper / blog post. Awaits UCDP-GED 2025-2027 releases for full closure.
+
+**Closed threads (after Papers 3 + 6 + 7 progression)**: 53 total.
+
+## Paper 2 (Disaster-displacement regime typology) PROMOTED 2026-05-25
+- Scope doc: `papers/PAPER_2_SCOPE.md`
+- Folder: `papers/PAPER_2_DISASTER_REGIMES/`
+- Hunt plan: `papers/PAPER_2_DISASTER_REGIMES/HUNT_PLAN.md`
+- Closure criteria: 4/11 met. Phase 1 is the easiest density-win and ready to fire.

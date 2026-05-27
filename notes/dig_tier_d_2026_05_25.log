@@ -1,0 +1,161 @@
+[load] UCDP-GED
+
+================================================================================
+DIG 005: MLI strife sequencing — early vs late emergence vs peers
+================================================================================
+
+Mali: total strife fatalities 1998+ = 3,213; first year with >=50 strife fatal = 1999
+      events  fatalities
+year                    
+2002       1           5
+2004       2          20
+2012      13         118
+2013       2          28
+2014       7          95
+2015       6          69
+2016      11          68
+2017      17         176
+2018      45         209
+2019      27         169
+2020      36         448
+2021      48         345
+2022      72         755
+2023      35         375
+2024      39         274
+
+Burkina Faso: total strife fatalities 1998+ = 516; first year with >=50 strife fatal = 2020
+      events  fatalities
+year                    
+2017       1           6
+2018       3           5
+2019      10          29
+2020      12         152
+2021       7          82
+2022       9          44
+2023       6         178
+2024       6          20
+
+Niger: total strife fatalities 1998+ = 270; first year with >=50 strife fatal = 2021
+      events  fatalities
+year                    
+2008       1          12
+2014       2           5
+2015       1           6
+2018       4          29
+2021       4         105
+2022       4          52
+2023       4          21
+2024       1          40
+
+Benin: no non-state-strife events
+
+South Sudan: total strife fatalities 1998+ = 6,547; first year with >=50 strife fatal = 2011
+      events  fatalities
+year                    
+2011      18         974
+2012      25         528
+2013      10         215
+2014       3          30
+2015       8         291
+2016       9         333
+2017      13         533
+2018      24         492
+2019      27         409
+2020      29         656
+2021      35         657
+2022      19         612
+2023       5         184
+2024      10         633
+
+Haiti: total strife fatalities 1998+ = 422; first year with >=50 strife fatal = 2021
+      events  fatalities
+year                    
+2021       8          52
+2022       9         131
+2023       3          76
+2024       4         163
+
+Central African Republic: total strife fatalities 1998+ = 3,896; first year with >=50 strife fatal = 2011
+      events  fatalities
+year                    
+2007       1           4
+2011       5          64
+2013      17         289
+2014     134        1045
+2015      36         278
+2016      13         214
+2017     109        1084
+2018      21         315
+2019      17         283
+2020      18         185
+2023       9         101
+2024       9          34
+
+=== MLI strife dyads (top 10 by lifetime fatalities) ===
+dyad_name
+IS - JNIM                   925
+Dozos (Mali) - JNIM         519
+Dan na Ambassagou - JNIM    442
+GATIA, MSA - IS             247
+IS - MSA                    192
+Dogon - Fulani              180
+CMA - GATIA                 131
+GATIA - IS                  107
+Arab - Kounta                79
+CMA - CM-FPR, GATIA, MAA     70
+
+=== MLI strife admin-1 acute fatalities ===
+adm_1
+Mopti region         876
+Gao region           417
+Ménaka region        404
+Segou region         231
+Tombouctou region    162
+Kayes region           2
+
+================================================================================
+DIG 006: BEN periphery — Atakora/Alibori admin-1 trajectory + BFA-Est mirror
+================================================================================
+BEN GED events: 65
+
+BEN annual events + fatalities (1998+):
+      events  fatalities
+year                    
+2019       1           1
+2020       1           1
+2021       6          11
+2022       8          30
+2023      20          46
+2024      29          85
+
+BEN acute (2020-2024) admin-1 fatalities:
+adm_1
+Alibori department    102
+Atacora department     71
+
+BEN acute actor side_a:
+side_a
+Government of Benin    147
+JNIM                    26
+
+=== BFA Est region (adjacent to BEN) acute fatalities by year ===
+      events  fatalities
+year                    
+2018       6          23
+2019      12          30
+2020      18          40
+2021      26         118
+2022      30         339
+2023      93        1030
+2024      64        1476
+
+=== BEN acute events, latitude band (north > 11.5 = near BFA border) ===
+                 events  fatalities
+band                               
+mid                  15          32
+north_central        23          66
+north_BF_border      26          75
+
+================================================================================
+TIER D DIG COMPLETE
+================================================================================

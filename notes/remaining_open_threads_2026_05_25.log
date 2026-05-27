@@ -1,0 +1,132 @@
+V-Dem cols: 39 party/libdem cols found
+
+================================================================================
+DIG A: PRE_REG_008 first fit: speed by party-state vs personalist
+================================================================================
+
+iso            class   start     end       rate  years
+SLV      personalist   0.393   0.090    -0.0606      5
+HUN      party_state   0.677   0.351    -0.0326     10
+TUR      personalist   0.461   0.101    -0.0360     10
+VEN      party_state   0.603   0.162    -0.0441     10
+POL      party_state   0.827   0.450    -0.0377     10
+TUN      personalist   0.642   0.196    -0.0446     10
+BLR      personalist   0.443   0.100    -0.0343     10
+IND      party_state   0.587   0.281    -0.0139     22
+USA      personalist   0.749   0.751    +0.0003      7
+SRB      personalist   0.503   0.225    -0.0199     14
+BGD      party_state   0.193   0.097    -0.0064     15
+NIC      personalist   0.216   0.045    -0.0132     13
+
+Personalist cases (n=7): mean rate = -0.0297, median = -0.0343
+Party-state cases (n=5): mean rate = -0.0269, median = -0.0326
+
+Mann-Whitney U test (personalist < party_state rate? i.e. personalist more negative): U=16.0, p=0.4381
+
+================================================================================
+DIG B: Speed variation across window length
+================================================================================
+
+Does a SHORTER window correlate with FASTER absolute rate? (single-event hypothesis)
+iso   window       rate   |rate|
+SLV        5    -0.0606   0.0606
+HUN       10    -0.0326   0.0326
+TUR       10    -0.0360   0.0360
+VEN       10    -0.0441   0.0441
+POL       10    -0.0377   0.0377
+TUN       10    -0.0446   0.0446
+BLR       10    -0.0343   0.0343
+IND       22    -0.0139   0.0139
+USA        7    +0.0003   0.0003
+SRB       14    -0.0199   0.0199
+BGD       15    -0.0064   0.0064
+NIC       13    -0.0132   0.0132
+
+Spearman ρ(window_length, |rate|) = -0.489 (p=0.1067)
+Predicted: negative correlation (shorter window = faster rate)
+
+================================================================================
+DIG C: IND federal counter-pressure: party-state at national level, varied at state level
+================================================================================
+
+V-Dem sub-national candidate cols: ['v2elsuffrage', 'v2elffelr', 'v2psnatpar', 'v2ddlexrf']
+
+IND polyarchy vs libdem 1998-2024:
+year  libdem  polyarchy   jucon  partyaut
+1998   0.593      0.746   0.819      2.05
+1999   0.586      0.737   0.819      2.05
+2000   0.584      0.735   0.819      2.05
+2001   0.584      0.735   0.819      2.05
+2002   0.587      0.739   0.819      2.05
+2003   0.583      0.736   0.819      2.05
+2004   0.578      0.731   0.819      2.05
+2005   0.573      0.723   0.819      2.05
+2006   0.569      0.721   0.819     1.947
+2007   0.569      0.721   0.819     1.947
+2008   0.569      0.721   0.819     1.947
+2009   0.539      0.683   0.819     1.947
+2010   0.532      0.671   0.822     1.792
+2011   0.532      0.671   0.822     1.792
+2012   0.525      0.659   0.822     1.792
+2013   0.522       0.65   0.827     1.792
+2014   0.488      0.617   0.818     1.792
+2015   0.417      0.543   0.799     2.082
+2016   0.406      0.524     0.8     2.082
+2017   0.371      0.488   0.777     1.649
+2018   0.363      0.482   0.777     1.479
+2019   0.324       0.43   0.766     1.479
+2020   0.292       0.39   0.753     1.326
+2021   0.307      0.398   0.761     1.096
+2022   0.291      0.384   0.764     1.057
+2023   0.273      0.374   0.724     1.091
+2024   0.281      0.381    0.71     0.967
+2025   0.260      0.377   0.667     1.583
+
+================================================================================
+DIG D: POL+BRA recovery symmetry — magnitude correlation test
+================================================================================
+
+POL consolidation 2010-2020 deltas vs recovery 2022-2024 deltas (signs should be opposite):
+subind                           consol Δ    recov Δ  symmetric?
+v2x_jucon                          -0.388     +0.164         YES
+v2x_freexp_altinf                  -0.291     +0.305         YES
+v2elfrfair                         -2.150     -0.033          no
+v2juhcind                          -2.833     +1.686         YES
+v2mecenefm                         -2.669     +2.475         YES
+v2cseeorgs                         -0.788     +0.436         YES
+
+Spearman ρ(consol_delta, -recovery_delta) for POL = 0.543 (p=0.2657)
+Higher ρ = stronger symmetry — same sub-indicators reverse direction by similar magnitudes
+
+BRA consolidation 2018-2022 deltas vs recovery 2022-2024 deltas:
+subind                           consol Δ    recov Δ  symmetric?
+v2x_jucon                          -0.032     +0.127         YES
+v2x_freexp_altinf                  -0.088     +0.219         YES
+v2elfrfair                         +0.108     +0.000          no
+v2juhcind                          +0.436     +0.199          no
+v2mecenefm                         -0.193     +2.509         YES
+v2cseeorgs                         +0.194     +0.616          no
+
+Spearman ρ(consol_delta, -recovery_delta) for BRA = 0.371 (p=0.4685)
+
+================================================================================
+DIG E: Coordinated resistance proxy — V-Dem opposition autonomy + party cohesion
+================================================================================
+
+iso      window  oppaut_start  oppaut_end  oppaut_Δ
+SLV   2019-2024         2.882       1.239    -1.643
+HUN   2010-2020         2.208       0.496    -1.712
+TUR   2007-2017         1.906       1.296    -0.610
+VEN   1997-2007         2.311       1.174    -1.137
+POL   2010-2020         2.724       2.326    -0.398
+TUN   2012-2022         1.689       1.634    -0.055
+BLR   1992-2002         0.528       0.528    +0.000
+IND   2002-2024         2.050       0.967    -1.083
+USA   2017-2024         3.293       2.305    -0.988
+SRB   2010-2024         2.115       0.663    -1.452
+BGD   2009-2024         1.297       0.482    -0.815
+NIC   2007-2020         1.126      -0.110    -1.236
+
+================================================================================
+REMAINING OPEN THREADS FIT COMPLETE
+================================================================================
