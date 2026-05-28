@@ -64,3 +64,21 @@ F2 firing = Paper 8's central "compound-crisis regime" claim walks back.
 
 ## 7. Provenance
 Locked 2026-05-28 before census. First fit fires on full-corpus channel-correlation computation.
+
+---
+
+## 8. Results — first fit (fired 2026-05-28)
+
+Full dig: `D:/IDP/papers/PAPER_8_COMPOUND_CRISIS/digs/2026_05_28_prereg033_coupling_census.md`
+
+**All 3 prediction sets SUPPORTED.** 101 countries with ≥10 country-years.
+
+- **Set A**: 8 couple = **8%** (predicted ≤15%) → SUPPORTED. Coupling set: ETH, SOM, BRA, COD, UKR, TUR, BGD, MEX. Predicted ETH/SOM/BRA found; SDN not testable (drought-data sparsity).
+- **Set C**: ETH only triple-coupler → SUPPORTED.
+- **Set B**: discriminating correlate is **shock-window overlap (2.50 vs 1.59, p=0.001)**, NOT state fragility (libdem 0.258 vs 0.377, p=0.125 n.s.). Favors synchronized-shock mechanism over state-collapse.
+
+F1/F2/F3 all NOT FIRED.
+
+### Unanticipated: two coupling families
+- **CD (conflict-drought)**: ETH 0.83 / SOM 0.79 / BRA 0.69 — famine-conflict + Amazon (→ PRE_REG_034 ENSO)
+- **CF (conflict-flood)**: COD +0.64 / BGD +0.57 / MEX +0.52 positive; **UKR −0.62 / TUR −0.61 NEGATIVE** = "displacement substitution" (war eclipses the disaster-displacement signal). Reframes coupling as a SIGNED axis (amplification ↔ substitution).

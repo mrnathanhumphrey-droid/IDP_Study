@@ -287,8 +287,9 @@
 ### Phase 1 (coupling census)
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
-| PRE_REG_033 | Coupling-vs-orthogonality classifier | **locked** | 2026-05-28 | ≤15% couple; coupling correlates with fragility OR shock-window; ETH triple unique |
-| P8-A | Full-corpus channel-correlation census | open | 2026-05-28 | all-pairs Spearman per country; data in hand |
+| PRE_REG_033 | Coupling-vs-orthogonality classifier | **locked + fired + SUPPORTED (A/B/C)** | 2026-05-28 | 8/101 (8%) couple → orthogonality confirmed. ETH only triple. Correlate = shock-window overlap (p=0.001) NOT fragility (p=0.125). See PAPER_8/digs/2026_05_28_prereg033_coupling_census.md |
+| P8-A | Full-corpus channel-correlation census | **closed-supported** | 2026-05-28 | 8% couple; 2 families (CD famine-conflict ETH/SOM/BRA + CF conflict-flood COD/BGD/MEX positive, UKR/TUR NEGATIVE = displacement substitution) |
+| P8-E | Negative-coupling / displacement-substitution (UKR/TUR) | open | 2026-05-28 | NEW thread — signed coupling axis (amplification ↔ substitution); war eclipses disaster signal |
 
 ### Phase 2 (ENSO mechanism)
 | ID | Title | Status | Last update | Notes |
@@ -368,9 +369,10 @@
 ### Phase 3 (channel-orthogonality + residue-class on SDP)
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
-| PRE_REG_026 | US SDP channel-orthogonality (parallel to PRE_REG_004) | **locked + first fit DEFERRED (coverage gap)** | 2026-05-27 | Eviction Lab Tracking System 2020-2021 covers 10 states (MN/MO/IN/WI/PA/CT/RI/NM/VA/DE); 0 of 8 PRE_REG_026 named states (CA/NY/MS/TX/FL/LA/MA/MI) present. Path to closure: Eviction Lab county-level 2007-2018 archive + HUD AHAR + ACS. See PAPER_7_SDP_FRAMEWORK/digs/2026_05_27_eviction_lab_partial_fit.md |
-| P7-I | Decompose US SDP into eviction/unaffordability/etc channels | open | 2026-05-27 | Coverage-limited at current data; deferred pending broader pull |
-| P7-J | Test orthogonality of SDP channels | open | 2026-05-27 | Mirror IDP test |
+| PRE_REG_026 | US SDP channel-orthogonality (parallel to PRE_REG_004) | **locked + FULL FIT FIRED (supersedes deferral)** | 2026-05-28 | HUD PIT 2007-2024 by CoC + ACS pulled (2024 national 771,480 validates). H1 SUPPORTED (61.9% single-channel dominance), H2 SUPPORTED (8/10 state map), H3 MIXED (bimodal street-vs-sheltered, not predicted 3-5). See digs/2026_05_27_prereg026_state_level_full_fit.md |
+| P7-A | HUD AHAR data pull | **closed-supported** | 2026-05-28 | HUD PIT master .xlsb 2007-2024 by CoC pulled (385 CoCs); see reference memory for URL |
+| P7-I | Decompose US SDP into eviction/unaffordability/etc channels | **closed-partial** | 2026-05-28 | Done via HUD structural-proxy buckets (cause-channels proxied, flagged); family/chronic/other-individual partition |
+| P7-J | Test orthogonality of SDP channels | **closed-supported** | 2026-05-28 | 61.9% single-channel dominance; PCA PC1=49% (multi-dim) |
 | PRE_REG_027 | Cross-country spending-allocation + SDP outcome correlation | **locked + fit fired + Set A SUPPORTED** | 2026-05-27 | OECD SOCX acquired. r(homeless, social_spend) = -0.503 (predicted ≤ -0.3) ✓ on n=8; r(homeless, military) = +0.852 (predicted ≥ +0.3) ✓ on n=7. 2/4 dimensions tested; threshold met. F1 NOT FIRED. See PAPER_7_SDP_FRAMEWORK/digs/2026_05_27_oecd_socx_correlation.md |
 | P7-K | Cluster US states into homelessness regimes | open | 2026-05-27 | Parallel to Paper 2 disaster regimes |
 
@@ -378,9 +380,18 @@
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
 | PRE_REG_028 | Finland Housing First as second-order reallocation case | **locked** | 2026-05-27 | First fit fires after ARA + Y-Foundation pulled |
-| P7-L | Apply methodology to both IDP + SDP | open | 2026-05-27 | After Phase 3 |
-| P7-M | Compare channel + residue-class structures | open | 2026-05-27 | Equivalence resolution |
-| P7-N | Empirically resolve H3 equivalence question | open | 2026-05-27 | Paper 7's headline finding |
+| P7-L | Apply methodology to both IDP + SDP | **closed-supported** | 2026-05-28 | H4 portability SUPPORTED; RMD-SRC runs on both |
+| P7-M | Compare channel + residue-class structures | **closed-supported** | 2026-05-28 | IDP 92%/6-regime vs SDP 61.9%/bimodal |
+| P7-N | Empirically resolve H3 equivalence question | **closed-supported (OVERLAPPING)** | 2026-05-28 | "Same math, different physics": same decomposition structure, different forces (policy/climate vs conflict/disaster). See digs/2026_05_27_prereg026_state_level_full_fit.md |
+
+### Phase 5 (structural determination / SDP legitimacy) — FIRED 2026-05-27/28
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_029 | Structural determination / SDP-legitimacy test (structure explains displacement net of climate) | **locked + first fit FIRED** | 2026-05-28 | H1 SUPPORTED (FORM LOO R² 0.67), H2 LOAD-BEARING SUPPORTED + ROBUST 4/4 (ΔR² LEVEL+0.355/FORM+0.199 over climate), H3 SUPPORTED (rent +11.64 p=0.004). SDP empirically LEGITIMATE. Honest boundary: form-clean, level RTS-fragile. See digs/2026_05_27_prereg029_structural_sdp_legitimacy.md |
+| P7-O | Zoning (WRLURI) as upstream lever — does it fix the LEVEL's RTS-fragility? | **closed-null (FALSIFIED w/ authentic data)** | 2026-05-28 | AUTHENTIC WRLURI2018 microdata (Gyourko Dropbox .dta, 2472 communities, weight_full state means) OVERTURNS the hand-coded probe. Zoning on LEVEL is wrong-signed + insignificant (−2.69 p=0.24 full; −1.65 p=0.38 drop-RTS); adds nothing over climate. Hand-coded version (HI=2.34 top) was CONFABULATED — HI/DC absent from 2018 survey; real top NJ/MD/RI/CA. RENT remains the mechanism (p=0.0003 survives drop-RTS) → 029's level-fragility was partly a 9-var overfit artifact. See digs/2026_05_28_zoning_probe_authentic_NULL.md |
+| P7-P | Migrant-influx as direct IDP→SDP bridge | **candidate-finding (verified)** | 2026-05-28 | 89.2% of 2022→2024 national family-homelessness increase (88,546 of 99,251) landed in 28 a-priori migrant-destination CoCs; 2023→24 step not trend; Chicago z=27.8, Denver z=15.1, NYC z=10.4. Ecological (no origin tags); honest non-spikers (Boston/DC/Houston). Candidate new pre-reg + paper. analysis/paper7_probe_migrant_bridge_2026_05_28.json |
+| PRE_REG_030 | Supply→rent→homelessness mediation (is there a structural driver of rent?) | **locked + fit FIRED** | 2026-05-28 | H1 SUPPORTED (rent 77% structurally driven; supply+income both p<0.001). H2 mediation FALSIFIED-borderline: indirect +0.22 (a=0.38,b=0.57 both sig) but boot 95% CI [−0.0001, 0.52] grazes zero → F2 fired (POWER ceiling at n≈47 between-state units, not sign). H3: demand(income) > supply for rent (ΔR² 0.244 vs 0.085). Authentic Saiz+WRLURI. Path to power = CoC/metro. See digs/2026_05_28_prereg030_supply_rent_mediation.md |
+| P7-Q | CoC/metro-level supply→rent→homelessness mediation (power to settle PRE_REG_030 H2) | **open** | 2026-05-28 | State n≈47 too few for between-state mediator; metros (n~380) provide power. Candidate PRE_REG_031. |
 
 ---
 
