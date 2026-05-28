@@ -86,5 +86,17 @@ Locked 2026-05-28 before the GEE area-fraction pull. Metric, thresholds, predict
 
 ---
 
-## 8. Results — first fit
-_(pending GEE area-fraction pull)_
+## 8. Results — first fit (fired 2026-05-28, GEE area-fraction pull)
+
+Full dig: `papers/PAPER_8_COMPOUND_CRISIS/digs/2026_05_28_prereg037_spatial_enso.md`
+
+**Set A F1 (harder than box-mean); the dilution alternative is RULED OUT.** The spatially-resolved metric does NOT rescue the La Niña signal — it shows it even weaker than the box-mean.
+
+- **Set A (F1)**: Horn area-fraction drought years (≥30% land SPEI ≤ −1.0, annual, 1950-2023) → **41.2% La Niña** (+6.1pp vs 35.1% baseline) — *lower* than the box-mean's 50%/+14.9pp. Gentle severity gradient (35→41→45% as drought widens), never near 60%. OND band 41.7%.
+- **Set C-reg (YES)**: SOM 2022 registers (36.5% of land in drought; invisible at box-mean). **F2 does NOT fire — the metric is not blind to recent droughts.**
+- **Set C-exceed (NO)**: spatial 41.2% < box-mean 50% → **the box-mean was NOT diluting a hidden La Niña signal.** Dilution affected event-visibility, not the enrichment conclusion.
+- **Set B holds on OND band**: BRA Amazon 17.6% La Niña / 52.9% El Niño (0%/60% at ≥0.40) — opposite the Horn; two-family split survives. Annual band smears it (timing artifact).
+- **Tempers PRE_REG_036**: its "extreme Horn droughts 100% La Niña" was n=2 (1955,1984); the area metric shows the most-widespread droughts at only 45-47% La Niña — a gentle gradient, not a tail-lock. Honest downward revision.
+
+### Net (triangulated)
+Across three instruments — displacement (034: 50%), box-mean SPEI (036: 50%), area-fraction SPEI (037: 41%) — Horn drought–La Niña is consistently ~40-50%: weak, real, robust to instrument AND spatial aggregation. **Single-year ENSO does NOT drive Horn compound-crisis coupling.** Amazon stays El-Niño-aligned (opposite). The ENSO hypothesis is triangulated-negative; the climate-mechanism question is closed for Paper 8 (climate = weak tail-modulator, not coupling driver).
