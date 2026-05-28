@@ -278,6 +278,38 @@
 
 ---
 
+## PAPER 5 — Democratic Resilience (blocking + recovery) (PROMOTED 2026-05-27)
+
+**Status**: scaffolded + scope locked + 3 pre-regs locked. Scope: `papers/PAPER_5_SCOPE.md`. Folder: `papers/PAPER_5_DEMOCRATIC_RECOVERY/`. Two load-bearing claims ALREADY supported (PATTERN_027 4-lever blocking + PRE_REG_012 mirror-order recovery 6/6).
+
+**Thesis**: backsliding is blockable (≥3 of 4 levers → blocked) + reversible (recovery mirrors capture; vertical recovers last). Hopeful complement to Paper 1.
+
+### Phase 1 (blocking-lever model)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_030 | Blocking-lever predictive model | **locked** | 2026-05-27 | ≥3 levers → blocked; first fit fires on corpus scoring (5 blocked vs 7 consolidated) |
+| P5-A | Score 12 corpus cases on 4 levers | open | 2026-05-27 | V-Dem proxies; test ≥3 cutoff |
+| P5-B | USA lever-erosion 2020→2025 | open | 2026-05-27 | H2: ≥3 levers (Trump I) → ≤2 (Trump II) |
+
+### Phase 2 (recovery velocity)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_031 | Recovery velocity / half-life by tier | **locked** | 2026-05-27 | horizontal half-life << vertical; first fit on 6 recovery cases |
+| P5-C | Per-tier half-life computation | open | 2026-05-27 | POL/BRA/KOR/BGD/LKA/ZMB |
+
+### Phase 3 (recovery completeness)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_032 | Recovery completeness / ceiling | **locked** | 2026-05-27 | vertical plateaus below baseline; BRA overshoot anchor |
+| P5-D | Ceiling-ratio by tier | open | 2026-05-27 | weight long-window cases (BRA/LKA) |
+
+### Phase 4 (forward-watch)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P5-E | 2026 BRA / 2028 USA / KOR / ISR / POL forward-watch | forward-watch | 2026-05-27 | lever-tests + recovery-sustainability |
+
+---
+
 ## PAPER 7 — SDP Framework / Structural Displacement (PROMOTED 2026-05-27)
 
 **Status**: framing locked; substrate proposed; no data pulled. Scope: `papers/PAPER_7_SCOPE.md`. Hunt: TBD. Folder: `papers/PAPER_7_SDP_FRAMEWORK/`.
