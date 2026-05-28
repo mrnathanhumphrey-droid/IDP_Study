@@ -300,8 +300,8 @@
 ### Phase 3 (temporal-window)
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
-| PRE_REG_035 | Temporal-window / synchronized-shock | **locked** | 2026-05-28 | ETH coupling window-transient (2020-2024) vs structural; split+bootstrap; data in hand |
-| P8-C | Split-window + leave-window-out bootstrap | open | 2026-05-28 | ETH pre-2018 vs 2018-2024 |
+| PRE_REG_035 | Temporal-window / synchronized-shock | **locked + fired + H1 WALKED BACK** | 2026-05-28 | F1/F2 fired: ETH coupling is STRUCTURAL not window-transient (leave-window-out drop 2020-22 → CD ρ unchanged 0.83→0.83, boot CI 0.67-0.90). Set C SUPPORTED (shock-overlap predicts coupling cross-country, ρ=0.40 p=0.004). Redirects mechanism to ENSO (PRE_REG_034). See PAPER_8/digs/2026_05_28_prereg035 |
+| P8-C | Split-window + leave-window-out bootstrap | **closed-walk-back** | 2026-05-28 | Coupling structural; ETH drought sparse pre-2017 limits split (Set A) but leave-window-out (Set B) decisive → structural |
 
 ### Phase 4 (mechanism synthesis)
 | ID | Title | Status | Last update | Notes |

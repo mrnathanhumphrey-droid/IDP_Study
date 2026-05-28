@@ -61,3 +61,23 @@ F1 + F2 both firing = coupling is structural (country-trait), reorienting Paper 
 
 ## 7. Provenance
 Locked 2026-05-28 before split/bootstrap. First fit fires on coupling-case time series (data already in hand).
+
+---
+
+## 8. Results — first fit (fired 2026-05-28)
+
+Full dig: `D:/IDP/papers/PAPER_8_COMPOUND_CRISIS/digs/2026_05_28_prereg035_temporal_window.md`
+
+**H1 (window-transient) WALKED BACK. F1 + F2 FIRED.** Set C SUPPORTED.
+
+### Set B (decisive) — leave-window-out
+Dropping ETH 2020-2022 triple-peak years: CD ρ **0.83 → 0.83 (unchanged)**; bootstrap 90% CI (0.67, 0.90). CF 0.69→0.64, FD 0.58→0.54. Coupling is STRUCTURAL, not driven by the synchronized-shock window. Predicted collapse <0.5 did NOT happen.
+
+### Set A — inconclusive (data coverage)
+ETH drought-displacement sparse pre-2017 → CD/FD "early" window n/a. Split-window can't cleanly test CD; leave-window-out (Set B) is the reliable probe.
+
+### Set C — SUPPORTED
+Shock-overlap vs max|ρ| across 49 countries: Spearman ρ=+0.40, p=0.004.
+
+### Reconciliation + redirect
+Set B (structural within-ETH) + Set C (shock-overlap predicts cross-country) reconcile as CHRONIC recurrent multi-hazard synchrony (not a one-time window). Mechanism redirected to recurrent climate-teleconnection → **PRE_REG_034 (ENSO) is now the decisive test**. Fragility already tested weak (PRE_REG_033 p=0.125). Honest walk-back; pre-committed F1/F2 pointed the paper at the right next question.
