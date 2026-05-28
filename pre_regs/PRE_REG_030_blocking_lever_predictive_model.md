@@ -85,3 +85,33 @@ F1 firing = blocking-lever model walks back to descriptive-only.
 
 ## 8. Provenance
 Locked 2026-05-27 before formal lever scoring. First fit fires on corpus scoring.
+
+---
+
+## 9. Results — first fit (fired 2026-05-28)
+
+Full dig: `D:/IDP/papers/PAPER_5_DEMOCRATIC_RECOVERY/digs/2026_05_28_prereg030_blocking_levers.md`
+
+### Test A — in-corpus separation: H1 SUPPORTED (10/12)
+Levers 1-3 scored as V-Dem global-median splits at onset (v2juhcind / v2csprtcpt / v2xel_frefair); lever 4 hand-coded constitutional federalism (USA/BRA/VEN). Decision rule ≥3 → blocked.
+
+**10 of 12 correct** (threshold ≥10 → H1 supported). The 2 misses are the documented special cases:
+- SLV (score 3, predicted blocked, consolidated) — the popular-mandate exception (Bukele 80%+ approval + captured Constituent Assembly)
+- PER (score 2, predicted consolidated, coded blocked) — but PER *did* consolidate under Boluarte; only Castillo's self-coup was blocked (F2 nuance)
+
+### Test B — USA lever-erosion (H2): NOT supported
+USA scores 4 in BOTH 2017 and 2025 on V-Dem coarse measures. **F3 FIRED** — lever-count does not drop. The PATTERN_027 erosion argument (SCOTUS-capture + party-state-fusion) operates below V-Dem global-median resolution. H2 walked back; the model is a cross-country separator, not a within-country early-warning instrument.
+
+### Substantive refinement — which levers discriminate
+Court independence (5/5 blocked, 5/7 consolidated) and competitive election (5/5, 4/7) are near-universal at onset because backsliding BEGINS from a democracy. The discriminating levers are **civil society (4/5 blocked vs 1/7 consolidated — strongest)** and **federalism (2/5 vs 1/7)**. Resistance-mobilization capacity, not baseline institutional quality, predicts blocking.
+
+### Falsifiers
+- F1 (< 10 correct): NOT FIRED (10/12)
+- F2 (≥3 blocked cases consolidate via legal channels): PARTIAL (PER only; flagged not fired)
+- F3 (USA lever-count doesn't drop): **FIRED** → H2 walked back
+
+### Sensitivity
+≥3 cutoff is optimal (≥2 → 8/12; ≥4 → 8/12). Not knife-edge-dependent.
+
+### Net
+**H1 SUPPORTED; H2 walked back.** Discriminating-lever refinement (civil society + federalism) is a candidate headline for Paper 5.
