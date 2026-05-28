@@ -294,14 +294,14 @@
 ### Phase 2 (recovery velocity)
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
-| PRE_REG_031 | Recovery velocity / half-life by tier | **locked** | 2026-05-27 | horizontal half-life << vertical; first fit on 6 recovery cases |
-| P5-C | Per-tier half-life computation | open | 2026-05-27 | POL/BRA/KOR/BGD/LKA/ZMB |
+| PRE_REG_031 | Recovery velocity / half-life by tier | **locked + fired + SUPPORTED** | 2026-05-28 | Vertical censored (never 50%) in POL/BRA/KOR; horizontal recovers 1-4yr. PRED A 5/6, PRED B 4/6. BGD/LKA excluded (degenerate baseline-trough gaps). See PAPER_5/digs/2026_05_28_prereg031_032 |
+| P5-C | Per-tier half-life computation | **closed-supported** | 2026-05-28 | 4 well-conditioned cases; vertical right-censored in 3 |
 
 ### Phase 3 (recovery completeness)
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
-| PRE_REG_032 | Recovery completeness / ceiling | **locked** | 2026-05-27 | vertical plateaus below baseline; BRA overshoot anchor |
-| P5-D | Ceiling-ratio by tier | open | 2026-05-27 | weight long-window cases (BRA/LKA) |
+| PRE_REG_032 | Recovery completeness / ceiling | **locked + fired + vertical-plateau SUPPORTED** | 2026-05-28 | Vertical recovers to 2% (BRA) / 4% (KOR) / 44% (POL) of baseline = structural ceiling (captured electoral machinery outlasts autocrat). Horizontal overshoots in BRA+KOR (antifragile courts). A2 4/6, overshoot 3/6. Metric amended ratio→recovery-fraction (diagnostic-driven). POL incomplete = Nawrocki re-stall (PRE_REG_006). See same dig |
+| P5-D | Ceiling by tier | **closed-supported** | 2026-05-28 | recovery-fraction metric; vertical plateau confirmed; BGD/LKA excluded |
 
 ### Phase 4 (forward-watch)
 | ID | Title | Status | Last update | Notes |

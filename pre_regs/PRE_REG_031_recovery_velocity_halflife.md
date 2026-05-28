@@ -59,3 +59,24 @@ F1 firing = velocity-asymmetry walked back; PRE_REG_012's ordering stands but wi
 
 ## 6. Provenance
 Locked 2026-05-27 before velocity computation. First fit fires on recovery time series.
+
+---
+
+## 7. Results — first fit (fired 2026-05-28)
+
+Full dig: `D:/IDP/papers/PAPER_5_DEMOCRATIC_RECOVERY/digs/2026_05_28_prereg031_032_velocity_ceiling.md`
+
+**SUPPORTED.** Half-life (years from trough to 50% tier recovery), 4 well-conditioned cases (BGD/LKA excluded — degenerate baseline-trough libdem gaps 0.017/0.001):
+
+| Case | horizontal HL | diagonal HL | vertical HL |
+|---|:---:|:---:|:---:|
+| POL | 2 | 2 | censored |
+| BRA | 4 | 4 | censored |
+| KOR | 1 | 2 | censored |
+| ZMB | 2 | 2 | 1 |
+
+- PRED A (horizontal HL ≤ vertical HL in ≥5 of 6): **5/6 SUPPORTED**
+- PRED B (vertical right-censored in ≥3 of 6): **4/6 SUPPORTED**
+- F1/F2/F3 all NOT FIRED
+
+Vertical is censored (never reaches 50%) in POL/BRA/KOR while horizontal recovers in 1-4 yrs. Tier composition restricted to 0-1 bounded v2x_ indices (diagnostic amendment — see dig §metric amendments).

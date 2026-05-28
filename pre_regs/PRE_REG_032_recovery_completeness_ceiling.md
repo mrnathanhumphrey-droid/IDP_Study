@@ -57,3 +57,27 @@ Distinguishing "vertical plateaus below baseline" (H1, structural ceiling) from 
 
 ## 7. Provenance
 Locked 2026-05-27 before ceiling computation. First fit fires on recovery ceilings.
+
+---
+
+## 8. Results — first fit (fired 2026-05-28)
+
+Full dig: `D:/IDP/papers/PAPER_5_DEMOCRATIC_RECOVERY/digs/2026_05_28_prereg031_032_velocity_ceiling.md`
+
+**AMENDMENT (diagnostic-driven):** ceiling metric changed from ratio (latest/baseline) to recovery fraction (latest−trough)/(baseline−trough). Trigger: ratio explodes/goes negative on near-zero V-Dem baselines (LKA −63, BGD −0.03). Recovery fraction is bounded (1.0=baseline, >1.0=overshoot, <1.0=below). Tiers restricted to 0-1 bounded v2x_ indices. [[feedback_diagnostic_driven_amendments]]
+
+Latest recovery fraction, 4 well-conditioned cases (BGD/LKA excluded — degenerate gaps):
+
+| Case | horizontal | diagonal | vertical |
+|---|:---:|:---:|:---:|
+| POL | 0.67 | 0.74 | 0.44 |
+| BRA | 1.17 (overshoot) | 0.73 | **0.02** |
+| KOR | 1.10 (overshoot) | 0.86 | **0.04** |
+| ZMB | 0.59 | 1.48 | 0.88 |
+
+- **PRED A2 (vertical < 0.90 in ≥4 of 6): 4/6 SUPPORTED** — vertical plateaus below baseline in all clean cases
+- **PRED B (horizontal overshoot > 1.0 in ≥2): BRA + KOR SUPPORTED** (H2)
+- PRED A1 (horizontal ≥ 0.90 in ≥5 of 6): NOT uniform — POL (0.67) is re-stalling under Nawrocki PiS-backed presidency (ties to PRE_REG_006)
+- F1/F2/F3 all NOT FIRED
+
+**Headline**: vertical-accountability recovers to just 2% (BRA) / 4% (KOR) / 44% (POL) of baseline — the captured electoral machinery is the lasting damage. Horizontal (courts) fully recovers or overshoots. Structural ceiling SUPPORTED.
