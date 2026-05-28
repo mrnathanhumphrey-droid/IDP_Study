@@ -296,7 +296,7 @@
 |---|---|---|---|---|
 | PRE_REG_034 | ENSO teleconnection test | **locked + fired + mixed (F1 on Set A)** | 2026-05-28 | NOAA ONI acquired. Set A NOT SUPPORTED (Horn drought-displ 50% La Niña vs 47% baseline; F1 — but underpowered, displacement lags rainfall). Set B contemporaneous (lag 0). **Set C SUPPORTED: BRA Amazon drought El-Niño-aligned (0% La Niña) = OPPOSITE phase from Horn → distinct climate drivers per family.** Clean test deferred to SPEI. See PAPER_8/digs/2026_05_28_prereg034 |
 | P8-B | Acquire NOAA ONI + align coupling-years | **closed-mixed** | 2026-05-28 | ONI 1950-2026 acquired (data/oni.txt). Single-year-ENSO not supported via displacement; family-specific opposite signatures real |
-| P8-F | Re-run ENSO vs SPEI meteorological drought | open | 2026-05-28 | NEW — data/spei/ on disk; contemporaneous+dense; resolves whether Set A failure is displacement-instrument artifact |
+| P8-F | Re-run ENSO vs SPEI meteorological drought | **blocked-data** | 2026-05-28 | Local SPEI (all 5 timescales) AND CHIRPS .nc files are TRUNCATED (partial downloads from 2026-05-24; SPEI_12 eof 30MB, CHIRPS eof 128MB of 7.68GB). Clean test needs multi-GB re-acquisition of global gridded climate (CSIC SPEIbase handle 10261/72264 OR CHIRPS). Deferred pending manual re-pull. |
 
 ### Phase 3 (temporal-window)
 | ID | Title | Status | Last update | Notes |
