@@ -143,3 +143,28 @@ Path to closure: acquire HadISST 2004-2024 (Met Office NetCDF) OR backfill panel
 
 ### Net result
 **Prediction set C SUPPORTED.** The ACE × USA-storm-IDP mechanism step of the climate-attribution chain is empirically present at the magnitude predicted. Sample is small (n=6) but signal direction is clean. Set B defers data extension; Set D (forward 2025-2040) is the load-bearing test for the drift hypothesis itself.
+
+---
+
+## 9. Results — Set E (fired 2026-05-27, CUB/PRI replication)
+
+Full dig: `D:/IDP/papers/PAPER_2_DISASTER_REGIMES/digs/2026_05_27_prereg015_setE_cub_pri.md`
+
+### Prediction set E (CUB/PRI replicate USA intensification) — SUPPORTED (CUB); PRI inconclusive-by-artifact
+
+| Country | pre-2008 mega-years | 2008-2024 mega-years | Δ abs-freq | Δ pct-freq | Intensified? |
+|---|:---:|:---:|---:|---:|:---:|
+| USA (ref) | 2 (7.1%) | 3 (17.6%) | +10.5% | +5.9% | ✓ |
+| CUB | 2 (7.1%) | 3 (17.6%) | +10.5% | +21.0% | ✓ replicates |
+| PRI | 0 | 0 | 0 | 0 | ✗ (artifact) |
+
+CUB replicates the USA intensification on both absolute and per-capita framings. PRI does not register intensification, but its storm-IDP never exceeds 98K because Hurricane Maria (2017) displacement was dominated by off-island emigration to the US mainland (counted as out-migration, not IDP) — a measurement artifact, not evidence against intensification.
+
+### Falsifier F5
+**F5 (CUB/PRI show no intensification → USA-specific) does NOT fire.** One strong confirming case (CUB), one uninformative case (PRI by measurement artifact). The first-mover / Regime-3a-wide intensification hypothesis gains a second confirming Atlantic member.
+
+### Methodological caveat
+Pre-2008 uses EM-DAT "Total Affected"; 2008-2024 uses GIDD-IDP. Different constructs; cross-source comparison inflates pre-2008 absolutes. Bias is uniform across countries and conservative for the trend test (makes intensification harder to detect). USA reference reproduces the Set A count exactly, confirming the metric basis is stable.
+
+### Climate-attribution thread status
+Paper 2's climate-attribution thread now has **3 confirming data points**: Set A (mega-year frequency 7.1%→17.6%), Set C (ACE × storm-IDP r=+0.552), Set E (CUB replication). Set B (SST correlation) remains the only deferred piece, gated by HadISST 2004-2024 acquisition.
