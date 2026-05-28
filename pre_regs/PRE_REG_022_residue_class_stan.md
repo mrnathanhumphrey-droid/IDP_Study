@@ -184,3 +184,32 @@ The original fit (08:42 AM 2026-05-27) ran 12.7 hours and accumulated only 12 se
 
 ### Net result
 **PRE_REG_022 H1 SUPPORTED.** The Papers 2 + 4 typology — built from disaster-regime cluster analysis and conflict-type meta-typology — carries empirical predictive content beyond country, year, and channel main effects. az.compare places 100% of model-weight on the typology model. This is the load-bearing methodology dig for Paper 6 and validates the substantive typology claims of Papers 2 + 4.
+
+---
+
+## 9. Robustness follow-ups (fired 2026-05-27, post-headline)
+
+Full dig: `D:/IDP/papers/PAPER_6_METHODOLOGY/digs/2026_05_27_ablation_and_latent_tests.md`
+
+### Ablation
+| Model | ΔLOO vs baseline |
+|---|---:|
+| Paper 2 disaster regimes only | +11.28 |
+| Paper 4 conflict types only | −1.53 (structurally disadvantaged by disaster sentinel) |
+| Combined | +14.22 |
+| Incremental conflict-after-disaster | +2.94 |
+
+Disaster regimes carry the bulk of the lift; conflict types add a smaller but real increment. Combined effect is **super-additive** (+14.22 > sum of parts +9.75 by ~+4.47 of interaction credit).
+
+### Latent-covariate tests (robustness against single-axis confounders)
+| Latent candidate | ΔLOO alone | Absorbs typology lift? |
+|---|---:|---|
+| WDI demographic-economic (log_pop, log_gdp_pc, urban) | +1.28 | NO |
+| Polity (polity2, durable) | −0.42 | NO |
+
+Both rejected. The typology is **irreducible to off-the-shelf country covariates** — neither demographic-exposure nor state-fragility/democratic-institutions explains the +14 lift.
+
+### Implication
+The typology encodes multi-dimensional joint structure (hazard-geography × conflict-dynamics) that no single canonical country scalar approximates. Paper 6 methodology claim is strengthened: residue-class typology is methodologically primitive.
+
+**Paper 6 closure now 7/9 criteria met** (up from 6 after headline alone).
