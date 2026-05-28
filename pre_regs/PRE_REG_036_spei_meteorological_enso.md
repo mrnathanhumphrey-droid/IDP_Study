@@ -82,5 +82,19 @@ Locked 2026-05-28 while SPEI_12.nc was still downloading (95.9MB of ~314MB; `SPE
 
 ---
 
-## 8. Results — first fit
-_(pending SPEI download completion + integrity check)_
+## 8. Results — first fit (fired 2026-05-28, SPEI v2.10 via Google Earth Engine)
+
+Full dig: `papers/PAPER_8_COMPOUND_CRISIS/digs/2026_05_28_prereg036_spei210_enso.md`
+
+**Set A NOT SUPPORTED (F1); Set C F2 fired — the artifact hypothesis is REJECTED.** The pre-committed expectation (dense meteorological SPEI would show the ≥60% La Niña enrichment displacement counts missed) FAILED.
+
+**Data note:** all direct SPEIbase NetCDF downloads truncated (CSIC server drops large transfers mid-stream; listing pages Anubis bot-protected). Resolved by pulling **v2.10 via Google Earth Engine** (`CSIC/SPEI/2_10`, 1901-2023), reducing server-side over the country boxes. First GEE-sourced instrument in the corpus. Extract: `data/spei/spei210_dec_ETH_SOM_BRA_1950_2023.csv`.
+
+- **Set A (F1)**: Horn country-box drought years (annual SPEI_12 ≤ −1.0, 1950-2023) = 1955,1959,1973,1980,1984,2009 → **50% La Niña** vs 35.1% baseline (+14.9pp, below the ≥60% AND +15pp bar). OND SPEI_03 band: 43%.
+- **Set C (F2)**: SPEI gives **~50%, identical to the displacement-based 50% (PRE_REG_034 Set A)** → the weak Horn–La Niña link is **real at country-aggregate scale, NOT a displacement-instrument artifact.** 034's walk-back stands firmer.
+- **Severity-dependence (pre-committed sweep, clean)**: the most extreme Horn droughts (SPEI ≤ −1.5: 1955, 1984 annual; 1974 OND) are **100% La Niña.** La Niña is a tail-risk amplifier, not a year-to-year driver.
+- **Set B (SUPPORTED on OND band)**: BRA Amazon OND-droughts (1969, 2015) = **0% La Niña / 100% El Niño** — opposite the Horn; two-family opposite-signature finding survives. (Annual SPEI_12 band spuriously gives 66.7% La Niña via the 2015-16 drought landing in the 2016 index after ENSO flipped — instrument-timing smear; contemporaneous OND band is the correct instrument.)
+- **Diagnostic limitation**: country-box MEAN dilutes spatially-concentrated drought — the 2020-2023 Horn catastrophe (textbook La Niña) registers as ~0 box-mean SPEI and never trips the threshold; the 2008-2023 window is degenerate. Motivates a spatially-resolved follow-up (drought-epicenter sub-box / area-fraction) to be locked as **PRE_REG_037** before firing (diagnostic-driven, not result-driven).
+
+### Net
+The meteorological re-test did not rescue the single-year-ENSO mechanism; it confirmed it is genuinely weak at country scale. ENSO acts as an extreme-tail amplifier (severe Horn droughts La-Niña-locked) with family-specific opposite signatures (Horn La-Niña / Amazon El-Niño), but does NOT explain the coupling year-to-year. Paper 8 mechanism: structural chronic shock-synchrony with family-specific climate tail-modulators, not an ENSO-driven coupling.
