@@ -1,10 +1,28 @@
 # Pattern 030 — Flood-dominant transitional class (typology gap)
 
 - **ID:** PATTERN_030
-- **Status:** candidate-hypothesis (typology refinement; 2 cases)
-- **Type:** mechanism (regime-typology gap)
+- **Status:** **WALKED BACK 2026-05-27 (PRE_REG_029 Thread 2, F2 fired) — boundary zone, not a regime**
+- **Type:** mechanism (regime-typology boundary, not a new regime)
 - **Discovered:** 2026-05-25 via Paper 2 Phase 2 P2-G test
-- **Severity / interest:** high (exposes structural gap in PRE_REG_003 rules)
+- **Walked back:** 2026-05-27 via PRE_REG_029 Thread 2 (no additional members found)
+- **Severity / interest:** documented boundary (2-country transition zone between R1 and R4)
+
+## WALK-BACK (2026-05-27, PRE_REG_029 Thread 2)
+
+Tested the R2b "flood-dominant transitional" hypothesis against additional candidates. **F2 FIRED — only ARG + KHM qualify; no additional members.**
+
+| Country | Flood | Storm | In flood≥70%+storm10-30% gap? |
+|---|---:|---:|:---:|
+| ARG | 85.4% | 11.1% | ✓ |
+| KHM | 75.7% | 23.8% | ✓ |
+| COL | 92.9% | 2.9% | ✗ (storm <10%, R2-like) |
+| THA | 94.3% | 5.7% | ✗ (R1 bimodal, max/med 130×) |
+| PAK | 95.0% | 0.6% | ✗ (R1 reference) |
+| IRQ | 44.8% | 0.3% | ✗ (not flood-dominant) |
+| VNM | 10.8% | 89.0% | ✗ (storm-dominant R3) |
+| BGD | 36.1% | 63.5% | ✗ (storm-leaning R4b) |
+
+**Verdict**: ARG + KHM are a 2-country transition zone between Regime 1 (pure bimodal-mega-flood) and Regime 4 (mixed), NOT a populated new regime. R2b retired to boundary-documentation. The typology does not gain a 2b sub-type; ARG/KHM are documented as boundary cases.
 
 ## One line
 
@@ -55,4 +73,4 @@ PRE_REG_003 H1's rules:
 
 ## Status
 
-Candidate-hypothesis. Refines PRE_REG_003 by adding Regime 2b. Should be tested by pulling additional flood-dominant candidates (COL, IRQ, VNM Mekong) and seeing if the gap class has more members.
+**WALKED BACK 2026-05-27 (PRE_REG_029 Thread 2).** Tested additional candidates (COL/IRQ/VNM/BGD/THA); none joined ARG/KHM in the flood≥70%+storm 10-30% gap. F2 fired. R2b is NOT a new regime — ARG/KHM documented as a 2-country boundary zone between Regime 1 and Regime 4. Honest walk-back on pre-committed falsifier.

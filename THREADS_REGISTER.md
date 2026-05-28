@@ -62,7 +62,9 @@
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
 | PRE_REG_017 | Phase 2 regime-expansion predictions | **locked + fired** | 2026-05-25 | F3 + F4 fired; H1 partially walked back |
-| P2-B | Regime 6 expansion (IRN/GRC/NZL/AFG) | **closed-walk-back** | 2026-05-25 | F3 fired. 0/3 testable confirm. R6 capped at 6 |
+| P2-B | Regime 6 expansion (IRN/GRC/NZL/AFG) | **closed-walk-back** | 2026-05-25 | F3 fired. 0/3 testable confirm. R6 capped at 6. (GRC reclassified → Regime 7 wildfire 2026-05-27, PRE_REG_029) |
+| **P2-R7** | **Regime 7 wildfire co-validation (GRC/ESP/PRT/CYP/ITA/TUR/FRA/HRV)** | **closed-supported** | 2026-05-27 | **Regime 7 (Wildfire-dominant) CONFIRMED via PRE_REG_029. 5 members: GRC 82% / ESP 71% / PRT 80% / CYP 99% / FRA 61% wildfire-IDP share. ITA/TUR/HRV stay Regime 6 (EQ-dominant) — clean discrimination. Typology 6 → 7 regimes.** |
+| **P2-R2b** | **Regime 2b flood-transitional test (ARG/KHM + COL/IRQ/VNM/BGD/THA)** | **closed-walk-back** | 2026-05-27 | **PRE_REG_029 F2 fired. Only ARG+KHM in flood≥70%+storm10-30% gap; no additional members. R2b walked back to R1↔R4 boundary-documentation, NOT a regime.** |
 | P2-C | Caribbean (JAM/PRI/BHS/TTO/BRB/GRD/LCA) | **closed-data-limited** | 2026-05-25 | PRI=3a ✓; 6/7 data-sparse |
 | P2-D | South Pacific (KIR/TUV/WSM/TON/NRU/PLW/COK) | **closed-data-gap** | 2026-05-25 | All <20K; untestable from GIDD |
 | P2-G | Regime 2 replication (CHN/MMR/ARG/KHM/THA) | **closed-mixed** | 2026-05-25 | THA → R1 candidate; ARG/KHM = typology gap (F4) |
@@ -216,7 +218,9 @@
 - **C-Ours-30 — P2-B Regime 6 expansion fail** — IRN/GRC/NZL fail R6 classification. IRN flood-dominant (51.5%), GRC wildfire-dominant (82% "other"), NZL data-sparse. R6 stays at 6 confirmed: HTI/NPL/TUR/CHL/ECU/ITA
 - **C-Ours-31 — P2-G THA emerges as Regime 1 second member** (PATTERN_028) — flood 94.3%, storm 5.7%; PAK no longer uniquely Regime 1
 - **C-Ours-32 — P2-G ARG/KHM = typology gap** (PATTERN_030) — flood-dominant (>75%) but secondary storm exposure >10% disqualifies from R1 strict; doesn't fit R2 either. Proposed Regime 2b
-- **C-Ours-33 — GRC wildfire-dominant candidate Regime 7** (PATTERN_029) — 82% "other" channel; Mediterranean wildfire-displacement candidate; needs ESP/PRT/CYP co-validation
+- **C-Ours-33 — GRC wildfire-dominant candidate Regime 7** (PATTERN_029) — 82% "other" channel; Mediterranean wildfire-displacement candidate; needs ESP/PRT/CYP co-validation → **CONFIRMED 2026-05-27, see C-Ours-62**
+- **C-Ours-62 — Regime 7 (Wildfire-dominant) CONFIRMED** (PRE_REG_029 Thread 1) — 5 Mediterranean members: CYP 99.2% / GRC 82.1% / PRT 80.3% / ESP 71.2% / FRA 61.1% wildfire-IDP share 2008-2024. Co-validation threshold (≥2 members ≥30%) cleared decisively. **Clean mechanism discrimination**: ITA (60% EQ), TUR (97% EQ), HRV (68% EQ) are same-basin Mediterranean but stay Regime 6 — wildfire vs earthquake splits the Mediterranean into two regimes. Paper 2 typology 6 → 7 regimes. Strongest demonstration yet of "mechanism not region is the organizing variable."
+- **C-Ours-63 — Regime 2b (Flood-transitional) WALKED BACK** (PRE_REG_029 Thread 2, F2 fired) — Only ARG (85.4% flood/11.1% storm) + KHM (75.7%/23.8%) fall in the flood≥70%+storm10-30% gap. Candidates COL (storm <10% → R2-like), THA/PAK (R1 bimodal, max/med 65-130×), IRQ (not flood-dom), VNM (storm-dom), BGD (storm-leaning) all classify elsewhere. No additional members → R2b retired to R1↔R4 boundary-documentation. Honest walk-back; not every typology gap is a regime.
 - **C-Ours-34 — P2-C/P2-D data-limited** — Caribbean (PRI sole confirms; 6/7 sub-30K cumulative IDP) and South Pacific (all <20K) below GIDD threshold; theory holds where measurable, theory-failure cannot be tested without event-level supplementation
 - **C-Ours-35 — PRE_REG_014 stability H1 WALKED BACK** — 15 of 29 confirmed regime members shift between 1980-2007 and 2008-2024 windows (52% shift rate); F1 fired. ~3-4 drought-reporting artifacts, ~4 R6 arrivals (predicted), ~3-4 R4 sub-type shifts, ~3-4 genuine geographic shifts
 - **C-Ours-36 — Regime 6 is EVENT-LATENT** — 4 of 6 R6 members (HTI/NPL/CHL/ECU) gained R6 only after post-2007 major quakes. R6 = JOINT product of (geophysical exposure) × (major event in window). PATTERN_020 refined with event-latency property

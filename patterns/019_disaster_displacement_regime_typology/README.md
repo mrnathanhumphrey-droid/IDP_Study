@@ -1,10 +1,32 @@
-# Pattern 019 — Disaster-displacement regimes: 4 distinct types
+# Pattern 019 — Disaster-displacement regimes (now 7 distinct types)
 
 - **ID:** PATTERN_019
-- **Status:** candidate-hypothesis
+- **Status:** CONFIRMED + EXTENDED — now 7 regimes (was 4 at discovery, 6 after Phase 2, 7 after PRE_REG_029)
 - **Type:** mechanism (typology)
 - **Discovered:** 2026-05-25 via flood-corpus expansion (PHL/BGD/IND/VNM/MOZ + PAK)
 - **Severity / interest:** high (parallel to conflict-type typology — both meta-arguments for methodology paper)
+
+## CURRENT STATE — 7 regimes (updated 2026-05-27)
+
+The original 4-regime discovery (below) expanded to 6 regimes via PRE_REG_003 + Phase 2 (Regime 5 drought FALSIFIED; Regime 6 earthquake CONFIRMED), then to **7 regimes via PRE_REG_029 (Regime 7 Wildfire-dominant CONFIRMED 2026-05-27)**.
+
+| Regime | Mechanism | Confirmed members |
+|---|---|---|
+| 1 Bimodal-mega-flood | glacial-monsoon + flat plain | PAK, THA |
+| 2 Steady-high-flood | multiple major river basins | IND |
+| 3 Storm-dominant (+3a bimodal / 3b perpetual) | tropical cyclone belts | MOZ/VNM/USA/CUB/PHL/DOM/FJI/VUT/PRI |
+| 4 Mixed (+4a/4b/4c) | deltaic multi-hazard | BRA/IDN/PER/IRN/AFG/BGD/JPN/MMR/MEX/CHN |
+| ~~5 Drought-dominant~~ | FALSIFIED (drought is R4 sub-channel) | — |
+| 6 Earthquake-dominant | subduction + collision zones | HTI/NPL/TUR/CHL/ECU/ITA/HRV |
+| **7 Wildfire-dominant** | **Mediterranean fire-climate** | **GRC/ESP/PRT/CYP/FRA** |
+
+Boundary zones documented (NOT regimes): ARG/KHM flood-transitional (PATTERN_030, walked back).
+
+The Mediterranean basin splits cleanly between Regime 6 (earthquake: ITA/TUR/HRV) and Regime 7 (wildfire: GRC/ESP/PRT/CYP/FRA) — mechanism, not region, is the organizing variable.
+
+---
+
+## Original 4-regime discovery (2026-05-25)
 
 ## One line
 Countries cluster into 4 distinct disaster-displacement regimes based on (a) which hazard channel dominates and (b) how event sizes distribute across years. PAK is uniquely a bimodal-mega-flood regime; IND is steady-high-flood; PHL/VNM/MOZ are storm-dominant; BGD is mixed-flood-storm.
