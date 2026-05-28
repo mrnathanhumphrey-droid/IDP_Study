@@ -1,0 +1,20 @@
+[evict] loading monthly: 43.3 MB
+[evict] monthly rows = 855,316 | cols = ['state', 'type', 'GEOID', 'month', 'filings_2020', 'filings_avg', 'filings_avg_prepandemic_baseline', 'last_updated']
+[evict] no State-type rows; aggregating tracts -> state
+[evict] per-state aggregated: 10 states
+       state  filings_2020_sum  baseline_sum  months  ratio_2020_vs_baseline
+   Minnesota            118096    101143.250      77                1.167611
+    Missouri            253976    254015.000      77                0.999846
+     Indiana            403487    437231.000      77                0.922823
+   Wisconsin            151212    166343.118      77                0.909037
+Pennsylvania            602907    684611.000      77                0.880656
+ Connecticut            102429    118106.268      77                0.867261
+Rhode_Island             41226     49780.000      77                0.828164
+   Newmexico             78449    101623.026      77                0.771961
+    Virginia            676610    975682.500      77                0.693474
+    Delaware             65821    105324.000      77                0.624938
+[evict] top-quartile eviction-ratio threshold: 0.9193767298425308
+[evict] state predictions consistent with eviction-channel: 0 of 8
+[evict] checking weekly: 239.9 MB
+[evict] wrote D:\IDP\analysis\paper7_eviction_lab_2026_05_27.json
+[evict] DONE

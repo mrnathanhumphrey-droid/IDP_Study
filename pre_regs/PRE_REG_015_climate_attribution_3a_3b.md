@@ -107,3 +107,39 @@ Full fit DEFERRED pending NOAA HURDAT2 + HadISST data acquisition. Partial fit o
 **Cross-reference**: USA 2024 = 10.24M storm-IDP = 5.2× previous max. Helene+Milton+Beryl single-season cluster. Single largest single-year storm signal in the entire corpus. Consistent with intensification but a single-year anchor, not a trend.
 
 **Status**: PARTIAL CONSISTENT; awaits full data acquisition for definitive fit.
+
+---
+
+## 8. Results — second pass (fired 2026-05-27, HadISST 1870-2003 + HURDAT2 1851-2025 acquired)
+
+Full dig: `D:/IDP/papers/PAPER_2_DISASTER_REGIMES/digs/2026_05_27_hadisst_hurdat_ace_partial_fit.md`
+
+### Prediction set C (ACE × USA storm-IDP) — FIRED
+**Pearson r = +0.552 on n = 6 years (2008-2018)** USA-storm-IDP × Atlantic seasonal ACE. Predicted ≥ +0.4. **SUPPORTED.**
+
+Observed pairs:
+| year | USA storm-IDP | ACE |
+|---:|---:|---:|
+| 2008 | 1,958,000 | 145.72 |
+| 2011 | 42,770 | 126.30 |
+| 2013 | 16,092 | 36.12 |
+| 2016 | 880,536 | 142.53 |
+| 2017 | 1,054,687 | 224.88 |
+| 2018 | 844,182 | 132.58 |
+
+### Prediction set B (SST × USA storm-IDP) — DEFERRED
+HadISST text-format release locally available stops at 2003; panel coverage starts at 2008. No temporal overlap. Test cannot fire on this data combination.
+
+Path to closure: acquire HadISST 2004-2024 (Met Office NetCDF) OR backfill panel with EM-DAT historical USA-storm-IDP 1980-2007.
+
+### Falsifier status update
+| F | Status |
+|---|---|
+| F1 (1980-2007 mega-year > 5) | NOT FIRED (2 mega-years observed; well below 5) |
+| F2 (SST × storm \|r\| < 0.2) | NOT TESTABLE (data overlap gap) |
+| **F3 (ACE × storm \|r\| < 0.2)** | **NOT FIRED — observed r = +0.552** |
+| F4 (2025-2040 forward < 3 mega-years) | NOT TESTABLE YET |
+| F5 (CUB/PRI no intensification) | NOT TESTED |
+
+### Net result
+**Prediction set C SUPPORTED.** The ACE × USA-storm-IDP mechanism step of the climate-attribution chain is empirically present at the magnitude predicted. Sample is small (n=6) but signal direction is clean. Set B defers data extension; Set D (forward 2025-2040) is the load-bearing test for the drift hypothesis itself.

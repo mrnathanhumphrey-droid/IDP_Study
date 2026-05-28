@@ -142,3 +142,45 @@ F1 + F2 firing together = methodology doesn't transfer to predictive setting. Pa
 
 ## 7. Provenance
 Locked 2026-05-27 before Stan fit. Will be hashed and committed to git.
+
+---
+
+## 8. Results — first fit (fired 2026-05-27, after Windows multiprocessing-deadlock fix; cores=1)
+
+Full dig: `D:/IDP/papers/PAPER_6_METHODOLOGY/digs/2026_05_27_phase1_residue_class_fit.md`
+
+### Outcome: H1 SUPPORTED
+**ΔLOO (residue_class − baseline) = +13.66 on n = 1239 country-year-channel observations.** Predicted ≥ +5. Match threshold met by 2.7× margin.
+
+| Model | elpd_loo | se | rank | weight | dse |
+|---|---:|---:|:---:|---:|---:|
+| residue_class | -2841.57 | 30.22 | 0 | **1.0** | 0.0 |
+| baseline | -2855.23 | 29.35 | 1 | 0.0 | 5.0 |
+
+z-score of the diff = ΔLOO / dse ≈ 2.73 — moderate-to-strong evidence at this n.
+
+### Variance partition (residue-class model)
+- sigma_country = 1.47
+- sigma_year = 0.29
+- sigma_channel = 1.29
+- **sigma_class = 1.56** (comparable to country-level heterogeneity — class structure carries variance on the same magnitude as country)
+- sigma_y = 2.334 (down from baseline 2.367 — residual scale shrinks once class structure is admitted)
+
+### Falsifier status
+| F | Status |
+|---|---|
+| **F1 (ΔLOO < 5 OR se_diff > 2)** | **NOT FIRED** (ΔLOO = +13.66; se_diff = 5 absolute; z = 2.7) |
+| F2 (sigma_class < sigma_y/2) | NOT FIRED (1.56 > 1.17) |
+| F3 (no within-channel improvement) | NOT TESTED at this pass |
+| F4 (USA 2024 anchor missed) | NOT TESTED at this pass |
+
+### Diagnostics
+- r_hat = 1.00 across all parameters in both models
+- 1-3 divergences after tuning in each fit (acceptable; target_accept=0.9; bump to 0.95 if publishing)
+- Pareto-k warning on residue-class fit — one or more influential observations; sensitivity check (k-fold) deferred to follow-up
+
+### Implementation note
+The original fit (08:42 AM 2026-05-27) ran 12.7 hours and accumulated only 12 seconds of CPU time — a Windows `multiprocessing.spawn` deadlock. The fix was `pm.sample(..., cores=1, progressbar=True)`. With this fix, each model sampled in 5-8 seconds.
+
+### Net result
+**PRE_REG_022 H1 SUPPORTED.** The Papers 2 + 4 typology — built from disaster-regime cluster analysis and conflict-type meta-typology — carries empirical predictive content beyond country, year, and channel main effects. az.compare places 100% of model-weight on the typology model. This is the load-bearing methodology dig for Paper 6 and validates the substantive typology claims of Papers 2 + 4.

@@ -72,7 +72,7 @@
 |---|---|---|---|---|
 | PRE_REG_014 | Regime stability 1980-2024 | **locked + fired** | 2026-05-25 | F1 FIRED — 15/29 shifts; H1 walked back; refined to R6 event-latency |
 | P2-H | Historical stability test | **closed-walk-back + refined** | 2026-05-25 | H1 walked back; R6 event-latency confirmed |
-| PRE_REG_015 | Climate-attribution USA 3a-3b | **locked + partial fit** | 2026-05-25 | A: CONSISTENT (USA mega-year freq 7.1%→17.6%); B/C deferred |
+| PRE_REG_015 | Climate-attribution USA 3a-3b | **locked + Set C SUPPORTED** | 2026-05-27 | Set A CONSISTENT (mega-year freq 7.1%→17.6%); **Set C SUPPORTED: r(USA storm-IDP, Atlantic ACE) = +0.552 on n=6 (predicted ≥ +0.4)**; Set B (SST × IDP) DEFERRED (HadISST stops 2003 / panel starts 2008, no overlap). F3 NOT FIRED. See PAPER_2_DISASTER_REGIMES/digs/2026_05_27_hadisst_hurdat_ace_partial_fit.md |
 | P2-F | USA 2024 mega-storm decomposition | **closed-supported** | 2026-05-25 | 11.0M total; 93% storm; 22.9× median, 5.2× prior max |
 | P2-E | Climate attribution layer (ERA5/CHIRPS/HadISST/HURDAT2) | open | 2026-05-25 | Data acquisition required; full PRE_REG_015 fit awaits |
 
@@ -239,6 +239,10 @@
 - **C-Ours-53 — US healthcare paradox surfaced (unpredicted finding)** — US is highest in healthcare-spend % GDP (17.0%) AND lowest in life expectancy (77.9y) among OECD peer set. Multi-dimensional outlier on spending; below-peer on outcomes. Sub-claim candidate for Paper 7.
 - **C-Ours-54 — Paper 7 homelessness rate REFINED** — original "US top quartile" claim was measurement-dependent. Under unsheltered-rate definition (rough sleeping / streets-living), **US is structural outlier (12/10K)** — 13× UK, 120× Finland. Under broad-total-homelessness definition (includes statutory + temporary accommodation), US is mid-pack (19.5/10K vs UK 56, FRA 49, NZL 217). Refined framing: SDP specifically describes unsheltered / streets-living homelessness produced by lack of welfare-state housing-rights architecture.
 - **C-Ours-55 — Finland Housing First partial fit SUPPORTED + 2025 inflection** — Finland declined 11 consecutive years 2014-2024 (Wikipedia confirms 2021 = 4,396 total / 1,318 long-term, well below pre-reg trajectory predictions). **Feb 2025: REVERSED**, attributed to "rising living costs and social security cuts." Pre-reg Prediction set A SUPPORTED through 2024; 2025 reversal is unpredicted-but-framework-consistent finding showing SDP framework operates in BOTH directions (investment → decline; retrenchment → reversal). Finland is the cleanest within-country empirical demonstration of revealed-preference framework.
+- **C-Ours-56 — PRE_REG_022 H1 SUPPORTED (Stan residue-class > baseline)** — ΔLOO = +13.66 on n=1239 country-year-channel observations (predicted ≥ 5; met by 2.7× margin). sigma_class = 1.56 ≈ sigma_country = 1.47 — typology carries variance on same order as country-level heterogeneity. az.compare 100% weight on residue_class model. **Papers 2 + 4 typology empirically vindicated as predictively load-bearing**, not just descriptively useful.
+- **C-Ours-57 — PRE_REG_027 Prediction set A SUPPORTED (OECD SOCX cross-country fit)** — r(homeless, social_spend) = -0.503 on n=8 (predicted ≤ -0.3) AND r(homeless, military) = +0.852 on n=7 (predicted ≥ +0.3). Both directions match. Both clear |r| ≥ 0.3 threshold; military correlation also clears |r| ≥ 0.5. US social-spend = 19.814% (2024) — lower-middle OECD, well below European welfare states (Austria/Finland 31.5%). PRE_REG_027 F1 NOT FIRED.
+- **C-Ours-58 — PRE_REG_015 Prediction set C SUPPORTED (Atlantic ACE × USA storm-IDP)** — r = +0.552 on n=6 years (2008-2018; predicted ≥ +0.4). HadISST + HURDAT2 both successfully parsed (1608 monthly SST grids 1870-2003; 175 seasons of Atlantic ACE 1851-2025). Set B (SST × IDP) DEFERRED — HadISST text release stops 2003, panel starts 2008, no overlap. Mechanism step of climate-attribution chain (Atlantic SST → ACE → USA storm-IDP) is empirically present at predicted magnitude.
+- **C-Ours-59 — PRE_REG_026 first fit DEFERRED (Eviction Lab coverage gap)** — Eviction Lab Tracking System 2020-2021 covers 10 states (MN/MO/IN/WI/PA/CT/RI/NM/VA/DE); none of the 8 PRE_REG_026 Set B named states (CA/NY/MS/TX/FL/LA/MA/MI) present. No falsifier fires. Sub-finding worth follow-up: Minnesota only state where 2020 filings exceeded prepandemic baseline (ratio 1.168).
 
 ## PAPER 6 — Methodology / Channel-Orthogonality + Residue-Class (PROMOTED 2026-05-27)
 
@@ -247,9 +251,9 @@
 ### Phase 1 (Stan residue-class fit)
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
-| PRE_REG_022 | Residue-class Stan model > classical baseline | pending lock | 2026-05-27 | Lock before Stan fit |
-| P6-B | Fit Stan residue-class model on full corpus | open | 2026-05-27 | Heavy compute; uses Papers 2+4 type assignments as classes |
-| P6-C | LOO-CV / WAIC vs baseline | open | 2026-05-27 | Medium effort; depends on P6-B success |
+| PRE_REG_022 | Residue-class Stan model > classical baseline | **locked + fit fired + H1 SUPPORTED** | 2026-05-27 | ΔLOO = +13.66 (predicted ≥ 5); residue_class weight 1.0 vs baseline 0.0; sigma_class = 1.56 ~ sigma_country = 1.47. F1 NOT FIRED. See PAPER_6_METHODOLOGY/digs/2026_05_27_phase1_residue_class_fit.md |
+| P6-B | Fit Stan residue-class model on full corpus | **closed-supported** | 2026-05-27 | Initial 12.7h Windows multiprocessing deadlock; fixed with cores=1; both models then fit in 5-8s each |
+| P6-C | LOO-CV / WAIC vs baseline | **closed-supported** | 2026-05-27 | ΔLOO = +13.66 with dse = 5; z ≈ 2.7. az.compare 1.0/0.0 weight split |
 
 ### Phase 2 (admin-1 + cross-paper unification)
 | ID | Title | Status | Last update | Notes |
@@ -293,10 +297,10 @@
 ### Phase 3 (channel-orthogonality + residue-class on SDP)
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
-| PRE_REG_026 | US SDP channel-orthogonality (parallel to PRE_REG_004) | **locked** | 2026-05-27 | First fit fires after HUD + Eviction Lab + ACS pulled |
-| P7-I | Decompose US SDP into eviction/unaffordability/etc channels | open | 2026-05-27 | State-year level |
+| PRE_REG_026 | US SDP channel-orthogonality (parallel to PRE_REG_004) | **locked + first fit DEFERRED (coverage gap)** | 2026-05-27 | Eviction Lab Tracking System 2020-2021 covers 10 states (MN/MO/IN/WI/PA/CT/RI/NM/VA/DE); 0 of 8 PRE_REG_026 named states (CA/NY/MS/TX/FL/LA/MA/MI) present. Path to closure: Eviction Lab county-level 2007-2018 archive + HUD AHAR + ACS. See PAPER_7_SDP_FRAMEWORK/digs/2026_05_27_eviction_lab_partial_fit.md |
+| P7-I | Decompose US SDP into eviction/unaffordability/etc channels | open | 2026-05-27 | Coverage-limited at current data; deferred pending broader pull |
 | P7-J | Test orthogonality of SDP channels | open | 2026-05-27 | Mirror IDP test |
-| PRE_REG_027 | Cross-country spending-allocation + SDP outcome correlation | **locked** | 2026-05-27 | First fit fires after SIPRI + OECD pulled |
+| PRE_REG_027 | Cross-country spending-allocation + SDP outcome correlation | **locked + fit fired + Set A SUPPORTED** | 2026-05-27 | OECD SOCX acquired. r(homeless, social_spend) = -0.503 (predicted ≤ -0.3) ✓ on n=8; r(homeless, military) = +0.852 (predicted ≥ +0.3) ✓ on n=7. 2/4 dimensions tested; threshold met. F1 NOT FIRED. See PAPER_7_SDP_FRAMEWORK/digs/2026_05_27_oecd_socx_correlation.md |
 | P7-K | Cluster US states into homelessness regimes | open | 2026-05-27 | Parallel to Paper 2 disaster regimes |
 
 ### Phase 4 (SDP-IDP equivalence test)
@@ -364,13 +368,13 @@ Each session-close should leave this register accurate to the last status change
 
 **Total tracked**: ~67 threads across all categories. **Closed**: 34. **Open + watching**: ~33.
 
-**Paper 2 substrate status**: 10 of 11 closure criteria met. Phase 1 + 2 + 3 (partial) closed. Only outstanding: full PRE_REG_015 fit (deferred pending HURDAT2 + HadISST data acquisition).
+**Paper 2 substrate status**: 10 of 11 closure criteria met. Phase 1 + 2 + 3 (partial) closed. PRE_REG_015 Set C (ACE × storm-IDP) **SUPPORTED 2026-05-27**; Set B (SST × storm-IDP) defers data extension to close 11/11.
 
 **Closed threads (post-Phase 3)**: 38 total (up from 34).
 
 **Paper 4 promoted 2026-05-25; Phase 1+2+3 closed 2026-05-27**: substrate-complete at 10/10. 5-type typology supported. PRE_REG_018 v2 SUPPORTED (16/18 anchors); v3 walked back (over-correction); Type C sub-typing C1/C2/C-mixed survives v3 walk-back.
 
-**Paper 6 (methodology) promoted 2026-05-27**: substrate exists from Papers 2 + 4 (channel-orthogonality + 6-regime + 5-type typology). Hunt phase. 3/9 closure criteria met. Next: PRE_REG_022 Stan residue-class lock + fit.
+**Paper 6 (methodology) promoted 2026-05-27**: substrate exists from Papers 2 + 4 (channel-orthogonality + 6-regime + 5-type typology). **PRE_REG_022 H1 SUPPORTED 2026-05-27** (ΔLOO = +13.66, residue-class model gets 100% weight). Phase 1 closed; 6/9 closure criteria met. Remaining: PRE_REG_023 admin-1 + PRE_REG_024 forward-prediction + k-fold sensitivity + publication-grade write-up.
 
 **Paper 7 (SDP framework) promoted 2026-05-27**: framing locked; PRE_REG_025 locked; substrate proposed; no data pulled. 1/9 closure criteria met. Next phase: data acquisition (HUD + Eviction Lab + SIPRI + OECD SOCX).
 

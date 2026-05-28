@@ -1,0 +1,22 @@
+[socx] loaded 616 rows from socx.csv
+[socx] columns: ['STRUCTURE', 'STRUCTURE_ID', 'STRUCTURE_NAME', 'ACTION', 'REF_AREA', 'Reference area', 'FREQ', 'Frequency of observation'] ...
+[socx] after filter: 616 rows
+[socx] latest-year social-spend table: 43 countries
+iso3 country  year_socx  social_spend_pct_gdp
+ AUT Austria       2024                31.554
+ FIN Finland       2024                31.437
+ FRA  France       2024                30.649
+ BEL Belgium       2024                28.573
+ DEU Germany       2024                27.854
+ ITA   Italy       2024                27.569
+ DNK Denmark       2024                26.423
+ SWE  Sweden       2024                26.086
+ ESP   Spain       2024                25.871
+ JPN   Japan       2022                24.736
+[socx] phase1 panel cols: ['iso3', 'country', 'military_pct_gdp', 'life_expectancy', 'gdp_per_capita', 'education_pct_gdp']
+[socx] candidate homeless cols: ['homeless_per_100k']
+[socx] candidate mil-spend cols: ['military_pct_gdp']
+[socx] r(homeless_per_100k, social_spend) = -0.503 on n=8
+[socx] r(homeless_per_100k, military_pct_gdp) = +0.852 on n=7
+[socx] wrote D:\IDP\analysis\paper7_socx_correlation_2026_05_27.json
+[socx] DONE

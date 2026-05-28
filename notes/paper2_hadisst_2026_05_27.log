@@ -1,0 +1,12 @@
+[hadisst] parsing files ...
+[hadisst] HadISST1_SST_1870-1900.txt.gz: parsed 372 month grids
+[hadisst] HadISST1_SST_1901-1930.txt.gz: parsed 360 month grids
+[hadisst] HadISST1_SST_1931-1960.txt.gz: parsed 360 month grids
+[hadisst] HadISST1_SST_1961-1990.txt.gz: parsed 360 month grids
+[hadisst] HadISST1_SST_1991-2003.txt.gz: parsed 156 month grids
+[hadisst] total months: 1608 | year range 1870-2003
+[hadisst] Aug-Oct annual: 134 years
+[hurdat] parsing hurdat2-atlantic-1851-2025.txt ...
+[hurdat] ACE years: 175 | sample 2017 = 224.87750000000023
+[panel] cols = ['ISO3', 'Year', 'Hazard Type', 'idp', 'affected', 'ratio', 'regime']
+[done] wrote D:\IDP\analysis\paper2_hadisst_hurdat_2026_05_27.json

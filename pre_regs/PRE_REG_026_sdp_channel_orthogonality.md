@@ -101,3 +101,36 @@ F1 + F3 firing together = methodology doesn't transfer to SDP fully.
 
 ## 6. Provenance
 Locked 2026-05-27 before HUD + Eviction Lab + ACS data pulled. First fit fires after Phase 1 data acquisition.
+
+---
+
+## 7. Results — first attempt (fired 2026-05-27, Eviction Lab Tracking System 2020-2021 acquired)
+
+Full dig: `D:/IDP/papers/PAPER_7_SDP_FRAMEWORK/digs/2026_05_27_eviction_lab_partial_fit.md`
+
+### Coverage gap
+Eviction Lab's public Eviction Tracking System covers 10 states (MN, MO, IN, WI, PA, CT, RI, NM, VA, DE). **None of the 8 states named in PRE_REG_026 Prediction set B (CA, NY, MS, TX, FL, LA, MA, MI) are present in the dataset.**
+
+The test cannot fire on Prediction set B with this data. This is a data-coverage limit, not a falsifier firing.
+
+### Pandemic-period eviction trajectory (10 states)
+| State | filings_2020 / prepandemic_baseline ratio |
+|---|---:|
+| Minnesota | 1.168 (only state above baseline) |
+| Missouri | 1.000 |
+| Indiana | 0.923 |
+| Wisconsin | 0.909 |
+| Pennsylvania | 0.881 |
+| Connecticut | 0.867 |
+| Rhode Island | 0.828 |
+| New Mexico | 0.772 |
+| Virginia | 0.693 |
+| Delaware | 0.625 |
+
+Minnesota >1.0 is anomalous (only state where 2020 filings exceeded prepandemic baseline despite moratoria). Filed for follow-up.
+
+### Falsifier status
+All falsifiers (F1/F2/F3) NOT TESTABLE on this dataset due to coverage gap. No spurious channel mappings created from off-pre-reg states.
+
+### Net result
+**First-fit DEFERRED.** Path to closure: acquire Eviction Lab county-level 2007-2018 (the full archive, not the pandemic Tracking System) + HUD AHAR PIT + ACS cost-burdened share by state.

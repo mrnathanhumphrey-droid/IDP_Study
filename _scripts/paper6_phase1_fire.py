@@ -138,9 +138,16 @@ with pm.Model() as baseline_model:
     mu = alpha + beta_country[country_idx] + beta_year[year_idx] + beta_channel[channel_idx]
     obs = pm.Normal("obs", mu=mu, sigma=sigma_y, observed=y)
 
-    print("  Sampling baseline...")
-    idata_baseline = pm.sample(1000, tune=1000, chains=2, target_accept=0.9,
-                                progressbar=False, idata_kwargs={"log_likelihood": True})
+    print("  Sampling baseline (cores=1 for Windows reliability)...")
+    idata_baseline = pm.sample(
+        1000,
+        tune=1000,
+        chains=2,
+        cores=1,
+        target_accept=0.9,
+        progressbar=True,
+        idata_kwargs={"log_likelihood": True},
+    )
 
 print("  Baseline sample summary:")
 print(az.summary(idata_baseline, var_names=["alpha", "sigma_country", "sigma_year", "sigma_channel", "sigma_y"]))
@@ -171,9 +178,16 @@ with pm.Model() as rc_model:
           + beta_channel[channel_idx] + beta_class[class_idx])
     obs = pm.Normal("obs", mu=mu, sigma=sigma_y, observed=y)
 
-    print("  Sampling residue-class...")
-    idata_rc = pm.sample(1000, tune=1000, chains=2, target_accept=0.9,
-                          progressbar=False, idata_kwargs={"log_likelihood": True})
+    print("  Sampling residue-class (cores=1 for Windows reliability)...")
+    idata_rc = pm.sample(
+        1000,
+        tune=1000,
+        chains=2,
+        cores=1,
+        target_accept=0.9,
+        progressbar=True,
+        idata_kwargs={"log_likelihood": True},
+    )
 
 print("  Residue-class sample summary:")
 print(az.summary(idata_rc, var_names=["alpha", "sigma_country", "sigma_year",
@@ -188,15 +202,15 @@ print("=" * 80)
 
 loo_baseline = az.loo(idata_baseline)
 loo_rc = az.loo(idata_rc)
-print(f"\nBaseline LOO-CV elpd_loo: {loo_baseline.elpd_loo:.2f} ± {loo_baseline.se:.2f}")
-print(f"Residue-class LOO-CV elpd_loo: {loo_rc.elpd_loo:.2f} ± {loo_rc.se:.2f}")
+print(f"\nBaseline LOO-CV elpd_loo: {loo_baseline.elpd:.2f} ± {loo_baseline.se:.2f}")
+print(f"Residue-class LOO-CV elpd_loo: {loo_rc.elpd:.2f} ± {loo_rc.se:.2f}")
 
 # Compare
-compare = az.compare({"baseline": idata_baseline, "residue_class": idata_rc}, ic="loo")
+compare = az.compare({"baseline": idata_baseline, "residue_class": idata_rc})
 print("\nModel comparison (LOO-CV):")
 print(compare)
 
-delta_loo = loo_rc.elpd_loo - loo_baseline.elpd_loo
+delta_loo = loo_rc.elpd - loo_baseline.elpd
 print(f"\nΔLOO (residue_class - baseline) = {delta_loo:.2f}")
 print(f"  Predicted: ≥ 5 (PRE_REG_022 H1)")
 print(f"  Status: {'SUPPORTED' if delta_loo >= 5 else 'NOT MET' if delta_loo >= 0 else 'WALKED BACK'}")
@@ -209,9 +223,9 @@ print(f"\nF1 (ΔLOO < 5): {'FIRED' if delta_loo < 5 else 'NOT FIRED'}")
 # ============================================================================
 import json
 results = {
-    "baseline_elpd_loo": float(loo_baseline.elpd_loo),
+    "baseline_elpd_loo": float(loo_baseline.elpd),
     "baseline_se": float(loo_baseline.se),
-    "residue_class_elpd_loo": float(loo_rc.elpd_loo),
+    "residue_class_elpd_loo": float(loo_rc.elpd),
     "residue_class_se": float(loo_rc.se),
     "delta_loo": float(delta_loo),
     "n_obs": int(n_obs),
@@ -219,6 +233,7 @@ results = {
     "n_classes": int(n_classes),
     "h1_threshold": 5,
     "h1_supported": bool(delta_loo >= 5),
+    "compare_table": compare.to_dict() if hasattr(compare, "to_dict") else str(compare),
 }
 Path("D:/IDP/analysis/paper6_phase1_loo_results_2026_05_27.json").write_text(
     json.dumps(results, indent=2), encoding="utf-8"

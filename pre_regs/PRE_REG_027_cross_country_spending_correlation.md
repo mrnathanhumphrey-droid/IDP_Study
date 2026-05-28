@@ -145,3 +145,34 @@ Requires OECD SOCX (welfare spending) + OECD Affordable Housing (homelessness ra
 
 ### Net result
 PARTIAL FIT SUPPORTED on testable predictions. Full correlation test pending OECD data acquisition.
+
+---
+
+## 9. Results — second pass (fired 2026-05-27, OECD SOCX acquired)
+
+Full dig: `D:/IDP/papers/PAPER_7_SDP_FRAMEWORK/digs/2026_05_27_oecd_socx_correlation.md`
+
+### Prediction set A — Correlations now fire on 2 of 4 dimensions
+| Pair | r | n | Predicted | Match |
+|---|---:|---:|---|---|
+| social_spend × homeless | **-0.503** | 8 | ≤ -0.3 | ✓ SUPPORTED |
+| military × homeless | **+0.852** | 7 | ≥ +0.3 | ✓ SUPPORTED |
+| public_housing × homeless | — | — | ≤ -0.3 | DEFERRED (OECD PH1 not yet acquired) |
+| healthcare × homeless | — | — | ≤ -0.2 | DEFERRED |
+
+Match threshold "≥ 2 of 4 in predicted direction with |r| ≥ 0.3" — **MET.** The |r| ≥ 0.5 single-strongest sub-condition also met (military at +0.852).
+
+### Falsifier status update
+| F | Status |
+|---|---|
+| F1 (all 4 \|r\| < 0.2) | **NOT FIRED** (both tested correlations clear 0.5 and 0.3 respectively) |
+| F2 (US not triple-outlier) | NOT FIRED (2/3 confirmed) |
+| F3 (Finland trajectory) | NOT FIRED |
+| F4 (CR + MU cases) | NOT FIRED |
+| F5 (sign flip with \|r\| ≥ 0.3) | NOT FIRED (both signs match prediction) |
+
+### US position in SOCX (additional context)
+US social-spend % GDP = **19.814%** (2024). Sits in lower-middle of OECD distribution, below OECD average 21.229%, well below European welfare states (Austria/Finland ≈ 31.5%).
+
+### Net result
+**Prediction set A SUPPORTED on the testable portion.** Two remaining correlation dimensions (public-housing-spend, healthcare-spend) pending OECD PH1 + OECD Health acquisition.
