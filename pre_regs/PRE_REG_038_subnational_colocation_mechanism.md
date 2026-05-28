@@ -88,5 +88,18 @@ Locked 2026-05-28 before any sub-national co-location was computed. Metric (1° 
 
 ---
 
-## 8. Results — first fit
-_(pending IDU co-location fit)_
+## 8. Results — first fit (fired 2026-05-28, IDU event-level)
+
+Full dig: `papers/PAPER_8_COMPOUND_CRISIS/digs/2026_05_28_prereg038_subnational_colocation.md`
+
+**F1 does NOT fire — coupling is NOT an aggregation artifact where testable.** SOM co-locates; non-coupling controls separate. But IDU single-channel coverage limits the cross-country test.
+
+- **Set A (PARTIAL)**: SOM (Horn CD-coupling, balanced channels) ρ_spatial = **+0.30 (p=0.02) at 1°, +0.297 (p=0.0003) at 0.5°** — same districts get conflict + drought displacement. COD = −0.02 (ns) but its disaster channel is only 38 events (2.8% share) → untestable, not evidence against. Conjunction (both >+0.3) not met for coverage reasons.
+- **Set B (SUPPORTED)**: UKR = 735 conflict / **0 disaster** events → pure single-channel = displacement-substitution confirmed at event level.
+- **Set C (COULD NOT FIRE)**: only 4 countries (SOM/COD/PHL/NGA) have ≥30 events in both channels (n<5). IDU is single-channel-dominant (most countries conflict-only or disaster-only). Descriptively 3/4 track national sign (SOM/PHL/NGA align; COD discordant = sparse).
+- **Set D (SUPPORTED)**: PHL control ρ_spatial = **−0.33 (1°), −0.49 (p<0.001 at 0.5°)** — channels spatially separated; NGA corroborates (−0.32). Non-coupling = significant spatial SEPARATION.
+- **Sensitivity (pre-committed)**: signal strongest at 0.5°, washes out at 2° → **co-location is district-scale (~50–100 km)**.
+- **Falsifiers**: F1 NOT fired (SOM co-locates), F2 NOT fired (controls separate, opposite to coupling case), F3 untestable (Set C n=4).
+
+### Net
+Within-place co-location mechanism supported where data permit: the Horn coupling case (SOM) co-locates at district scale, non-coupling cases (PHL/NGA) separate — co-location discriminates coupling and is NOT an aggregation artifact. Combined with the ENSO-null: **Horn coupling = local compound vulnerability (same districts hit by drought AND conflict), not a shared national climate driver.** Binding limit = IDU single-channel coverage → **Phase 2 (PRE_REG_039 candidate): dense gridded drought-hazard channel (GEE SPEI at 0.5° cells) paired with IDU conflict events, to fix coverage + enable the full cross-country Set C test + spatio-temporal co-location.**
