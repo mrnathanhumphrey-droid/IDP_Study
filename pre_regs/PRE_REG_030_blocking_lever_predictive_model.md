@@ -115,3 +115,18 @@ Court independence (5/5 blocked, 5/7 consolidated) and competitive election (5/5
 
 ### Net
 **H1 SUPPORTED; H2 walked back.** Discriminating-lever refinement (civil society + federalism) is a candidate headline for Paper 5.
+
+---
+
+## 10. Results — Prediction set C (out-of-sample, fired 2026-05-28)
+
+Full dig: `D:/IDP/papers/PAPER_5_DEMOCRATIC_RECOVERY/digs/2026_05_28_prereg030_setC_oos.md`
+
+Scored 12 current democracies (not in original corpus) at 2024 on the locked 4-lever model:
+
+- **AT-RISK (≤2 levers): GEO (1), PHL (1), IND (2), MEX (2), IDN (2)**
+- **PROTECTED (≥3): ZAF, ITA, ARG, DEU, FRA, GRC, ESP**
+
+**Strong face-validity**: the at-risk list reproduces the contemporary scholarly backsliding-watch consensus, derived independently from a model locked on 12 historical cases. Key distinctions the model gets right: MEX court=0 (2024 judicial reform), GEO lowest (Georgian Dream most acute), Milei-ARG protected (disruptive-but-institutionally-constrained ≠ institution-capturing), ZAF protected (2024 GNU = functioning accountability).
+
+Caveats: predictions not outcomes (forward-falsifiable 2025-2030); protected ≠ permanently safe (lever erosion). PRE_REG_030 now fully fired (Sets A + B + C). The model is both a retrospective separator and a forward risk instrument.

@@ -290,6 +290,7 @@
 | PRE_REG_030 | Blocking-lever predictive model | **locked + fired + H1 SUPPORTED** | 2026-05-28 | **10/12 correct** (≥3 levers → blocked). 2 misses = SLV exception + PER complication (both pre-flagged). Discriminating levers = civil society (4/5 blk vs 1/7 cons) + federalism, NOT courts/elections (near-universal at onset). See PAPER_5/digs/2026_05_28_prereg030_blocking_levers.md |
 | P5-A | Score 12 corpus cases on 4 levers | **closed-supported** | 2026-05-28 | V-Dem global-median splits + hand-coded federalism; 10/12; ≥3 cutoff optimal on sensitivity |
 | P5-B | USA lever-erosion 2020→2025 | **closed-walk-back (F3 fired)** | 2026-05-28 | H2 NOT supported — USA scores 4 both 2017+2025 on V-Dem coarse measures; erosion is sub-threshold for global-median splits. Model is cross-country separator, not within-country early-warning |
+| P5-A2 | PRE_REG_030 Set C out-of-sample scoring | **closed-supported** | 2026-05-28 | Scored 12 current democracies at 2024. AT-RISK: GEO/PHL/IND/MEX/IDN; PROTECTED: ZAF/ITA/ARG/DEU/FRA/GRC/ESP. Face-valid vs scholarly backsliding-watch; model distinguishes Milei-disruptive-but-constrained from Morena-court-capturing. Forward-falsifiable 2025-2030. See digs/2026_05_28_prereg030_setC_oos.md |
 
 ### Phase 2 (recovery velocity)
 | ID | Title | Status | Last update | Notes |
