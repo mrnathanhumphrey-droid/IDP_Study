@@ -278,6 +278,37 @@
 
 ---
 
+## PAPER 8 — Compound-Crisis Coupling (PROMOTED 2026-05-28)
+
+**Status**: scaffolded + scope locked + 3 pre-regs locked. Scope: `papers/PAPER_8_SCOPE.md`. Folder: `papers/PAPER_8_COMPOUND_CRISIS/`. Grows from PRE_REG_004 F2 (unpredicted BRA+ETH couplings).
+
+**Thesis**: ~92% of countries have orthogonal displacement channels; a rare minority COUPLE (ETH triple CD ρ=0.83, SOM/BRA/SDN single-pair). Coupling = distinct compound-crisis regime. The shadow of Papers 2/4/6's separation findings.
+
+### Phase 1 (coupling census)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_033 | Coupling-vs-orthogonality classifier | **locked** | 2026-05-28 | ≤15% couple; coupling correlates with fragility OR shock-window; ETH triple unique |
+| P8-A | Full-corpus channel-correlation census | open | 2026-05-28 | all-pairs Spearman per country; data in hand |
+
+### Phase 2 (ENSO mechanism)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_034 | ENSO teleconnection test | **locked** | 2026-05-28 | Horn drought peaks in La Niña; conflict lags 0-1yr; needs NOAA ONI |
+| P8-B | Acquire NOAA ONI + align coupling-years | open | 2026-05-28 | small public NOAA CPC file |
+
+### Phase 3 (temporal-window)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| PRE_REG_035 | Temporal-window / synchronized-shock | **locked** | 2026-05-28 | ETH coupling window-transient (2020-2024) vs structural; split+bootstrap; data in hand |
+| P8-C | Split-window + leave-window-out bootstrap | open | 2026-05-28 | ETH pre-2018 vs 2018-2024 |
+
+### Phase 4 (mechanism synthesis)
+| ID | Title | Status | Last update | Notes |
+|---|---|---|---|---|
+| P8-D | Adjudicate ENSO vs window vs state-collapse | open | 2026-05-28 | after Phases 1-3 |
+
+---
+
 ## PAPER 5 — Democratic Resilience (blocking + recovery) (PROMOTED 2026-05-27)
 
 **Status**: scaffolded + scope locked + 3 pre-regs locked. Scope: `papers/PAPER_5_SCOPE.md`. Folder: `papers/PAPER_5_DEMOCRATIC_RECOVERY/`. Two load-bearing claims ALREADY supported (PATTERN_027 4-lever blocking + PRE_REG_012 mirror-order recovery 6/6).

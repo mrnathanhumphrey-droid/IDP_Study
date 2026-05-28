@@ -3,7 +3,7 @@
 Last updated: 2026-05-27 (Papers 1/2/4 paper-readable; Paper 3 partial fit done; Paper 6 + Paper 7 promoted; v3 walked back)
 
 ## Papers promoted from substrate
-P1 Executive-aggrandizement (10/11) · P2 Disaster regimes (11/11, 7 regimes) · P3 Strife epicenter (6/9 + RULAC) · P4 Conflict typology (10/10) · **P5 Democratic Resilience (promoted 2026-05-27; PATTERN_027 + PRE_REG_012 anchors; PRE_REG_030-032 locked)** · P6 Methodology (7/9) · P7 SDP framework (parallel agent)
+P1 Executive-aggrandizement (10/11) · P2 Disaster regimes (11/11, 7 regimes) · P3 Strife epicenter (6/9 + RULAC) · P4 Conflict typology (10/10) · **P5 Democratic Resilience (~6/9; PRE_REG_030 A/B/C + 031 + 032 fired; blocking-lever model + vertical-plateau ceiling)** · P6 Methodology (7/9) · P7 SDP framework (parallel agent) · **P8 Compound-Crisis Coupling (promoted 2026-05-28; PATTERN_023+021 anchors; PRE_REG_033-035 locked)**
 
 ## Pre-registrations (8 locked, 7 with first-fit results)
 - **PRE_REG_001** (locked 2026-05-25): Strife-Signature Epicenter Diffusion → awaiting TGO/CIV/GHA UCDP updates
