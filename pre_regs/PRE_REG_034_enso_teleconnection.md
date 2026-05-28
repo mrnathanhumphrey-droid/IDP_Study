@@ -59,3 +59,18 @@ F1 firing = drop ENSO mechanism; coupling is not climate-teleconnection-driven.
 
 ## 7. Provenance
 Locked 2026-05-28 before NOAA ONI acquisition. First fit fires when ONI arrives.
+
+---
+
+## 8. Results — first fit (fired 2026-05-28, NOAA ONI acquired)
+
+Full dig: `D:/IDP/papers/PAPER_8_COMPOUND_CRISIS/digs/2026_05_28_prereg034_enso.md`
+
+**Set A NOT SUPPORTED (F1 fired); Set B contemporaneous; Set C SUPPORTED.**
+
+- **Set A**: Horn drought-displacement mega-years 50% La Niña vs 47% baseline — no enrichment, F1 fired. BUT underpowered: GIDD drought-displacement is ~4 years/country, all 2017-2023, and lags meteorological drought (2020-2023 Horn drought recorded as displacement in 2022-2023). Displacement timing ≠ rainfall timing → wrong instrument for the ENSO test.
+- **Set B**: conflict-drought coupling is CONTEMPORANEOUS (lag 0 strongest: ETH 0.83, SOM 0.79), not drought-leads-conflict. Consistent with PRE_REG_035 structural synchrony.
+- **Set C SUPPORTED**: BRA Amazon drought is El-Niño-aligned (0% La Niña) — OPPOSITE ENSO phase from Horn. The two CD-coupling families have distinct, opposite climate drivers (correct known climatology).
+
+### Net
+Single-year-ENSO mechanism not supported via displacement (F1), but family-specific opposite climate signatures (Horn La-Niña-ish / Amazon El-Niño) are real. Clean climate test deferred to SPEI meteorological drought (data/spei/, contemporaneous + dense) — Set A failure is likely a displacement-instrument artifact, not absence of climate signal.

@@ -294,8 +294,9 @@
 ### Phase 2 (ENSO mechanism)
 | ID | Title | Status | Last update | Notes |
 |---|---|---|---|---|
-| PRE_REG_034 | ENSO teleconnection test | **locked** | 2026-05-28 | Horn drought peaks in La Niña; conflict lags 0-1yr; needs NOAA ONI |
-| P8-B | Acquire NOAA ONI + align coupling-years | open | 2026-05-28 | small public NOAA CPC file |
+| PRE_REG_034 | ENSO teleconnection test | **locked + fired + mixed (F1 on Set A)** | 2026-05-28 | NOAA ONI acquired. Set A NOT SUPPORTED (Horn drought-displ 50% La Niña vs 47% baseline; F1 — but underpowered, displacement lags rainfall). Set B contemporaneous (lag 0). **Set C SUPPORTED: BRA Amazon drought El-Niño-aligned (0% La Niña) = OPPOSITE phase from Horn → distinct climate drivers per family.** Clean test deferred to SPEI. See PAPER_8/digs/2026_05_28_prereg034 |
+| P8-B | Acquire NOAA ONI + align coupling-years | **closed-mixed** | 2026-05-28 | ONI 1950-2026 acquired (data/oni.txt). Single-year-ENSO not supported via displacement; family-specific opposite signatures real |
+| P8-F | Re-run ENSO vs SPEI meteorological drought | open | 2026-05-28 | NEW — data/spei/ on disk; contemporaneous+dense; resolves whether Set A failure is displacement-instrument artifact |
 
 ### Phase 3 (temporal-window)
 | ID | Title | Status | Last update | Notes |
