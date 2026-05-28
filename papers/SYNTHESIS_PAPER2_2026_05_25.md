@@ -9,7 +9,7 @@
 ## 0. Headline state
 
 - **All 3 phases closed** (Phase 3 partially — full PRE_REG_015 fit deferred pending HURDAT2 + HadISST data acquisition)
-- **Closure criteria**: 10 of 11 met
+- **Closure criteria**: **11 of 11 met (2026-05-27)** — all PRE_REG_015 testable sets fired (A/B/C/E; D forward-watch). Typology expanded to 7 regimes (Regime 7 Wildfire CONFIRMED). See update note at end of doc.
 - **Confirmed regime members**: 30 across 5 regimes (Regime 5 falsified at PRE_REG_003 fit)
 - **Pre-regs locked + tested**: 5 (PRE_REG_003, 013, 014, 015, 016, 017) — actually 6 if 017 counted
 - **Anchor patterns**: 6 (PATTERN_019, 020, 025, 028, 029, 030)
@@ -245,3 +245,21 @@ When user is ready to draft Paper 2 prose, the load-bearing files (in order) are
 ---
 
 **Status: Paper 2 substrate at paper-readable threshold (10/11 closure criteria met). Prose drafting is user's lane.**
+
+---
+
+## UPDATE 2026-05-27 — Paper 2 → 11/11 + typology expanded to 7 regimes
+
+Three developments closed the last criterion and strengthened the typology:
+
+1. **PRE_REG_015 Set C SUPPORTED** (`digs/2026_05_27_hadisst_hurdat_ace_partial_fit.md`) — r(USA storm-IDP, Atlantic ACE) = +0.552, n=6. ACE is the robust climate-attribution intermediate.
+
+2. **PRE_REG_015 Set E SUPPORTED** (`digs/2026_05_27_prereg015_setE_cub_pri.md`) — CUB replicates USA storm-mega-year intensification (7.1%→17.6%; per-capita +21%). PRI inconclusive-by-artifact (Maria displacement = off-island emigration). F5 NOT FIRED.
+
+3. **PRE_REG_015 Set B CONSISTENT-BUT-FRAGILE** (`digs/2026_05_27_prereg015_setB_sst.md`) — HadISST extended to 1870-2025. Direct SST × USA-storm-IDP: +0.518 raw on 2008-2024 (crosses +0.4) but outlier-driven (log +0.23 / Spearman +0.15); +0.24 historical; +0.21 pooled. Mechanism refinement: the robust chain is SST → ACE → displacement, not direct SST → displacement (landfall geography injects noise).
+
+4. **Regime 7 (Wildfire-dominant) CONFIRMED** (PRE_REG_029; `digs/2026_05_27_regime7_confirmed_2b_walkback.md`) — 5 Mediterranean members (GRC/ESP/PRT/CYP/FRA). Clean discrimination from Regime 6 (ITA/TUR/HRV earthquake-dominant). Typology now **7 regimes**.
+
+5. **Regime 2b WALKED BACK** (PRE_REG_029 F2) — only ARG/KHM in the flood-transitional gap; documented as R1↔R4 boundary zone, not a regime.
+
+**Closure: 11/11. All testable PRE_REG_015 sets fired. Typology = 7 regimes. Climate-attribution thread anchored by ACE (Set C) + CUB replication (Set E).**

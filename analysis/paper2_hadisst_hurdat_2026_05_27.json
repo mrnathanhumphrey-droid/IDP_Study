@@ -1,10 +1,10 @@
 {
   "hadisst_years": [
     1870,
-    2003
+    2025
   ],
-  "n_months_parsed": 1608,
-  "aug_oct_2024_mdr_sst": null,
+  "n_months_parsed": 1872,
+  "aug_oct_2024_mdr_sst": 29.052639593908626,
   "aug_oct_2003_mdr_sst": 28.47559503666103,
   "ace_2017": 224.87750000000023,
   "ace_2024": 161.58249999999992,
