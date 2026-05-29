@@ -1,16 +1,17 @@
 """
-PRE-REG 039 — seam closure: two discharge axes of one displacement system.
-State level (n~51). All on-disk. Output: analysis/paper7_seam_closure_039.json
+PRE-REG 039 seam closure — SENTINEL-CLEAN (supersedes the contaminated first run).
 
-food_insec  = FEA FOODINSEC_21_23 (state)
-homeless    = CoC homeless_per_10k -> state (pop-weighted, latest yr)
-rent_floor  = CoC rent_coc -> state (pop-weighted)
-precarity   = Pulse behind_on_rent_share (state, mean over periods)
-poverty     = FEA POVRATE21 -> state (pop-weighted county)
-food_floor  = FARA sum(LAPOP1_10)/sum(Pop2010) -> state (income-free low-access share)
+FEA carries sentinels (CT food = -8888; 11 POVRATE counties <0, min -9999; 8 food
+out-of-range). All FEA percentage columns are filtered to valid [0,100] BEFORE state
+aggregation. State level n=51. Output: analysis/paper7_seam_closure_039.json
+
+Sections:
+  A. seam correlations + D1-D4 falsifiers (food insecurity = poverty's display = push gauge)
+  B. FLOW test: does origin food-insec/poverty drive OUT-MIGRATION? (Migration ACS events)
+  C. recursive decomposition: homelessness -> street vs sheltered (different drivers => fractal)
 """
 from __future__ import annotations
-import json, zipfile
+import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -19,129 +20,102 @@ import statsmodels.api as sm
 
 IDP = Path(r"D:\IDP")
 FEAX = r"D:\Food Deserts\data_raw\FEA\2025-food-environment-atlas-data.xlsx"
-FARA_ZIP = r"D:\Food Deserts\data_raw\FARA\2019_Food_Access_Research_Atlas_Data.zip"
-
-FIPS2USPS = {1:'AL',2:'AK',4:'AZ',5:'AR',6:'CA',8:'CO',9:'CT',10:'DE',11:'DC',12:'FL',13:'GA',
-15:'HI',16:'ID',17:'IL',18:'IN',19:'IA',20:'KS',21:'KY',22:'LA',23:'ME',24:'MD',25:'MA',26:'MI',
-27:'MN',28:'MS',29:'MO',30:'MT',31:'NE',32:'NV',33:'NH',34:'NJ',35:'NM',36:'NY',37:'NC',38:'ND',
-39:'OH',40:'OK',41:'OR',42:'PA',44:'RI',45:'SC',46:'SD',47:'TN',48:'TX',49:'UT',50:'VT',51:'VA',
-53:'WA',54:'WV',55:'WI',56:'WY'}
-NAME2USPS = {'alabama':'AL','alaska':'AK','arizona':'AZ','arkansas':'AR','california':'CA','colorado':'CO',
-'connecticut':'CT','delaware':'DE','district of columbia':'DC','florida':'FL','georgia':'GA','hawaii':'HI',
-'idaho':'ID','illinois':'IL','indiana':'IN','iowa':'IA','kansas':'KS','kentucky':'KY','louisiana':'LA',
-'maine':'ME','maryland':'MD','massachusetts':'MA','michigan':'MI','minnesota':'MN','mississippi':'MS',
-'missouri':'MO','montana':'MT','nebraska':'NE','nevada':'NV','new hampshire':'NH','new jersey':'NJ',
-'new mexico':'NM','new york':'NY','north carolina':'NC','north dakota':'ND','ohio':'OH','oklahoma':'OK',
-'oregon':'OR','pennsylvania':'PA','rhode island':'RI','south carolina':'SC','south dakota':'SD',
-'tennessee':'TN','texas':'TX','utah':'UT','vermont':'VT','virginia':'VA','washington':'WA',
-'west virginia':'WV','wisconsin':'WI','wyoming':'WY'}
+EV = r"D:\Migration\data\derived\event_observables.parquet"
+POP = r"D:\Migration\data\derived\migpuma_population_2010.parquet"
+COC = IDP / "analysis" / "paper7_coc_timepanel_2012_2024.csv"
+PULSE = IDP / "analysis" / "paper7_pulse_housing_precarity.csv"
+FIPS2USPS = {1:'AL',2:'AK',4:'AZ',5:'AR',6:'CA',8:'CO',9:'CT',10:'DE',11:'DC',12:'FL',13:'GA',15:'HI',16:'ID',17:'IL',18:'IN',19:'IA',20:'KS',21:'KY',22:'LA',23:'ME',24:'MD',25:'MA',26:'MI',27:'MN',28:'MS',29:'MO',30:'MT',31:'NE',32:'NV',33:'NH',34:'NJ',35:'NM',36:'NY',37:'NC',38:'ND',39:'OH',40:'OK',41:'OR',42:'PA',44:'RI',45:'SC',46:'SD',47:'TN',48:'TX',49:'UT',50:'VT',51:'VA',53:'WA',54:'WV',55:'WI',56:'WY'}
+NAME2USPS = {v.lower(): v for v in FIPS2USPS.values()}
+NAME2USPS.update({'alabama':'AL','alaska':'AK','arizona':'AZ','arkansas':'AR','california':'CA','colorado':'CO','connecticut':'CT','delaware':'DE','district of columbia':'DC','florida':'FL','georgia':'GA','hawaii':'HI','idaho':'ID','illinois':'IL','indiana':'IN','iowa':'IA','kansas':'KS','kentucky':'KY','louisiana':'LA','maine':'ME','maryland':'MD','massachusetts':'MA','michigan':'MI','minnesota':'MN','mississippi':'MS','missouri':'MO','montana':'MT','nebraska':'NE','nevada':'NV','new hampshire':'NH','new jersey':'NJ','new mexico':'NM','new york':'NY','north carolina':'NC','north dakota':'ND','ohio':'OH','oklahoma':'OK','oregon':'OR','pennsylvania':'PA','rhode island':'RI','south carolina':'SC','south dakota':'SD','tennessee':'TN','texas':'TX','utah':'UT','vermont':'VT','virginia':'VA','washington':'WA','west virginia':'WV','wisconsin':'WI','wyoming':'WY'})
 
 
-def wmean(df, val, w):
-    d = df.dropna(subset=[val, w]);
-    return np.average(d[val], weights=d[w]) if len(d) else np.nan
+def valid_pct(s):
+    return pd.to_numeric(s, errors="coerce").where(lambda x: (x >= 0) & (x <= 100))
+
+
+def wm(d, v, w):
+    x = d.dropna(subset=[v, w])
+    return np.average(x[v], weights=x[w]) if len(x) else np.nan
+
+
+def corr(df, a, b):
+    x = df.dropna(subset=[a, b])
+    r, p = stats.pearsonr(x[a], x[b])
+    return {"r": round(float(r), 3), "p": round(float(p), 4), "n": int(len(x))}
 
 
 def main():
-    # food insecurity (state)
+    out = {"note": "sentinel-clean: FEA pct cols filtered to [0,100] before aggregation", "sentinels": {}}
     ins = pd.read_excel(FEAX, sheet_name="INSECURITY", header=1)
-    food = ins.groupby("State").agg(food_insec=("FOODINSEC_21_23","mean"),
-                                    food_insec_pre=("FOODINSEC_18_20","mean")).reset_index().rename(columns={"State":"st"})
+    soc = pd.read_excel(FEAX, sheet_name="SOCIOECONOMIC", header=1)
+    out["sentinels"]["food_out_of_range_counties"] = int(((ins.FOODINSEC_21_23 < 0) | (ins.FOODINSEC_21_23 > 100)).sum())
+    out["sentinels"]["pov_negative_counties"] = int((soc.POVRATE21 < 0).sum())
+    ins["fi"] = valid_pct(ins.FOODINSEC_21_23)
+    soc["pv"] = valid_pct(soc.POVRATE21)
+    food = ins.groupby("State").fi.mean().rename("food_insec")
+    pov = soc.groupby("State").pv.mean().rename("poverty")
 
-    # poverty (county -> state pop-weighted, county pop from FARA)
-    soc = pd.read_excel(FEAX, sheet_name="SOCIOECONOMIC", header=1)[["FIPS","State","POVRATE21"]]
-    with zipfile.ZipFile(FARA_ZIP) as z, z.open("Food Access Research Atlas.csv") as f:
-        fara = pd.read_csv(f, usecols=["CensusTract","Pop2010","LAPOP1_10"], dtype={"CensusTract":str})
-    fara["geoid"] = fara.CensusTract.str.zfill(11)
-    fara["FIPS"] = fara.geoid.str[:5].astype(int)
-    fara["statefip"] = fara.geoid.str[:2].astype(int)
-    for c in ["Pop2010","LAPOP1_10"]:
-        fara[c] = pd.to_numeric(fara[c], errors="coerce").fillna(0.0)
-    # state poverty = unweighted county-mean POVRATE21 (pop-weighted merge was corrupted;
-    # unweighted validates corr(food_insec,poverty)=0.918, the expected structural link)
-    pov = soc.groupby("State").POVRATE21.mean().rename("poverty").reset_index().rename(columns={"State":"st"})
-
-    # food floor (state low-access share, FARA)
-    ff = fara.groupby("statefip").apply(lambda d: d.LAPOP1_10.sum()/d.Pop2010.sum()).rename("food_floor").reset_index()
-    ff["st"] = ff.statefip.map(FIPS2USPS)
-    ff = ff[["st","food_floor"]].dropna()
-
-    # homelessness + rent floor (CoC -> state)
-    coc = pd.read_csv(IDP/"analysis"/"paper7_coc_timepanel_2012_2024.csv")
-    yr = coc.dropna(subset=["homeless_per_10k"]).year.max()
-    c = coc[coc.year==yr].copy()
+    coc = pd.read_csv(COC)
+    yr = int(coc.dropna(subset=["homeless_per_10k"]).year.max())
+    c = coc[coc.year == yr].copy()
     c["st"] = c.coc_number.str[:2]
-    hs = c.groupby("st").apply(lambda d: pd.Series({
-        "homeless_per_10k": wmean(d,"homeless_per_10k","total_population"),
-        "rent_floor": wmean(d,"rent_coc","total_population")})).reset_index()
+    rent = c.groupby("st").apply(lambda d: wm(d, "rent_coc", "total_population")).rename("rent_floor")
+    hom = c.groupby("st").apply(lambda d: wm(d, "homeless_per_10k", "total_population")).rename("homeless")
 
-    # precarity (Pulse, state)
-    pul = pd.read_csv(IDP/"analysis"/"paper7_pulse_housing_precarity.csv")
+    pul = pd.read_csv(PULSE)
     ps = pul[pul.geo_type.astype(str).str.lower().str.contains("state")].copy()
-    if len(ps)==0: ps = pul.copy()
-    def to_usps(g):
-        g=str(g).strip()
-        if len(g)==2 and g.upper() in FIPS2USPS.values(): return g.upper()
-        return NAME2USPS.get(g.lower())
-    ps["st"] = ps.geography.map(to_usps)
-    prec = ps.groupby("st").agg(behind_on_rent=("behind_on_rent_share","mean"),
-                                eviction_risk=("eviction_risk_share","mean")).reset_index()
+    if len(ps) == 0:
+        ps = pul.copy()
+    ps["st"] = ps.geography.map(lambda g: g.strip().upper() if str(g).strip().upper() in FIPS2USPS.values() else NAME2USPS.get(str(g).strip().lower()))
+    prec = ps.groupby("st").agg(behind_on_rent=("behind_on_rent_share", "mean"),
+                                eviction_risk=("eviction_risk_share", "mean"))
 
-    # merge
-    m = food.merge(pov,on="st").merge(ff,on="st").merge(hs,on="st").merge(prec,on="st")
-    m = m.dropna(subset=["food_insec","homeless_per_10k","rent_floor","behind_on_rent","poverty","food_floor"])
-    print(f"homeless year used: {yr};  merged states n={len(m)}")
+    # FARA food floor (state) + out-migration (Migration events)
+    ev = pd.read_parquet(EV); nyr = ev.YEAR.nunique()
+    oos = (ev[ev.orig_state != ev.dest_state].groupby("orig_state").PERWT.sum() / nyr)
+    spop = pd.read_parquet(POP).groupby(["statefip", "year"]).population.sum().groupby("statefip").mean()
+    om = pd.DataFrame({"oos": oos, "pop": spop}).dropna()
+    om["st"] = om.index.map(FIPS2USPS)
+    om = om.dropna(subset=["st"]).set_index("st")
+    om["outmig_oos_per1k"] = 1000 * om.oos / om["pop"]
 
-    def corr(a,b):
-        r,p = stats.pearsonr(m[a],m[b]); return float(r),float(p)
-    out={"n":int(len(m)),"homeless_year":int(yr),"corr":{}, "reg":{}}
-    pairs=[("behind_on_rent","food_insec"),("behind_on_rent","homeless_per_10k"),
-           ("eviction_risk","homeless_per_10k"),("food_insec","homeless_per_10k"),
-           ("rent_floor","homeless_per_10k"),("rent_floor","food_insec"),
-           ("food_floor","food_insec"),("poverty","food_insec"),("poverty","homeless_per_10k"),
-           # pre-pandemic robustness (FOODINSEC_18_20, before SNAP emergency allotments)
-           ("poverty","food_insec_pre"),("food_floor","food_insec_pre"),
-           ("behind_on_rent","food_insec_pre"),("food_insec_pre","homeless_per_10k")]
-    for a,b in pairs:
-        r,p=corr(a,b); out["corr"][f"{a}~{b}"]={"r":round(r,3),"p":round(p,4)}
+    M = pd.concat([food, pov, rent, hom, prec, om.outmig_oos_per1k], axis=1).dropna(subset=["food_insec", "poverty", "homeless", "rent_floor"])
+    out["n"] = int(len(M)); out["homeless_year"] = yr
+    out["poverty_range"] = [round(M.poverty.min(), 1), round(M.poverty.max(), 1)]
+    out["food_range"] = [round(M.food_insec.min(), 1), round(M.food_insec.max(), 1)]
 
-    def reg(y,xs):
-        X=sm.add_constant(m[xs]); res=sm.OLS(m[y],X).fit(cov_type="HC1")
-        return {k:{"b":round(float(res.params[k]),4),"p":round(float(res.pvalues[k]),4)} for k in ["const"]+xs} | {"r2":round(float(res.rsquared),3)}
-    out["reg"]["homeless~rent_floor+poverty"]=reg("homeless_per_10k",["rent_floor","poverty"])
-    out["reg"]["food_insec~poverty+food_floor+rent_floor"]=reg("food_insec",["poverty","food_floor","rent_floor"])
+    # ---- A. seam correlations ----
+    out["corr"] = {f"{a}~{b}": corr(M, a, b) for a, b in [
+        ("poverty", "food_insec"), ("food_insec", "homeless"), ("rent_floor", "homeless"),
+        ("poverty", "homeless"), ("behind_on_rent", "food_insec"), ("behind_on_rent", "homeless"),
+        ("eviction_risk", "homeless"), ("food_insec", "outmig_oos_per1k"),
+        ("poverty", "outmig_oos_per1k"), ("rent_floor", "outmig_oos_per1k")]}
 
-    # ---- decision rules ----
-    c1 = out["corr"]["behind_on_rent~food_insec"]
-    c2 = out["corr"]["behind_on_rent~homeless_per_10k"]
-    c3 = out["corr"]["food_insec~homeless_per_10k"]
-    rH = out["reg"]["homeless~rent_floor+poverty"]["rent_floor"]
-    rF = out["reg"]["food_insec~poverty+food_floor+rent_floor"]
-    D1 = c1["r"]>0 and c1["p"]<0.05
-    D2 = not (c2["r"]>0 and c2["p"]<0.05)
-    D3 = not (c3["r"]>0 and c3["p"]<0.05)
-    D4 = (rH["b"]>0 and rH["p"]<0.05) and (rF["rent_floor"]["p"]>0.05) and \
-         ((rF["poverty"]["b"]>0 and rF["poverty"]["p"]<0.05) or (rF["food_floor"]["b"]>0 and rF["food_floor"]["p"]<0.05))
-    out["falsifiers"]={"CLOSE_D1_precarity_to_food":bool(D1),"CLOSE_D2_precarity_not_homeless":bool(D2),
-                       "CLOSE_D3_axes_dissociate":bool(D3),"CLOSE_D4_rent_floor_switch":bool(D4),
-                       "SEAM_CLOSED":bool(D1 and D2 and D3 and D4)}
+    def reg(y, xs, d=M):
+        x = d.dropna(subset=[y] + xs); X = sm.add_constant(x[xs])
+        r = sm.OLS(x[y], X).fit(cov_type="HC1")
+        return {k: {"b": round(float(r.params[k]), 4), "p": round(float(r.pvalues[k]), 4)} for k in xs} | {"r2": round(float(r.rsquared), 3)}
+    out["reg_homeless"] = reg("homeless", ["rent_floor", "poverty"])
+    out["reg_food"] = reg("food_insec", ["poverty", "rent_floor"])
 
-    # contrast: South vs high-rent-coast states
-    south=["MS","LA","AL","AR","TN","SC","KY","WV","NM","OK"]
-    coast=["CA","NY","HI","MA","WA","OR","CO"]
-    for tag,sts in [("South",south),("Coast",coast)]:
-        s=m[m.st.isin(sts)]
-        out.setdefault("contrast",{})[tag]={"food_insec":round(s.food_insec.mean(),1),
-            "homeless_per_10k":round(s.homeless_per_10k.mean(),1),
-            "rent_floor":round(s.rent_floor.mean(),0),"behind_on_rent":round(s.behind_on_rent.mean(),3)}
+    # ---- C. recursive decomposition: street vs sheltered (CoC level) ----
+    cc = coc[coc.year == yr].dropna(subset=["homeless_per_10k", "unsheltered_per_10k", "rent_coc", "income_coc"]).copy()
+    cc["sheltered_per_10k"] = (cc.homeless_per_10k - cc.unsheltered_per_10k).clip(lower=0)
 
-    (IDP/"analysis"/"paper7_seam_closure_039.json").write_text(json.dumps(out,indent=2))
-    print(json.dumps(out["corr"],indent=2))
-    print("REG homeless~rent+pov:", out["reg"]["homeless~rent_floor+poverty"])
-    print("REG food_insec~pov+floor+rent:", out["reg"]["food_insec~poverty+food_floor+rent_floor"])
-    print("contrast:", json.dumps(out.get("contrast",{})))
-    print("FALSIFIERS:", json.dumps(out["falsifiers"],indent=2))
+    def reg_coc(y):
+        X = sm.add_constant(cc[["rent_coc", "income_coc"]].astype(float))
+        r = sm.OLS(np.log1p(cc[y]), X).fit(cov_type="HC1")
+        return {"rent_b": round(float(r.params["rent_coc"]), 5), "rent_p": round(float(r.pvalues["rent_coc"]), 4), "r2": round(float(r.rsquared), 3)}
+    out["decomp_street_sheltered"] = {"n_coc": int(len(cc)),
+                                      "unsheltered": reg_coc("unsheltered_per_10k"),
+                                      "sheltered": reg_coc("sheltered_per_10k")}
+
+    (IDP / "analysis" / "paper7_seam_closure_039.json").write_text(json.dumps(out, indent=2))
+    print(json.dumps({k: out[k] for k in ["n", "sentinels", "poverty_range", "food_range", "corr"]}, indent=2))
+    print("reg homeless~rent+pov:", out["reg_homeless"])
+    print("reg food~pov+rent:", out["reg_food"])
+    print("decomp street/sheltered:", out["decomp_street_sheltered"])
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
