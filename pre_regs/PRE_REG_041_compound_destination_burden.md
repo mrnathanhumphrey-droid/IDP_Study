@@ -75,5 +75,17 @@ Locked 2026-05-29 before any burden/temporal computation. Shared-cell rule, thre
 
 ---
 
-## 8. Results — first fit
-_(pending IDU destination-burden + temporal parse)_
+## 8. Results — first fit (fired 2026-05-29, IDU destination parse)
+
+Full dig: `papers/PAPER_8_COMPOUND_CRISIS/digs/2026_05_29_prereg041_compound_destination_burden.md`
+
+**Set A + B + C all SUPPORTED. Mechanism quantified; loop with national coupling (033) closed.**
+
+- **Set A (burden)**: SOM **8 shared-destination cells absorb 55.6%** of national displacement (top-decile 68.3%, Gini 0.794). Highly concentrated.
+- **Set B (same-year)**: within shared cells, conflict-dest × disaster-dest over (cell,year) **ρ=+0.80 (p=0.0006)** vs +0.17 ns in non-shared → the national temporal coupling LIVES in the destination hubs.
+- **Set C (contemporaneity)**: lag 0 = +0.80, lags ±1 negative → strictly same-year compound (matches PRE_REG_034 Set B).
+- Cross-country: NGA burden only 18.6% (diffuse, non-coupling) — coupling signature = concentrated burden (56%) AND national coupling.
+- Falsifiers F1/F2/F3 all NOT fired.
+
+### Net — mechanism complete
+Unifies the arc: the national year-coupling (033) is the aggregate signature of a few destination hubs absorbing both flows simultaneously. **Compound-crisis coupling = contemporaneous displacement-destination convergence of spatially-distinct, independently-driven hazards (no shared climate driver, no co-located hazards); burden concentrated on a few receiving hubs (SOM: 8 cells = 56%) that experience neither hazard directly.** Policy: target the destination hubs, not the hazard zones. Optional remaining: multi-country generalization (SOM decisive; most IDU countries single-channel), name the 8 SOM hubs for manuscript.
