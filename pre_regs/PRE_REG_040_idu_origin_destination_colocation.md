@@ -74,5 +74,16 @@ Locked 2026-05-29 before any origin/destination split. Parse rule, metric, predi
 
 ---
 
-## 8. Results — first fit
-_(pending IDU origin/destination parse)_
+## 8. Results — first fit (fired 2026-05-29, IDU origin/destination parse)
+
+Full dig: `papers/PAPER_8_COMPOUND_CRISIS/digs/2026_05_29_prereg040_origin_destination.md`
+
+**Set A SUPPORTED — the reframe is confirmed. Compound-crisis coupling = displacement-DESTINATION convergence.**
+
+- **Set A (SUPPORTED)**: SOM ρ_destination = **+0.412**, ρ_origin = **−0.097**, gap **+0.509** (>+0.3 and dest>origin). Drought- and conflict-displaced Somalis flee FROM different places but converge ON the same destinations.
+- **Set B (directionally unanimous, n=3)**: all both-channel countries show dest > origin — SOM +0.51, COD +0.28, NGA +0.28. The gap (dest>origin) is universal (displaced converge); the coupling signature is the *absolute positive* destination co-location (SOM +0.41 vs NGA −0.10). (PHL destination set too sparse; n<4 for formal Wilcoxon.)
+- **Set C (SUPPORTED)**: SOM origins distinct (−0.10), gap ≥ +0.15 — consistent with Phase 2's hazard non-co-location.
+- Falsifiers: F1/F2/F3 NOT fired for SOM.
+
+### Net — mechanism established
+Reconciles the full arc: Phase 1 mixed-centroid +0.30 = destination signal (+0.41) diluted by non-co-locating origins (−0.10 ≈ Phase 2 hazard −0.24). **Mechanism: compound-crisis coupling is NOT co-located hazards / shared climate driver; it is displacement-destination convergence — two spatially-distinct, independently-driven hazards (drought peripheries, conflict zones) whose displaced populations pile into the SAME receiving areas. The compound burden falls on the destinations, not the hazard origins.** Fully triangulated (ENSO-null 036/037 + hazard-coloc-null 039 + origin-distinct/destination-shared 040). Policy corollary: receiving areas bear the compound load. Phase 4 = destination-burden quantification + temporal-overlap decomposition of the PRE_REG_033 coupling.
