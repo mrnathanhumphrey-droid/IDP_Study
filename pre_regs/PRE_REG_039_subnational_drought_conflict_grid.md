@@ -86,5 +86,16 @@ Locked 2026-05-29 before any SPEI×UCDP grid join. Grid (0.5°), metrics, countr
 
 ---
 
-## 8. Results — first fit
-_(pending GEE SPEI grid pull + UCDP-GED join)_
+## 8. Results — first fit (fired 2026-05-29, GEE SPEI × UCDP-GED v25.1, 20 countries)
+
+Full dig: `papers/PAPER_8_COMPOUND_CRISIS/digs/2026_05_29_prereg039_drought_conflict_grid.md`
+
+**F1 + F3 fired; Set C reversed. The hazard-level test REJECTS same-place drought-conflict co-occurrence and reframes Phase 1.**
+
+- **Set A (F1)**: coupling cases show NO spatial hazard co-location — ETH −0.07, **SOM −0.24 (p=0.002, inverse)**, BRA +0.09, COD +0.005. Conflict cells are not more drought-prone. Conflict clusters in populated/contested zones; drought-frequency is a climatological property of often-sparse peripheries.
+- **Set B (F3)**: cross-country spatial co-location does NOT track national coupling (Spearman −0.15, p=0.52, n=20).
+- **Set C (REVERSED)**: within-cell drought→conflict is NEGATIVE in coupling cases (ETH/SOM/COD frac-positive 0.17-0.27, Wilcoxon p≈0 — conflict *lower* in drought years). The only POSITIVE drought→conflict cases are **SYR/AFG/IRQ** (protracted-war/"Syria drought" cases) — which are NOT the displacement-coupling countries. Predicted coupling-positive / control-zero; observed the opposite.
+- **Set D**: PHL/NGA ≤0 (trivially, since nearly all are ~0/neg) — control no longer discriminates (unlike Phase 1).
+
+### Net + reframe
+Phase 1 found displacement channels co-locate (SOM +0.30); Phase 2 shows the underlying HAZARDS do not (SOM −0.24) and drought does not locally trigger conflict in coupling cases. **Compound-crisis coupling is NOT co-located hazards and NOT locally drought-triggered conflict.** Triangulated triple-negative (ENSO-null 036/037 + hazard-co-location-null + within-cell-trigger-null) → the coupling is a **displacement-system property: shared receiving destinations + national-temporal overlap of two spatially-distinct, separately-driven hazards.** Side-finding: the classic local drought→conflict signal appears only in SYR/AFG/IRQ (not the coupling cases). **Phase 3 (candidate): IDU origin-vs-destination decomposition** to test the shared-destination hypothesis directly. NOTE: use `GEDEvent_v25_1.csv` (full history); v26_0_4 is 2026-candidate only.
