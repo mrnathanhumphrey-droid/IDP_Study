@@ -1,0 +1,115 @@
+{
+  "n": 51,
+  "homeless_year": 2024,
+  "corr": {
+    "behind_on_rent~food_insec": {
+      "r": -0.144,
+      "p": 0.314
+    },
+    "behind_on_rent~homeless_per_10k": {
+      "r": -0.014,
+      "p": 0.925
+    },
+    "eviction_risk~homeless_per_10k": {
+      "r": -0.386,
+      "p": 0.0052
+    },
+    "food_insec~homeless_per_10k": {
+      "r": 0.088,
+      "p": 0.5395
+    },
+    "rent_floor~homeless_per_10k": {
+      "r": 0.656,
+      "p": 0.0
+    },
+    "rent_floor~food_insec": {
+      "r": -0.042,
+      "p": 0.7706
+    },
+    "food_floor~food_insec": {
+      "r": -0.148,
+      "p": 0.3003
+    },
+    "poverty~food_insec": {
+      "r": 0.918,
+      "p": 0.0
+    },
+    "poverty~homeless_per_10k": {
+      "r": -0.089,
+      "p": 0.5356
+    },
+    "poverty~food_insec_pre": {
+      "r": 0.918,
+      "p": 0.0
+    },
+    "food_floor~food_insec_pre": {
+      "r": -0.148,
+      "p": 0.2995
+    },
+    "behind_on_rent~food_insec_pre": {
+      "r": -0.144,
+      "p": 0.313
+    },
+    "food_insec_pre~homeless_per_10k": {
+      "r": 0.088,
+      "p": 0.5377
+    }
+  },
+  "reg": {
+    "homeless~rent_floor+poverty": {
+      "const": {
+        "b": -43.2142,
+        "p": 0.0002
+      },
+      "rent_floor": {
+        "b": 0.046,
+        "p": 0.0
+      },
+      "poverty": {
+        "b": 0.0001,
+        "p": 0.988
+      },
+      "r2": 0.431
+    },
+    "food_insec~poverty+food_floor+rent_floor": {
+      "const": {
+        "b": -434.0591,
+        "p": 0.2019
+      },
+      "poverty": {
+        "b": 0.777,
+        "p": 0.0
+      },
+      "food_floor": {
+        "b": 629.7973,
+        "p": 0.1668
+      },
+      "rent_floor": {
+        "b": 0.2184,
+        "p": 0.2238
+      },
+      "r2": 0.853
+    }
+  },
+  "falsifiers": {
+    "CLOSE_D1_precarity_to_food": false,
+    "CLOSE_D2_precarity_not_homeless": true,
+    "CLOSE_D3_axes_dissociate": true,
+    "CLOSE_D4_rent_floor_switch": true,
+    "SEAM_CLOSED": false
+  },
+  "contrast": {
+    "South": {
+      "food_insec": 14.5,
+      "homeless_per_10k": 11.1,
+      "rent_floor": 1155.0,
+      "behind_on_rent": 0.133
+    },
+    "Coast": {
+      "food_insec": 10.7,
+      "homeless_per_10k": 58.3,
+      "rent_floor": 1827.0,
+      "behind_on_rent": 0.113
+    }
+  }
+}
