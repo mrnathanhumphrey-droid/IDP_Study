@@ -3,7 +3,7 @@ PRE-REG 039 seam closure — SENTINEL-CLEAN (supersedes the contaminated first r
 
 FEA carries sentinels (CT food = -8888; 11 POVRATE counties <0, min -9999; 8 food
 out-of-range). All FEA percentage columns are filtered to valid [0,100] BEFORE state
-aggregation. State level n=51. Output: analysis/paper7_seam_closure_039.json
+aggregation. State level n=51. Output: analysis/FOOD_seam_closure_039.json
 
 Sections:
   A. seam correlations + D1-D4 falsifiers (food insecurity = poverty's display = push gauge)
@@ -110,7 +110,7 @@ def main():
                                       "unsheltered": reg_coc("unsheltered_per_10k"),
                                       "sheltered": reg_coc("sheltered_per_10k")}
 
-    (IDP / "analysis" / "paper7_seam_closure_039.json").write_text(json.dumps(out, indent=2))
+    (IDP / "analysis" / "FOOD_seam_closure_039.json").write_text(json.dumps(out, indent=2))
     print(json.dumps({k: out[k] for k in ["n", "sentinels", "poverty_range", "food_range", "corr"]}, indent=2))
     print("reg homeless~rent+pov:", out["reg_homeless"])
     print("reg food~pov+rent:", out["reg_food"])
