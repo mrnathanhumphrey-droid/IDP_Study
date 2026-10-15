@@ -68,3 +68,6 @@ analysis/*.exe
 .DS_Store
 Thumbs.db
 *.swp
+
+# third-party paper full texts
+*_extracted.txt
